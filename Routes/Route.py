@@ -2,7 +2,7 @@ import networkx as nx
 
 
 class Route:
-    """Routes will be in nx graph 
+    """Routes will be 2 node nx graph 
     each node of graph is station : data in node (starting_station, destination_station, departure_time, arrival_time)
     each edge is road : data is (distance, data_booked)
     """

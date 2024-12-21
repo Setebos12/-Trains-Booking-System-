@@ -1,4 +1,5 @@
 from Routes.Route import Route, NotDateTimeDatError
+from Routes.Routes import Routes
 from datetime import datetime
 import pytest
 
@@ -49,3 +50,14 @@ def test_book_route_and_undo_root():
     assert route.is_booked() is True
     route.undo_book_route()
     assert route.is_booked() is False
+
+
+def test_create_Routes():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route1 = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+    data1 = datetime(2024, 12, 29, 21, 30)
+    data2 = datetime(2024, 12, 29, 20, 45)
+    route2 = Route("Kraków", "Wrocław", data1, data2, 350)
+    routes = Routes([route1, route2])
+

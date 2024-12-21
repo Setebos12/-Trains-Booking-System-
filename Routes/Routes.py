@@ -1,5 +1,5 @@
 from Routes.Route import Route
-from networkx import DiGraph
+from networkx import DiGraph, has_path, shortest_path, shortest_path_length
 
 
 class Routes:
@@ -17,12 +17,16 @@ class Routes:
             self.routes.add_edge(route.starting_station(), route.destination_station(), data=route)
             self.routes.nodes[route.destination_station()]["arrival_time"] = route.arrival_time()
 
-
     def check_if_route_exist(self, starting_station: str, destination_station: str) -> bool:
-        pass
+        return has_path(self.routes, starting_station, destination_station)
 
     def calculate_road(self, starting_station: str, destination_station: str) -> int:
-        pass
+        return shortest_path_length(
+            self.routes,
+            starting_station,
+            destination_station,
+            weight=lambda u, v, d: d["data"].distance()
+        )
 
     def book_route(self, starting_station: str, destination_station: str, data):
         pass

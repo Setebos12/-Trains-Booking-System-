@@ -64,4 +64,27 @@ def test_create_Routes():
     assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
 
 
+def test_path_exist():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route1 = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+    data1 = datetime(2024, 12, 29, 21, 30)
+    data2 = datetime(2024, 12, 29, 20, 45)
+    route2 = Route("Kraków", "Wrocław", data1, data2, 350)
+    routes = Routes([route1, route2])
 
+    assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
+    assert routes.check_if_route_exist("Warszawa Centralna", "Wrocław") is True
+
+
+def test_path_weight():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route1 = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+    data1 = datetime(2024, 12, 29, 21, 30)
+    data2 = datetime(2024, 12, 29, 20, 45)
+    route2 = Route("Kraków", "Wrocław", data1, data2, 350)
+    routes = Routes([route1, route2])
+
+    assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
+    assert routes.calculate_road("Warszawa Centralna", "Wrocław") == 650

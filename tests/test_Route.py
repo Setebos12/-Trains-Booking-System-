@@ -12,6 +12,7 @@ def test_create_Route():
     assert route.destination_station() == "Kraków"
     assert route.arrival_time() == data1
     assert route.departure_time() == data2
+    assert route._distance == 300
     assert route.is_booked() is False
 
 
@@ -27,3 +28,24 @@ def test_create_Route_negative_time():
     data2 = datetime(2024, 12, 29, 17, 30)
     with pytest.raises(ValueError):
         Route("Warszawa Centralna", "Kraków", data2, data1, 300)
+
+
+def test_create_Route_negative_distance():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    with pytest.raises(ValueError):
+        Route("Warszawa Centralna", "Kraków", data2, data1, -1)
+
+
+def test_book_route_and_undo_root():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+
+    assert route.is_booked() is False
+    data = 123
+    route.book_route(data)
+    assert route.booked_data == 123
+    assert route.is_booked() is True
+    route.undo_book_route()
+    assert route.is_booked() is False

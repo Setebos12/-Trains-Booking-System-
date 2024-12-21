@@ -7,18 +7,12 @@ class NotDateTimeDatError(Exception):
 
 class Route:
     def __init__(self, starting_station: str, destination_station: str, arrival_time, departure_time, distance):
-        self._starting_station = starting_station
-        self._destination_station = destination_station
+        self.starting_station = starting_station
+        self.destination_station = destination_station
         self.set_arrive_time_departure_time(arrival_time, departure_time)
         self.set_disctance(distance)
 
         self.booked_data = None
-
-    def starting_station(self):
-        return self._starting_station
-
-    def destination_station(self):
-        return self._destination_station
 
     def arrival_time(self):
         return self._arrival_time

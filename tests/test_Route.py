@@ -9,8 +9,8 @@ def test_create_Route():
     data2 = datetime(2024, 12, 29, 17, 30)
     route = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
 
-    assert route.starting_station() == "Warszawa Centralna"
-    assert route.destination_station() == "Kraków"
+    assert route.starting_station == "Warszawa Centralna"
+    assert route.destination_station == "Kraków"
     assert route.arrival_time() == data1
     assert route.departure_time() == data2
     assert route._distance == 300
@@ -88,3 +88,18 @@ def test_path_weight():
 
     assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
     assert routes.calculate_road("Warszawa Centralna", "Wrocław") == 650
+
+
+def test_calculate_time():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route1 = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+    data11 = datetime(2024, 12, 29, 21, 30)
+    data22 = datetime(2024, 12, 29, 20, 45)
+    route2 = Route("Kraków", "Wrocław", data11, data22, 350)
+    routes = Routes([route1, route2])
+
+    assert routes.calculate_time('Warszawa Centralna', 'Wrocław') == data11 - data2
+
+
+

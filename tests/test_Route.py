@@ -61,3 +61,7 @@ def test_create_Routes():
     route2 = Route("Kraków", "Wrocław", data1, data2, 350)
     routes = Routes([route1, route2])
 
+    assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
+
+
+

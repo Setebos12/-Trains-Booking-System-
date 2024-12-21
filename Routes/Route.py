@@ -6,10 +6,6 @@ class NotDateTimeDatError(Exception):
 
 
 class Route:
-    """Routes will be 2 node nx graph
-    each node of graph is station : data in node (starting_station, destination_station, departure_time, arrival_time)
-    each edge is road : data is (distance, data_booked)
-    """
     def __init__(self, starting_station: str, destination_station: str, arrival_time, departure_time, distance):
         self._starting_station = starting_station
         self._destination_station = destination_station
@@ -34,6 +30,9 @@ class Route:
         if distance < 0:
             return ValueError
         self._distance = distance
+
+    def distance(self):
+        return self._distance
 
     def book_route(self, data):
         self.booked_data = data

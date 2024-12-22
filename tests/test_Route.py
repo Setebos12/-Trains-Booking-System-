@@ -1,5 +1,5 @@
 from Routes.Route import Route, NotDateTimeDatError
-from Routes.Routes import Routes
+from Routes.Routes import Routes, CarriageRoutes
 from datetime import datetime
 import pytest
 
@@ -14,7 +14,6 @@ def test_create_Route():
     assert route.arrival_time() == data1
     assert route.departure_time() == data2
     assert route._distance == 300
-    assert route.is_booked() is False
 
 
 def test_create_Route_no_datatime():
@@ -36,20 +35,6 @@ def test_create_Route_negative_distance():
     data2 = datetime(2024, 12, 29, 17, 30)
     with pytest.raises(ValueError):
         Route("Warszawa Centralna", "Kraków", data2, data1, -1)
-
-
-def test_book_route_and_undo_root():
-    data1 = datetime(2024, 12, 29, 20, 30)
-    data2 = datetime(2024, 12, 29, 17, 30)
-    route = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
-
-    assert route.is_booked() is False
-    data = 123
-    route.book_route(data)
-    assert route.booked_data == 123
-    assert route.is_booked() is True
-    route.undo_book_route()
-    assert route.is_booked() is False
 
 
 def test_create_Routes():
@@ -102,4 +87,75 @@ def test_calculate_time():
     assert routes.calculate_time('Warszawa Centralna', 'Wrocław') == data11 - data2
 
 
+def test_CarriageRoutes():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route1 = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+    data11 = datetime(2024, 12, 29, 21, 30)
+    data22 = datetime(2024, 12, 29, 20, 45)
+    route2 = Route("Kraków", "Wrocław", data11, data22, 350)
+    seats_id = ['1', '2', '3', '4', '5']
+    carriage_routes = CarriageRoutes([route1, route2], seats_id)
 
+    assert carriage_routes.seats_id == seats_id
+
+
+def create_simple_CarriageRoutes():
+    data1 = datetime(2024, 12, 29, 20, 30)
+    data2 = datetime(2024, 12, 29, 17, 30)
+    route1 = Route("Warszawa Centralna", "Kraków", data1, data2, 300)
+    data11 = datetime(2024, 12, 29, 21, 30)
+    data22 = datetime(2024, 12, 29, 20, 45)
+    route2 = Route("Kraków", "Wrocław", data11, data22, 350)
+    seats_id = ['1', '2', '3', '4', '5']
+    carriage_routes = CarriageRoutes([route1, route2], seats_id)
+    return carriage_routes, seats_id
+
+
+def test_list_booked_seats():
+    cr, seats_id = create_simple_CarriageRoutes()
+
+    assert cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Wrocław") == (set(seats_id), set())
+
+
+def test_check_if_booked_is_possible():
+    cr, seats_id = create_simple_CarriageRoutes()
+    ans = cr.check_if_can_booked("Warszawa Centralna", "Wrocław", '1')
+    assert ans is True
+    cr.booked_seats("Warszawa Centralna", "Wrocław", '1', 123)
+    ans = cr.check_if_can_booked("Warszawa Centralna", "Wrocław", '1')
+    assert ans is False
+    ans = cr.check_if_can_booked("Warszawa Centralna", "Kraków", '5')
+    assert ans is True
+    ans = cr.check_if_can_booked("Warszawa Centralna", "Kraków", '1')
+    assert ans is False
+
+
+def test_booked_seats():
+    cr, seats_id = create_simple_CarriageRoutes()
+
+    cr.booked_seats("Warszawa Centralna", "Wrocław", '1', 123)
+    assert cr.routes.edges["Warszawa Centralna", "Kraków"]['seats']['1'] == 123
+    assert cr.routes.edges["Kraków", "Wrocław"]['seats']['1'] == 123
+
+
+def test_booked_seats_and_list_setas():
+    cr, seats_id = create_simple_CarriageRoutes()
+
+    cr.booked_seats("Warszawa Centralna", "Wrocław", '1', 123)
+
+    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Wrocław")
+    assert ans == ({'2', '3', '4', '5'}, {'1'})
+    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Kraków")
+    assert ans == ({'2', '3', '4', '5'}, {'1'})
+
+
+def test_booked_seats_and_list_setas_one_station():
+    cr, seats_id = create_simple_CarriageRoutes()
+
+    cr.booked_seats("Warszawa Centralna", "Kraków", '1', 123)
+
+    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Wrocław")
+    assert ans == ({'2', '3', '4', '5'}, {'1'})
+    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Kraków")
+    assert ans == ({'2', '3', '4', '5'}, {'1'})

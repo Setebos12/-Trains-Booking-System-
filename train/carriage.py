@@ -3,12 +3,12 @@ from train.Seats import Seat
 
 
 class Cariage:
-    def __init__(self, id: int, routes: list[Routes], seats: list[Seat]) -> None:
+    def __init__(self, id: int, routes: list[Routes], seats: list[Seat], carriage_look=None) -> None:
         self.id = id
         self.seats = seats
         seats_id = [seat.data['id'] for seat in self.seats]
-        self.routes = {route.routes_id :CarriageRoutes(route.routes_id, route, seats_id) for route in routes}
-        self.carriage_look = None
+        self.routes = {route.routes_id: CarriageRoutes(route.routes_id, route, seats_id) for route in routes}
+        self.carriage_look = carriage_look
         self.current_route_id = 0
 
     def book_seat_for_route(self, starting_station, destination_station, seat_id, route_id, data, time=None):
@@ -21,6 +21,13 @@ class Cariage:
         if route_id not in self.routes:
             raise ValueError
         return self.routes[route_id].list_booked_and_an_empy_seats(starting_station, destination_station)
+
+    def filter_seats(self, r_data):
+        seats_id = set()
+        for seat in self.seats:
+            if seat.check_requirments(r_data):
+                seats_id.add(seat.data['id'])
+        return seats_id
 
     def get_all_booked(self):
         pass

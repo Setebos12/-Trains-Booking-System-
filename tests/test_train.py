@@ -63,7 +63,7 @@ def test_create_carriage():
     assert carriage.seats == seats
 
 
-def test_create_carriage_list_avalible_seats():
+def test_list_avalible_seats():
     seats = {Seat(1, True, 2),
              Seat(2, True, 1),
              Seat(3, True, 0)}
@@ -75,7 +75,7 @@ def test_create_carriage_list_avalible_seats():
     assert carriage.seats == seats
 
 
-def test_create_carriage_list_avalible_seat_wrong_id_route():
+def test_list_avalible_seat_wrong_id_route():
     seats = {Seat(1, True, 2),
              Seat(2, True, 1),
              Seat(3, True, 0)}
@@ -86,7 +86,7 @@ def test_create_carriage_list_avalible_seat_wrong_id_route():
         carriage.list_all_availabe_seats('Warszawa Centralna', 'Wrocław', 2)
 
 
-def test_create_carriage_list_avalible_test_book_seat():
+def test_list_avalible_test_book_seat():
     seats = {Seat(1, True, 2),
              Seat(2, True, 1),
              Seat(3, True, 0)}
@@ -97,3 +97,18 @@ def test_create_carriage_list_avalible_test_book_seat():
     carriage.book_seat_for_route('Warszawa Centralna', 'Wrocław', 2, 1, 123)
     ans = carriage.list_all_availabe_seats('Warszawa Centralna', 'Wrocław', 1)
     assert ans == ({1, 3}, {2})
+
+
+def test_filter_seats():
+    seats = {Seat(1, True, 2),
+             Seat(2, True, 1),
+             Seat(3, False, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes()
+    carriage = Cariage(1, [carriage_routes], seats)
+
+    carriage.book_seat_for_route('Warszawa Centralna', 'Wrocław', 2, 1, 123)
+    ans = carriage.filter_seats({"window_middle_corridor": 0})
+    assert ans == {3}
+    ans = carriage.filter_seats({"compartments": True})
+    assert ans == {1, 2}

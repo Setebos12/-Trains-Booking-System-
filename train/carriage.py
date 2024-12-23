@@ -8,7 +8,10 @@ class Cariage:
         self.seats = seats
         seats_id = [seat.data['id'] for seat in self.seats]
         self.routes = {route.routes_id: CarriageRoutes(route.routes_id, route, seats_id) for route in routes}
-        self.carriage_look = carriage_look
+        if carriage_look is not None:
+            self.carriage_look = self.assing_seats(carriage_look)
+        else:
+            self.carriage_look = None
         self.current_route_id = 0
 
     def book_seat_for_route(self, starting_station, destination_station, seat_id, route_id, data, time=None):
@@ -29,8 +32,34 @@ class Cariage:
                 seats_id.add(seat.data['id'])
         return seats_id
 
-    def get_all_booked(self):
-        pass
+    def assing_seats(self, carriage_look):
+        seats_id = [seat.data['id'] for seat in self.seats]
+        seats_id.sort()
+
+        index = 0
+        for x_dim in range(len(carriage_look)):
+            for y_dim in range(len(carriage_look[x_dim])):
+                if carriage_look[x_dim][y_dim] == 'S':
+                    carriage_look[x_dim][y_dim] = str(carriage_look[x_dim][y_dim]) + str(seats_id[index])
+                    index += 1
+                    if index > len(seats_id):
+                        return
+        return carriage_look
+
+    def get_carriage_look(self, seats):
+        free_seat, booked_seats = seats
+        carriage_look = self.carriage_look.copy()
+
+        for x_dim in range(len(carriage_look)):
+            for y_dim in range(len(carriage_look[x_dim])):
+                if carriage_look[x_dim][y_dim][0] == 'S':
+                    index = int(carriage_look[x_dim][y_dim][1:])
+                    if index in free_seat:
+                        carriage_look[x_dim][y_dim] += 'F'
+                    else:
+                        carriage_look[x_dim][y_dim] += 'B'
+        return carriage_look
+
 
     def set_current_station(self):
         pass

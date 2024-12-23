@@ -112,3 +112,28 @@ def test_filter_seats():
     assert ans == {3}
     ans = carriage.filter_seats({"compartments": True})
     assert ans == {1, 2}
+
+
+def test_assign_seats_id():
+    seats = {Seat(1, True, 2),
+             Seat(2, True, 1),
+             Seat(3, False, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes()
+    carriage = Cariage(1, [carriage_routes], seats)
+    ans = carriage.assing_seats([['.', 'S', 'S', 'S']])
+    assert ans == [['.', 'S1', 'S2', 'S3']]
+
+
+def test_get_carriage_look():
+    seats = {Seat(1, True, 2),
+             Seat(2, True, 1),
+             Seat(3, True, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes()
+    carriage = Cariage(1, [carriage_routes], seats, [['.', 'S', 'S', 'S']])
+
+    carriage.book_seat_for_route('Warszawa Centralna', 'Wrocław', 2, 1, 123)
+    seats = carriage.list_all_availabe_seats('Warszawa Centralna', 'Wrocław', 1)
+    ans = carriage.get_carriage_look(seats)
+    assert ans == [['.', 'S1F', 'S2B', 'S3F']]

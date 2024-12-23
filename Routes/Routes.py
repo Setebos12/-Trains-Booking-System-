@@ -11,9 +11,9 @@ class Routes:
     each node of graph is station : data in node (departure_time, arrival_time)
     each edge is road : data is (distance, data_booked)
     """
-    def __init__(self, routes: list[Route]):
+    def __init__(self, routes_id, routes: list[Route]):
+        self.routes_id = routes_id
         self.routes = DiGraph()
-        self.current_station = routes[0].starting_station
         for route in routes:
             self.routes.add_node(route.starting_station,
                                  departure_time=route.departure_time())
@@ -44,10 +44,18 @@ class Routes:
         arrivetime = self.routes.nodes[destination_station]['arrival_time']
         return arrivetime-departtime
 
+    def get_departure_time(self, station: str):
+        return self.routes.nodes[station]['departure_time']
+
+
+    def get_arrival_time(self, station: str):
+        return self.routes.nodes[station]['arrival_time']
+
 
 class CarriageRoutes(Routes):
-    def __init__(self, routes, seats_id):
-        super().__init__(routes)
+    def __init__(self, routes_id, routes: Routes, seats_id):
+        self.routes_id = routes_id
+        self.routes = routes.routes
         seats_booked = {seat_id: None for seat_id in seats_id}
 
         self.seats_id = seats_id

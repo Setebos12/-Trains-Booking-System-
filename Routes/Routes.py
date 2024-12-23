@@ -55,7 +55,7 @@ class Routes:
 class CarriageRoutes(Routes):
     def __init__(self, routes_id, routes: Routes, seats_id):
         self.routes_id = routes_id
-        self.routes = routes.routes
+        self.routes = routes.routes.copy()
         seats_booked = {seat_id: None for seat_id in seats_id}
 
         self.seats_id = seats_id

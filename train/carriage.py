@@ -6,8 +6,8 @@ class Cariage:
     def __init__(self, id: int, routes: list[Routes], seats: list[Seat], carriage_look=None) -> None:
         self.id = id
         self.seats = seats
-        seats_id = [seat.data['id'] for seat in self.seats]
-        self.routes = {route.routes_id: CarriageRoutes(route.routes_id, route, seats_id) for route in routes}
+        self.seats_id = [seat.data['id'] for seat in self.seats]
+        self.routes = {route.routes_id: CarriageRoutes(route.routes_id, route, self.seats_id) for route in routes}
         if carriage_look is not None:
             self.carriage_look = self.assing_seats(carriage_look)
         else:
@@ -60,9 +60,8 @@ class Cariage:
                         carriage_look[x_dim][y_dim] += 'B'
         return carriage_look
 
-
-    def set_current_station(self):
-        pass
+    def add_routes(self, route: Routes):
+        self.routes[route.routes_id] = CarriageRoutes(route.routes_id, route, self.seats_id)
 
     def set_next_station(self):
         pass

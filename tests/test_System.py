@@ -3,7 +3,7 @@ from networkx import DiGraph
 from train.train_files import read_all_trains
 import networkx as nx
 from matplotlib import pyplot as plt
-
+import pytest
 
 def test_incorpoate_To_bigger_graph():
     trains = read_all_trains()
@@ -13,6 +13,32 @@ def test_incorpoate_To_bigger_graph():
 
     assert len(graph.nodes['Warszawa Centralna']['arrivals']) > 0
     assert len(graph.nodes['Warszawa Centralna']['departure']) > 0
+
+
+def test_direct_path():
+    trains = read_all_trains()
+    system = System(trains)
+    system.create_graph_from_trains() # change to go outside class
+
+    nx.draw(system.network, with_labels=True, node_color="skyblue", font_weight="bold", node_size=100, font_size=6)
+    plt.show()
+
+    assert system.check_direct_connection("Radom Główny", "Sopot") == set()
+    assert system.check_direct_connection("Olsztyn Główny", "Sopot") == set()
+    assert system.check_direct_connection("Olsztyn Główny", "Kraków Główny") == {(3, 4)}
+    assert system.check_direct_connection("Warszawa Centralna", "Warszawa Zachodnia") == {(3, 4), (0, 1), (2, 3), (1, 2)}
+
+
+def test_direct_path_no_path():
+    trains = read_all_trains()
+    system = System(trains)
+    system.create_graph_from_trains() # change to go outside class
+
+    nx.draw(system.network, with_labels=True, node_color="skyblue", font_weight="bold", node_size=100, font_size=6)
+    plt.show()
+
+    with pytest.raises(ValueError):
+        system.check_direct_connection("Sopot", "Warszawa Centralna")
 
 
 def test_set_common_elements():

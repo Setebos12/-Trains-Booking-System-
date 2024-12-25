@@ -1,7 +1,7 @@
 from train.train import Train
 from networkx import DiGraph, compose, has_path, all_simple_paths
 from train.train_files import read_all_trains
-
+from datetime import timedelta
 
 class System:
     def __init__(self, trains: list[Train]):
@@ -23,12 +23,37 @@ class System:
         common_keys = list(get_common(start_deparutes, destin_arrival))
         return common_keys
 
-    def check_all_connections(self, starting_station, destination_station):
+    def check_no_direct_connections(self, starting_station, destination_station):
         if has_path(self.network, starting_station, destination_station) is False:
             raise ValueError # create some error no path error
 
-        paths = all_simple_paths(starting_station, destination_station)
-        pass
+        paths = list(all_simple_paths(self.network, starting_station, destination_station))
+        all_paths = []
+        for path in paths:
+            begin_station = path[0]
+            end_station = path[-1]
+            path_stations = []
+            for station in path[1:]:
+                trains1 = self.check_direct_connection(begin_station, station)
+                if trains1 == []:
+                    continue
+                trains2 = self.check_direct_connection(station, end_station)
+                if trains2 == []:
+                    continue
+                path_stations.append((trains1, trains2, station))
+            all_paths.append(path_stations)
+        return all_paths
+
+    def check_stations_correct_transfers(self, arrival_train, departure_train, station, transfer_tim=0):
+        arrival_time = self.network.nodes[station]['arrivals'][arrival_train]
+        deparute_time = self.network.nodes[station]['departure'][departure_train]
+        time_diff = deparute_time - arrival_time
+        time_diff_minutes = time_diff.total_seconds() / 60
+        if time_diff_minutes < transfer_tim:
+            return 0
+
+        return 1, deparute_time - arrival_time
+
 
 
 

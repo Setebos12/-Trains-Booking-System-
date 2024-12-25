@@ -41,6 +41,25 @@ def test_direct_path_no_path():
         system.check_direct_connection("Sopot", "Warszawa Centralna")
 
 
+def test_all_path():
+    trains = read_all_trains()
+    system = System(trains)
+    system.create_graph_from_trains()
+
+    paths = system.check_no_direct_connections("Radom Główny", "Sopot")
+    system.check_no_direct_connections("Radom Główny", "Sopot")
+
+
+def test_check_transfer():
+    trains = read_all_trains()
+    system = System(trains)
+    system.create_graph_from_trains()
+
+    assert system.check_stations_correct_transfers((3, 4), (0, 1), "Warszawa Centralna") == 0
+    assert system.check_stations_correct_transfers((3, 4), (2, 3), "Warszawa Centralna") == 0
+
+
+
 def test_set_common_elements():
     nums1 = [1, 2, 3, 4]
     nums2 = [2, 3]

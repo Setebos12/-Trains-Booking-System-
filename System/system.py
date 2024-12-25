@@ -1,14 +1,11 @@
 from train.train import Train
-from networkx import DiGraph, compose
+from networkx import DiGraph, compose, has_path
 from train.train_files import read_all_trains
 
 
 class System:
-    def __init__(self, trains : list[Train]):
+    def __init__(self, trains: list[Train]):
         self.trains = {train.id: train for train in trains}
-
-    def add_train(self, train: Train):
-        self.trains[train.id] = train
 
     def create_graph_from_trains(self):
         trains = read_all_trains()
@@ -17,6 +14,18 @@ class System:
             graph = add_train_to_system(graph, train)
         self.network = graph
 
+    def check_direct_connection(self, starting_station, destination_station):
+        if has_path(self.network, starting_station, destination_station) is False:
+            raise ValueError # create some error
+
+        start_deparutes = self.network[starting_station]['departure'].copy()
+        destin_arrival = self.network[destination_station]['arrivals'].copy()
+
+
+def get_common(nums1, nums2):
+    return set(nums1) & set(nums2)
+
+
 
 def merge_Graphs(G: DiGraph, grap_routes: DiGraph, train_id, route_id):
 
@@ -24,9 +33,6 @@ def merge_Graphs(G: DiGraph, grap_routes: DiGraph, train_id, route_id):
     data_nodes = dict(grap_routes.nodes(data=True))
     for node in graph.nodes:
         graph.nodes[node].clear()
-
-    # departure_time
-    # arrival_time
 
     merger_graph = compose(G, graph)
     for node in data_nodes:

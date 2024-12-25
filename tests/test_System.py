@@ -23,10 +23,10 @@ def test_direct_path():
     nx.draw(system.network, with_labels=True, node_color="skyblue", font_weight="bold", node_size=100, font_size=6)
     plt.show()
 
-    assert system.check_direct_connection("Radom Główny", "Sopot") == set()
-    assert system.check_direct_connection("Olsztyn Główny", "Sopot") == set()
-    assert system.check_direct_connection("Olsztyn Główny", "Kraków Główny") == {(3, 4)}
-    assert system.check_direct_connection("Warszawa Centralna", "Warszawa Zachodnia") == {(3, 4), (0, 1), (2, 3), (1, 2)}
+    assert set(system.check_direct_connection("Radom Główny", "Sopot")) == set()
+    assert set(system.check_direct_connection("Olsztyn Główny", "Sopot")) == set()
+    assert set(system.check_direct_connection("Olsztyn Główny", "Kraków Główny")) == {(3, 4)}
+    assert set(system.check_direct_connection("Warszawa Centralna", "Warszawa Zachodnia")) == {(3, 4), (0, 1), (2, 3), (1, 2)}
 
 
 def test_direct_path_no_path():
@@ -47,7 +47,9 @@ def test_all_path():
     system.create_graph_from_trains()
 
     paths = system.check_no_direct_connections("Radom Główny", "Sopot")
-    system.check_no_direct_connections("Radom Główny", "Sopot")
+    assert paths == [[]]
+    paths = system.check_no_direct_connections("Olsztyn Główny", "Warszawa Centralna")
+    assert len(paths) == 0
 
 
 def test_check_transfer():
@@ -55,9 +57,8 @@ def test_check_transfer():
     system = System(trains)
     system.create_graph_from_trains()
 
-    assert system.check_stations_correct_transfers((3, 4), (0, 1), "Warszawa Centralna") == 0
-    assert system.check_stations_correct_transfers((3, 4), (2, 3), "Warszawa Centralna") == 0
-
+    assert system.check_stations_correct_transfers((3, 4), (0, 1), "Warszawa Centralna") == (0, 0)
+    assert system.check_stations_correct_transfers((3, 4), (2, 3), "Warszawa Centralna") == (0, 0)
 
 
 def test_set_common_elements():

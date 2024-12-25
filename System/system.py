@@ -33,14 +33,24 @@ class System:
             begin_station = path[0]
             end_station = path[-1]
             path_stations = []
-            for station in path[1:]:
+            for station in path[1:-1]:
                 trains1 = self.check_direct_connection(begin_station, station)
                 if trains1 == []:
                     continue
                 trains2 = self.check_direct_connection(station, end_station)
                 if trains2 == []:
                     continue
-                path_stations.append((trains1, trains2, station))
+                for train1 in trains1:
+                    for train2 in trains2:
+                        if train1 == train2:
+                            continue
+                        tran, tran_time = self.check_stations_correct_transfers(train1, train2, station)
+                        if tran == 1:
+                            path_stations.append({'train1': train1,
+                                                  'train2': train2,
+                                                  'station': station,
+                                                  'time_wait': tran_time})
+
             all_paths.append(path_stations)
         return all_paths
 
@@ -50,7 +60,7 @@ class System:
         time_diff = deparute_time - arrival_time
         time_diff_minutes = time_diff.total_seconds() / 60
         if time_diff_minutes < transfer_tim:
-            return 0
+            return 0, 0
 
         return 1, deparute_time - arrival_time
 

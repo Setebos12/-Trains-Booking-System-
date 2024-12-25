@@ -6,6 +6,9 @@ from networkx.readwrite.json_graph import node_link_graph
 from Routes.Routes import Routes
 from train.train import Train
 from train.carriage_files import create_carriage_from_data
+from pathlib import Path, PosixPath
+
+
 
 def serialize_datetime(obj):
     if isinstance(obj, datetime):
@@ -45,3 +48,17 @@ def read_train_file(uniq_id):
                      node_link_graph(route['graph'], edges="links"),
                      False) for route in data['routes'].values()]
     return Train(train_id, car, routes)
+
+
+def read_all_trains():
+    file_path = Path("/home/krzysztof-rutkowski/pipr1/project1/data/Trains/")
+    all_trains = file_path.glob("*.json")
+
+    trains = []
+    for train in all_trains:
+        id = train.stem
+        trains.append(read_train_file(id))
+    return trains
+
+
+

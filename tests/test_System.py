@@ -61,6 +61,14 @@ def test_check_transfer():
     assert system.check_stations_correct_transfers((3, 4), (2, 3), "Warszawa Centralna") == (0, 0)
 
 
+def test_list_all_avalible_seats():
+    trains = read_all_trains()
+    system = System(trains)
+    system.create_graph_from_trains()
+
+    data = system.list_all_availabe_seats("Olsztyn Główny", "Kraków Główny", 3, 4, {'table': True})
+    assert len(data) > 0
+
 def test_set_common_elements():
     nums1 = [1, 2, 3, 4]
     nums2 = [2, 3]

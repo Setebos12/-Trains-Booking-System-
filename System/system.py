@@ -51,7 +51,7 @@ class System:
                                                   'station': station,
                                                   'time_wait': tran_time})
 
-            all_paths.append(path_stations)
+            all_paths.extend(path_stations)
         return all_paths
 
     def check_stations_correct_transfers(self, arrival_train, departure_train, station, transfer_tim=0):
@@ -64,12 +64,24 @@ class System:
 
         return 1, deparute_time - arrival_time
 
+    def book_seat(self, starting_station, destination_station,train_id, route_id ,carriage_id, seat_id, data):
+        if train_id not in self.trains.keys():
+            raise ValueError
+
+        self.trains[route_id].book_seat_for_route(starting_station,
+                                                  destination_station,
+                                                  carriage_id,
+                                                  seat_id,
+                                                  route_id,
+                                                  data)
+
+    def list_all_availabe_seats(self, starting_station, destination_station, route_id, train_id, r_data={}):
+        return self.trains[train_id].list_all_availabe_seats(starting_station, destination_station, route_id, r_data)
 
 
 
 def get_common(nums1, nums2):
     return set(nums1) & set(nums2)
-
 
 
 def merge_Graphs(G: DiGraph, grap_routes: DiGraph, train_id, route_id):

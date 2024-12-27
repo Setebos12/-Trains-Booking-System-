@@ -1,6 +1,6 @@
 import json
 from user.ticket import Ticket
-import os
+from pathlib import Path
 
 
 class User:
@@ -24,21 +24,23 @@ class User:
 
 
 def write_user_file(user: User, base_path="data/Users"):
+    base_path = Path(base_path)
+    base_path.mkdir(parents=True, exist_ok=True)
+
+    file_path = base_path / f"{user.id}.json"
     data = user.json_repr()
-    s1 = json.dumps(data, indent=4)
-    uniq_id = user.id
-    file_path = os.path.join(base_path, f"{uniq_id}.json")
-    os.makedirs(base_path, exist_ok=True)  # Ensure directory exists
-    with open(file_path, 'w') as file_handle:
-        file_handle.write(s1)
+    with file_path.open('w') as file_handle:
+        json.dump(data, file_handle, indent=4)
 
 
 def read_user(id: str, base_path="data/Users"):
-    file_path = os.path.join(base_path, f"{id}.json")
-    if not os.path.exists(file_path):
+    base_path = Path(base_path)
+    file_path = base_path / f"{id}.json"
+
+    if not file_path.exists():
         raise FileNotFoundError(f"User file {file_path} not found.")
 
-    with open(file_path, 'r') as file_handle:
+    with file_path.open('r') as file_handle:
         data = json.load(file_handle)
 
     tickets = [
@@ -56,19 +58,18 @@ def read_user(id: str, base_path="data/Users"):
 
 
 def get_all_users(base_path="data/Users"):
-    users = []
+    base_path = Path(base_path)
 
-    if not os.path.exists(base_path):
+    if not base_path.exists():
         raise FileNotFoundError(f"Directory {base_path} does not exist.")
-    for file_name in os.listdir(base_path):
 
-        if file_name.endswith(".json"):
-            user_id = os.path.splitext(file_name)[0]
-
-            try:
-                user = read_user(user_id, base_path=base_path)
-                users.append(user)
-            except Exception as e:
-                print(f"Failed to read user from file {file_name}: {e}")
+    users = []
+    for file_path in base_path.glob("*.json"):
+        user_id = file_path.stem
+        try:
+            user = read_user(user_id, base_path=base_path)
+            users.append(user)
+        except Exception as e:
+            print(f"Failed to read user from file {file_path.name}: {e}")
 
     return users

@@ -11,7 +11,7 @@ def write_data(data, base_path="data/Users"):
     data = data.json_repr()
     s1 = json.dumps(data, default=serialize_datetime, indent=4)
     with file_path.open('w') as file_handle:
-        json.dump(s1, file_handle, indent=4)
+        file_handle.write(s1)
 
 
 def read_data(id: str, base_path="data/Users"):
@@ -23,6 +23,13 @@ def read_data(id: str, base_path="data/Users"):
 
     with file_path.open('r') as file_handle:
         data = json.load(file_handle, object_hook=deserialize_datetime)
+    return data
+
+
+def read_list(path):
+    path = Path(path)
+    with path.open('r') as file_handle:
+        data = json.load(file_handle)
     return data
 
 

@@ -3,7 +3,7 @@ from user.user import User, write_user_file, read_user
 
 
 def test_create_ticket():
-    ticket = Ticket("Warsaw", "Vien", 1, 1, 1, 1)
+    ticket = Ticket("Warsaw", "Vien", 1, 1, 1, 1, "10", "20")
 
     assert ticket.carriage_id == 1
     assert ticket.route_id == 1
@@ -19,7 +19,7 @@ def test_create_user():
 
 def test_write_read_user_file():
     user = User(1)
-    ticket = Ticket("Warsaw", "Vien", 1, 1, 1, 1)
+    ticket = Ticket("Warsaw", "Vien", 1, 1, 1, 1, "10", "20")
     user.add_ticket(ticket)
 
     write_user_file(user)

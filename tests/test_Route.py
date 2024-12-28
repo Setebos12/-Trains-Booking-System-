@@ -117,7 +117,7 @@ def create_simple_CarriageRoutes():
 def test_list_booked_seats():
     cr, seats_id = create_simple_CarriageRoutes()
 
-    assert cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Wrocław") == (set(seats_id), set())
+    assert cr.list_booked_and_empty_seats("Warszawa Centralna", "Wrocław") == (set(seats_id), set())
 
 
 def test_check_if_booked_is_possible():
@@ -146,9 +146,9 @@ def test_booked_seats_and_list_setas():
 
     cr.booked_seats("Warszawa Centralna", "Wrocław", '1', 123)
 
-    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Wrocław")
+    ans = cr.list_booked_and_empty_seats("Warszawa Centralna", "Wrocław")
     assert ans == ({'2', '3', '4', '5'}, {'1'})
-    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Kraków")
+    ans = cr.list_booked_and_empty_seats("Warszawa Centralna", "Kraków")
     assert ans == ({'2', '3', '4', '5'}, {'1'})
 
 
@@ -157,7 +157,7 @@ def test_booked_seats_and_list_setas_one_station():
 
     cr.booked_seats("Warszawa Centralna", "Kraków", '1', 123)
 
-    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Wrocław")
+    ans = cr.list_booked_and_empty_seats("Warszawa Centralna", "Wrocław")
     assert ans == ({'2', '3', '4', '5'}, {'1'})
-    ans = cr.list_booked_and_an_empy_seats("Warszawa Centralna", "Kraków")
+    ans = cr.list_booked_and_empty_seats("Warszawa Centralna", "Kraków")
     assert ans == ({'2', '3', '4', '5'}, {'1'})

@@ -1,11 +1,44 @@
 from train.train import Train
 from networkx import DiGraph, compose, has_path, all_simple_paths
-from train.train_files import read_all_trains
+from train.train_files import read_all_trains, write_train_file
 from datetime import timedelta
+from user.user import get_all_users, User, write_user_file
+from System.MonitorUser import MonitorUserSystem
+from user.ticket import Ticket
+
+"""System Save data to files"""
+
+
+class InvalidStationError(Exception):
+    pass
+
+
+class RouteError(Exception):
+    pass
+
 
 class System:
     def __init__(self, trains: list[Train]):
         self.trains = {train.id: train for train in trains}
+        self.create_graph_from_trains()
+        self.all_stations = self.network.nodes.keys()
+        list_user = get_all_users()
+        self.users = {user.id: user for user in list_user}
+        self.monitor_user = None
+
+    def add_user(self, user_id):
+        user = User(user_id)
+        if user.id in self.users.keys():
+            raise ValueError
+        self.users[user.id] = user
+        write_user_file(user)
+        self.monitor_user = MonitorUserSystem(user.id)
+
+    def change_current_user(self, user_id):
+        if user_id not in self.users.keys():
+            self.add_user(user_id)
+
+        self.monitor_user = MonitorUserSystem(user_id)
 
     def create_graph_from_trains(self):
         trains = read_all_trains()
@@ -14,14 +47,41 @@ class System:
             graph = add_train_to_system(graph, train)
         self.network = graph
 
-    def check_direct_connection(self, starting_station, destination_station):
-        if has_path(self.network, starting_station, destination_station) is False:
-            raise ValueError # create some error no path error
+    def check_direct_connection(self, starting_station, destination_station, time=None):
 
-        start_deparutes = self.network.nodes[starting_station]['departure'].copy()
+        if starting_station not in self.all_stations or destination_station not in self.all_stations:
+            raise InvalidStationError("Invalid starting or destination station.")
+
+        if not has_path(self.network, starting_station, destination_station):
+            raise RouteError("No path exists between the stations.")
+
+        start_departures = self.network.nodes[starting_station]['departure'].copy()
+        filtered_dict = start_departures
+
+        if time is not None:
+            filtered_dict = {key: value for key, value in start_departures.items() if value > time}
+
         destin_arrival = self.network.nodes[destination_station]['arrivals'].copy()
-        common_keys = list(get_common(start_deparutes, destin_arrival))
-        return common_keys
+
+        common_keys = get_common(filtered_dict, destin_arrival)
+        filtered_keys = common_keys.copy()
+
+        for train_id in common_keys:
+            route = self.get_train_route(train_id)
+            if not route.check_if_route_exist(starting_station, destination_station):
+                filtered_keys.remove(train_id)
+        sorted_keys = sorted(
+            filtered_keys,
+            key=lambda train_id: filtered_dict[train_id]
+        )
+
+        return list(sorted_keys)
+
+
+    def sort_keys(self, keys ,station):
+        list_of_trains = []
+        self.network.nodes[station]['departure']
+
 
     def check_no_direct_connections(self, starting_station, destination_station):
         if has_path(self.network, starting_station, destination_station) is False:
@@ -64,20 +124,63 @@ class System:
 
         return 1, deparute_time - arrival_time
 
-    def book_seat(self, starting_station, destination_station,train_id, route_id ,carriage_id, seat_id, data):
+    def book_seat(self, starting_station, destination_station, train_id, route_id ,carriage_id, seat_id, data):
         if train_id not in self.trains.keys():
             raise ValueError
 
-        self.trains[route_id].book_seat_for_route(starting_station,
+        self.trains[train_id].book_seat_for_route(starting_station,
                                                   destination_station,
                                                   carriage_id,
                                                   seat_id,
                                                   route_id,
                                                   data)
+        write_train_file(self.trains[train_id])
+
+    def remove_ticket(self, ticket: Ticket):
+        user_id = self.monitor_user.user_id
+        starting_station = ticket.start_station
+        destination_station = ticket.end_station
+        train_id = ticket.train_id
+        route_id = ticket.route_id
+        carriage_id = ticket.carriage_id
+        seat_id = ticket.seat_id
+        self.book_seat(starting_station, destination_station, train_id, route_id, carriage_id, seat_id, None)
+        self.users[user_id].remove_ticket(ticket)
+        write_user_file(self.users[user_id])
+
+    def book_seat_data(self):
+        if not self.monitor_user:
+            raise ValueError
+
+        if not self.monitor_user.check_if_all_not_none():
+            raise ValueError
+
+        user_id = self.monitor_user.user_id
+        starting_station = self.monitor_user.deparute
+        destination_station = self.monitor_user.arrival
+        train_id = self.monitor_user.train_id
+        route_id = self.monitor_user.route_id
+        carriage_id = self.monitor_user.carriage_id
+        seat_id = self.monitor_user.seat_id
+        self.book_seat(starting_station, destination_station, train_id, route_id, carriage_id, seat_id, user_id)
+        departure_time = self.trains[train_id].routes[route_id].get_departure_time(starting_station)
+        arrival_time = self.trains[train_id].routes[route_id].get_arrival_time(destination_station)
+        ticket = Ticket(starting_station, destination_station, train_id, route_id, carriage_id, seat_id, departure_time, arrival_time)
+        self.users[self.monitor_user.user_id].add_ticket(ticket)
+        write_user_file(self.users[self.monitor_user.user_id])
+
+
 
     def list_all_availabe_seats(self, starting_station, destination_station, route_id, train_id, r_data={}):
         return self.trains[train_id].list_all_availabe_seats(starting_station, destination_station, route_id, r_data)
 
+    def get_train_route(self, ids):
+        route_id, train_id = ids
+        route = self.trains[train_id].routes[route_id]
+        return route
+
+    def get_random_seat():
+        pass
 
 
 def get_common(nums1, nums2):

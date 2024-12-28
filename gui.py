@@ -1,9 +1,9 @@
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QDateEdit, QWidget, QMainWindow, QCompleter
-from PySide6.QtWidgets import QListWidgetItem, QTableWidgetItem, QTableWidget, QMessageBox, QPushButton
+from PySide6.QtWidgets import QListWidgetItem, QTableWidgetItem, QTableWidget, QMessageBox, QPushButton, QListWidget
 from PySide6.QtCore import QDate, QTime, Qt
 from ui_trains import Ui_Trains
 import sys
-from System.system import System, read_all_trains
+from System.system import System, read_all_trains, RouteError, InvalidStationError
 from datetime import datetime
 
 
@@ -53,6 +53,7 @@ class TrainWindow(QMainWindow):
         if item.ticket is None:
             return
 
+        self._clear_button()
         ticket = item.ticket
         button = QPushButton("Remove Ticket")
         button.ticket = ticket
@@ -104,12 +105,16 @@ class TrainWindow(QMainWindow):
             try:
                 info = self.system.check_direct_connection(departure, arrival, datatime_time)
                 if not len(info):
-                    raise ValueError
+                    raise ValueError(f"No Train found from {departure} to {arrival}")
                 self.ui.info.setText(str(info))
                 self.train_list(info, departure, arrival)
                 self.ui.stackedWidget.setCurrentIndex(3)
+            except RouteError as e:
+                self.ui.info.setText(f"{str(e)}")
+            except InvalidStationError as e:
+                self.ui.info.setText(f"{str(e)}")
             except ValueError as e:
-                self.ui.info.setText("abasd")
+                self.ui.info.setText(f"{str(e)}")
 
     def train_list(self, ids, departure, arrival):
         self.ui.listWidget.clear()
@@ -123,7 +128,7 @@ class TrainWindow(QMainWindow):
             )
             item = QListWidgetItem(item_text)
             item.t = item_text
-            item.route = route.routes_id
+            item.route = route.id
             item.train = self.system.trains[train_id[1]]
             self.ui.listWidget.addItem(item)
 
@@ -162,7 +167,8 @@ class TrainWindow(QMainWindow):
         self.system.monitor_user.carriage_id = item.carriage.id
         departure = self.ui.Departure.text()
         arrival = self.ui.Arrival.text()
-        seats = item.carriage.list_all_availabe_seats(departure, arrival, item.route)
+        r_data = self._get_r_data()
+        seats = item.carriage.list_all_availabe_seats(departure, arrival, item.route, r_data)
         carriage_look = item.carriage.get_carriage_look(seats)
         self.ui.SeatsLook.setRowCount(len(carriage_look))
         self.ui.SeatsLook.setColumnCount(len(carriage_look[0])) if carriage_look else 0
@@ -200,6 +206,29 @@ class TrainWindow(QMainWindow):
         completer.setCaseSensitivity(Qt.CaseInsensitive)
         self.ui.Arrival.setCompleter(completer)
         self.ui.Departure.setCompleter(completer)
+
+    def _get_r_data(self):
+        r_data = {}
+        if self.ui.corridor_middle_window.isChecked():
+            wmc = self.ui.CMW1.value()
+            r_data['window_middle_corridor'] = wmc
+
+        if self.ui.Table.isChecked():
+            table = self.ui.Table1.isChecked()
+            r_data['table'] = table
+
+        if self.ui.Compartemnts1.isChecked():
+            compartments = self.ui.Compartemnts1.isChecked()
+            r_data['compartments'] = compartments
+
+        return r_data
+
+    def _clear_button(self):
+        for i in reversed(range(self.ui.page_2.layout().count())):
+            widget = self.ui.page_2.layout().itemAt(i).widget()
+            if widget is not None and not isinstance(widget, QListWidget):
+                self.ui.page_2.layout().takeAt(i)  # Usuń widget z układu
+                widget.deleteLater()
 
 
 

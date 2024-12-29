@@ -1,11 +1,44 @@
-from PySide6.QtWidgets import QApplication, QVBoxLayout, QDateEdit, QWidget, QMainWindow, QCompleter
-from PySide6.QtWidgets import QListWidgetItem, QTableWidgetItem, QTableWidget, QMessageBox, QPushButton, QListWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter
+from PySide6.QtWidgets import QListWidgetItem, QTableWidgetItem, QPushButton
+from PySide6.QtWidgets import QListWidget
 from PySide6.QtCore import QDate, QTime, Qt
 from ui_trains import Ui_Trains
 import sys
-from System.system import System, read_all_trains, RouteError, InvalidStationError
+from System.system import System, read_all_trains
+from System.system import RouteError, InvalidStationError
 from datetime import datetime
+from io import BytesIO
+from networkx import draw_circular
+from matplotlib import pyplot as plt
+from PIL.ImageQt import ImageQt
+from PySide6.QtGui import QPixmap
+from PIL import Image
 
+
+def plot_route(route, departure_station, arrival_station):
+    G = route.routes
+
+    path = route.stations_between(departure_station, arrival_station)
+    node_colors = []
+    for node in G.nodes:
+        if node == departure_station:
+            node_colors.append("green")
+        elif node == arrival_station:
+            node_colors.append("red")
+        elif node in path:
+            node_colors.append("yellow")
+        else:
+            node_colors.append("skyblue")
+
+    plt.figure(figsize=(4.5, 4.5))
+    draw_circular(G, with_labels=True, node_color=node_colors, font_weight="bold", node_size=450, font_size=5)
+    plt.title("Routes Visualization")
+
+    buff = BytesIO()
+    plt.savefig(buff, format="png")
+    plt.close()
+    buff.seek(0)
+    return buff
 
 
 class TrainWindow(QMainWindow):
@@ -16,7 +49,7 @@ class TrainWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(2)
         self._set_data()
         self.ui.Search.clicked.connect(self._button_search)
-        self.ui.listWidget.itemClicked.connect(self._select_train)
+        self.ui.listWidget.itemDoubleClicked.connect(self._select_train)
         self.ui.Carriages.itemClicked.connect(self._select_carriage)
         self.ui.Home.clicked.connect(self._go_home)
         self.ui.SeatsLook.itemClicked.connect(self._seat_clicked)
@@ -103,10 +136,10 @@ class TrainWindow(QMainWindow):
 
         if self.ui.checkBox.isChecked():
             try:
-                info = self.system.check_direct_connection(departure, arrival, datatime_time)
+                info = self.system.check_direct_connection(
+                    departure, arrival, datatime_time)
                 if not len(info):
-                    raise ValueError(f"No Train found from {departure} to {arrival}")
-                self.ui.info.setText(str(info))
+                    raise ValueError(f"No Train from {departure} to {arrival}")
                 self.train_list(info, departure, arrival)
                 self.ui.stackedWidget.setCurrentIndex(3)
             except RouteError as e:
@@ -115,44 +148,88 @@ class TrainWindow(QMainWindow):
                 self.ui.info.setText(f"{str(e)}")
             except ValueError as e:
                 self.ui.info.setText(f"{str(e)}")
+        else:
+            try:
+                info = self.system.check_no_direct_connections(
+                    departure, arrival, datatime_time)
+                if not len(info):
+                    raise ValueError(f"No Train from {departure} to {arrival}")
+                self.no_direct_train_list(info, departure, arrival)
+                self.ui.stackedWidget.setCurrentIndex(3)
+            except RouteError as e:
+                self.ui.info.setText(f"{str(e)}")
+            except InvalidStationError as e:
+                self.ui.info.setText(f"{str(e)}")
+            except ValueError as e:
+                self.ui.info.setText(f"{str(e)}")
+
+    def no_direct_train_list(self, ids, departure, arrival):
+        self.ui.listWidget.clear()
+        for trains_info in ids:
+            train1_id = trains_info['train1']
+            train2_id = trains_info['train2']
+            transfer = trains_info['station']
+            time_wait = trains_info['time_wait']
+            transfer_info = f"Transfer at {transfer}\n time_wait {str(time_wait)[:-3]}"
+            info_item = QListWidgetItem(transfer_info)
+            info_item.setFlags(Qt.ItemFlag.NoItemFlags)
+            self.ui.listWidget.addItem(info_item)
+            self.add_train_item(train1_id, departure, transfer)
+            self.add_train_item(train2_id, transfer, arrival)
+
 
     def train_list(self, ids, departure, arrival):
         self.ui.listWidget.clear()
         for train_id in ids:
-            route = self.system.get_train_route(train_id)
+            self.add_train_item(train_id, departure, arrival)
 
-            info = route.info_route(departure, arrival)
-            item_text = (
-                f"Pociąg {train_id}: {departure} -> {arrival}\n"
-                f"{info}"
-            )
-            item = QListWidgetItem(item_text)
-            item.t = item_text
-            item.route = route.id
-            item.train = self.system.trains[train_id[1]]
-            self.ui.listWidget.addItem(item)
+    def add_train_item(self, train_id, departure, arrival):
+        route = self.system.get_train_route(train_id)
+
+        info = route.info_route(departure, arrival)
+        item_text = (
+            f"Pociąg {train_id}: {departure} -> {arrival}\n"
+            f"{info}"
+        )
+        item = QListWidgetItem(item_text)
+        item.t = item_text
+        item.route = route.id
+        item.train = self.system.trains[train_id[1]]
+        item.dep_arr = departure, arrival
+        self.ui.listWidget.addItem(item)
+
+    def display_route(self, route):
+        buffer = plot_route(route, self.system.monitor_user.deparute,
+                            self.system.monitor_user.arrival)
+        image = Image.open(buffer)
+        qt_pixmap = QPixmap.fromImage(ImageQt(image))
+
+        self.ui.labelplot.setPixmap(qt_pixmap)
 
     def _Booker(self):
         if self.selected_seat and self.selected_carriage and self.selected_train:
 
             print(f"Rezerwacja dla pociągu {self.selected_train.id}, wagonu {self.selected_carriage.id}, siedzenia {self.selected_seat.data['id']}")
             self.system.book_seat_data()
-            self._Go_ticket()
-
-        else:
-            print("Należy wybrać pociąg, wagon i siedzenie.")
-
-
+            if self.ui.checkBox.isChecked():
+                self._Go_ticket()
+            else:
+                self.ui.stackedWidget.setCurrentIndex(3)
 
     def _select_train(self, item):
+        if item.flags() == Qt.ItemFlag.NoItemFlags:
+            return
         self.ui.SeatsLook.clear()
         self.ui.summary.setText("Choose Sit My friend")
         self.selected_train = item.train
         self.route = item.route
         self.system.monitor_user.route_id = item.route
         self.system.monitor_user.train_id = item.train.id
+        self.system.monitor_user.arrival = item.dep_arr[1]
+        self.system.monitor_user.deparute = item.dep_arr[0]
         self.ui.Carriages.clear()
         self.ui.stackedWidget.setCurrentIndex(0)
+        self.display_route(self.selected_train.routes[self.system.monitor_user.route_id])
         for carriage in item.train.carriages.values():
             carriage_item = QListWidgetItem(f"Carriage {str(carriage.id)}")
             carriage_item.carriage = carriage
@@ -231,10 +308,6 @@ class TrainWindow(QMainWindow):
                 widget.deleteLater()
 
 
-
-
-
-
 def guiMain(args):
     app = QApplication(args)
     window = TrainWindow()
@@ -244,5 +317,3 @@ def guiMain(args):
 
 if __name__ == "__main__":
     guiMain(sys.argv)
-
-

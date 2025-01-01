@@ -1,5 +1,5 @@
 from Routes.Route import Route, NotDateTimeDatError
-from Routes.Routes import Routes, CarriageRoutes
+from Routes.Routes import Routes, CarriageRoutes, create_graph_from_routes
 from datetime import datetime
 import pytest
 
@@ -44,7 +44,7 @@ def test_create_Routes():
     data1 = datetime(2024, 12, 29, 21, 30)
     data2 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data1, data2, 350)
-    routes = Routes(1, [route1, route2])
+    routes = Routes(1, create_graph_from_routes([route1, route2]))
 
     assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
 
@@ -56,7 +56,7 @@ def test_path_exist():
     data1 = datetime(2024, 12, 29, 21, 30)
     data2 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data1, data2, 350)
-    routes = Routes(1, [route1, route2])
+    routes = Routes(1, create_graph_from_routes([route1, route2]))
 
     assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
     assert routes.check_if_route_exist("Warszawa Centralna", "Wrocław") is True
@@ -69,7 +69,7 @@ def test_path_weight():
     data1 = datetime(2024, 12, 29, 21, 30)
     data2 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data1, data2, 350)
-    routes = Routes(1, [route1, route2])
+    routes = Routes(1, create_graph_from_routes([route1, route2]))
 
     assert list(routes.routes.nodes()) == ['Warszawa Centralna', 'Kraków', 'Wrocław']
     assert routes.calculate_road("Warszawa Centralna", "Wrocław") == 650
@@ -82,7 +82,7 @@ def test_calculate_time():
     data11 = datetime(2024, 12, 29, 21, 30)
     data22 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data11, data22, 350)
-    routes = Routes(1, [route1, route2])
+    routes = Routes(1, create_graph_from_routes([route1, route2]))
 
     assert routes.calculate_time('Warszawa Centralna', 'Wrocław') == data11 - data2
 
@@ -95,7 +95,7 @@ def test_CarriageRoutes():
     data22 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data11, data22, 350)
     seats_id = ['1', '2', '3', '4', '5']
-    routes = Routes(1, [route1, route2])
+    routes = Routes(1, create_graph_from_routes([route1, route2]))
     carriage_routes = CarriageRoutes(1, routes, seats_id)
 
     assert carriage_routes.seats_id == seats_id
@@ -109,7 +109,7 @@ def create_simple_CarriageRoutes():
     data22 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data11, data22, 350)
     seats_id = ['1', '2', '3', '4', '5']
-    routes = Routes(1, [route1, route2])
+    routes = Routes(1, create_graph_from_routes([route1, route2]))
     carriage_routes = CarriageRoutes(1, routes, seats_id)
     return carriage_routes, seats_id
 

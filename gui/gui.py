@@ -2,8 +2,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter
 from PySide6.QtWidgets import QListWidgetItem, QTableWidgetItem, QPushButton
 from PySide6.QtWidgets import QListWidget
 from PySide6.QtCore import QDate, QTime, Qt
-from ui_trains import Ui_Trains
-import sys
+from gui.ui_trains import Ui_Trains
 from System.system import System
 from System.system import RouteError, InvalidStationError
 from datetime import datetime
@@ -309,7 +308,3 @@ def guiMain(args):
     window = TrainWindow()
     window.show()
     return app.exec()
-
-
-if __name__ == "__main__":
-    guiMain(sys.argv)

@@ -1,7 +1,8 @@
 import networkx as nx
 from matplotlib import pyplot as plt
-from get_data import get_station_data
+from get_data.get_data import get_station_data
 from System.system import System
+
 
 def draw_graph(routes):
     G = routes
@@ -22,5 +23,6 @@ def get_stations_gps(stations):
     return station_positions
 
 
-system = System()
-draw_graph(system.network)
+if __name__ == '__main__':
+    system = System()
+    draw_graph(system.network)

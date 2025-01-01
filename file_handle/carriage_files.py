@@ -2,7 +2,7 @@ from train.carriage import Cariage
 from train.Seats import Seat
 from networkx.readwrite.json_graph import node_link_graph
 from Routes.Routes import CarriageRoutes
-from file_handle import read_data, write_data
+from file_handle.file_handle import read_data, write_data
 
 
 def write_to_file_carriage(carriage: Cariage):

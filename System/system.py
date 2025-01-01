@@ -1,11 +1,11 @@
 from train.train import Train
 from networkx import DiGraph, compose, has_path, all_simple_paths
-from train.train_files import read_all_trains, write_train_file
+from file_handle.train_files import read_all_trains, write_train_file
 from datetime import timedelta
 from user.user import get_all_users, User, write_user_file
 from System.MonitorUser import MonitorUserSystem
 from user.ticket import Ticket
-from train.train_files import read_all_trains
+from file_handle.train_files import read_all_trains
 
 """System Save data to files"""
 
@@ -79,10 +79,6 @@ class System:
 
         return list(sorted_keys)
 
-    def sort_keys(self, keys ,station):
-        list_of_trains = []
-        self.network.nodes[station]['departure']
-
     def check_no_direct_connections(self, starting_station, destination_station, time=None, time_wait=None):
         if has_path(self.network, starting_station, destination_station) is False:
             raise RouteError("No path exists between the stations.")
@@ -117,7 +113,9 @@ class System:
                             path_stations.add(one_path)
 
             all_paths.extend(path_stations)
-        return set(all_paths)
+            all_paths = list(set(all_paths))
+            all_paths.sort(key=lambda path: path[3])
+        return all_paths
 
     def check_stations_correct_transfers(self, arrival_train, departure_train, station, transfer_tim=0):
         arrival_time = self.network.nodes[station]['arrivals'][arrival_train]
@@ -173,8 +171,6 @@ class System:
         ticket = Ticket(starting_station, destination_station, train_id, route_id, carriage_id, seat_id, departure_time, arrival_time)
         self.users[self.monitor_user.user_id].add_ticket(ticket)
         write_user_file(self.users[self.monitor_user.user_id])
-
-
 
     def list_all_availabe_seats(self, starting_station, destination_station, route_id, train_id, r_data={}):
         return self.trains[train_id].list_all_availabe_seats(starting_station, destination_station, route_id, r_data)

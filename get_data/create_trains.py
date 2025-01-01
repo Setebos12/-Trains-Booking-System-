@@ -1,8 +1,7 @@
 from train.train import Train
-from Routes.Routes_files import read_Route
-from train.carriage_files import read_carriage
-from train.train_files import write_train_file, read_train_file
-from train.train_files import read_all_trains
+from file_handle.Routes_files import read_Route
+from file_handle.carriage_files import read_carriage
+from file_handle.train_files import write_train_file
 from pathlib import Path
 from random import choice, sample, randint
 
@@ -35,4 +34,5 @@ def get_ids(path):
     return ids
 
 
-create_Random_trains()
+if __name__ == "__main__":
+    create_Random_trains()

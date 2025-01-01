@@ -55,8 +55,8 @@ def read_user(id: str, base_path="data/Users"):
             ticket_data['route_id'],
             ticket_data['carriage_id'],
             ticket_data['seat_id'],
-            arrival_time=ticket_data.get('arrival_time', "N/A"),
-            departure_time=ticket_data.get('departure_time', "N/A")
+            arrival_time=ticket_data['arrival_time'],
+            departure_time=ticket_data['departure_time']
         ) for ticket_data in data.get('tickets', [])
     ]
 

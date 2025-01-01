@@ -1,10 +1,10 @@
 from train.Seats import Seat
 from train.carriage import Cariage
-from Routes.Routes import Routes, SeatsinRouteBookedError
+from Routes.Routes import Routes, SeatsinRouteBookedError, create_graph_from_routes
 from Routes.Route import Route
 import pytest
 from train.train import Train
-from train.train_files import read_train_file
+from file_handle.train_files import read_train_file
 from datetime import datetime
 
 
@@ -49,7 +49,7 @@ def create_simple_CarriageRoutes():
     data11 = datetime(2024, 12, 29, 21, 30)
     data22 = datetime(2024, 12, 29, 20, 45)
     route2 = Route("Kraków", "Wrocław", data11, data22, 350)
-    carriage_routes = Routes(1, [route1, route2])
+    carriage_routes = Routes(1, create_graph_from_routes([route1, route2]))
     return carriage_routes
 
 

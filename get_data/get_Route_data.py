@@ -1,9 +1,9 @@
-from get_data import get_all_stations_info
+from get_data.get_data import get_all_stations_info
 from Routes.Route import Route
 from Routes.Routes import Routes, create_graph_from_routes
 from datetime import datetime
-from Routes.Routes_files import write_Route
-from file_handle import read_list
+from file_handle.Routes_files import write_Route
+from file_handle.file_handle import read_list
 
 
 data = read_list('data/Routes_internet_data.txt')
@@ -31,10 +31,10 @@ def get_one_train_Route(routes, id):
         arrival_time = convert_to_datetime(destination_station['arrival_time'])
         departure_time = convert_to_datetime(starting_station['departure_time'])
         route_station = Route(starting_station['station'],
-                            destination_station['station'],
-                            arrival_time,
-                            departure_time,
-                            float(starting_station['distance'])-last_distance)
+                              destination_station['station'],
+                              arrival_time,
+                              departure_time,
+                              float(starting_station['distance'])-last_distance)
         routes_statios.append(route_station)
         last_distance = float(starting_station['distance'])
     routes = Routes(id, create_graph_from_routes(routes_statios))
@@ -48,8 +48,8 @@ def write_routes(data):
         trains.append(get_one_train_Route(train, index))
         write_Route(trains[index])
 
-write_routes(data)
 
+write_routes(data)
 
 
 # look = [['.', 'S', 'S'],

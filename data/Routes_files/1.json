@@ -1,0 +1,45 @@
+{
+    "id": 1,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T13:05:00",
+                "id": "Krak\u00f3w G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T15:20:00",
+                "arrival_time": "2025-01-16T15:19:00",
+                "id": "Warszawa Zachodnia"
+            },
+            {
+                "departure_time": "2025-01-16T15:45:00",
+                "arrival_time": "2025-01-16T15:25:00",
+                "id": "Warszawa Centralna"
+            },
+            {
+                "arrival_time": "2025-01-16T15:51:00",
+                "id": "Warszawa Wschodnia"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 289.9,
+                "source": "Krak\u00f3w G\u0142\u00f3wny",
+                "target": "Warszawa Zachodnia"
+            },
+            {
+                "weight": 3.1000000000000227,
+                "source": "Warszawa Zachodnia",
+                "target": "Warszawa Centralna"
+            },
+            {
+                "weight": 4.199999999999989,
+                "source": "Warszawa Centralna",
+                "target": "Warszawa Wschodnia"
+            }
+        ]
+    }
+}

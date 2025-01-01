@@ -1,0 +1,95 @@
+{
+    "id": 0,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T06:05:00",
+                "id": "Krak\u00f3w G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T08:20:00",
+                "arrival_time": "2025-01-16T08:19:00",
+                "id": "Warszawa Zachodnia"
+            },
+            {
+                "departure_time": "2025-01-16T08:30:00",
+                "arrival_time": "2025-01-16T08:25:00",
+                "id": "Warszawa Centralna"
+            },
+            {
+                "departure_time": "2025-01-16T08:37:00",
+                "arrival_time": "2025-01-16T08:36:00",
+                "id": "Warszawa Wschodnia"
+            },
+            {
+                "departure_time": "2025-01-16T10:57:00",
+                "arrival_time": "2025-01-16T10:55:00",
+                "id": "Gda\u0144sk G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T11:02:00",
+                "arrival_time": "2025-01-16T11:01:00",
+                "id": "Gda\u0144sk Wrzeszcz"
+            },
+            {
+                "departure_time": "2025-01-16T11:07:00",
+                "arrival_time": "2025-01-16T11:06:00",
+                "id": "Gda\u0144sk Oliwa"
+            },
+            {
+                "departure_time": "2025-01-16T11:12:00",
+                "arrival_time": "2025-01-16T11:11:00",
+                "id": "Sopot"
+            },
+            {
+                "arrival_time": "2025-01-16T11:21:00",
+                "id": "Gdynia G\u0142\u00f3wna"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 289.9,
+                "source": "Krak\u00f3w G\u0142\u00f3wny",
+                "target": "Warszawa Zachodnia"
+            },
+            {
+                "weight": 3.1000000000000227,
+                "source": "Warszawa Zachodnia",
+                "target": "Warszawa Centralna"
+            },
+            {
+                "weight": 4.199999999999989,
+                "source": "Warszawa Centralna",
+                "target": "Warszawa Wschodnia"
+            },
+            {
+                "weight": 323.90000000000003,
+                "source": "Warszawa Wschodnia",
+                "target": "Gda\u0144sk G\u0142\u00f3wny"
+            },
+            {
+                "weight": 4.199999999999932,
+                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                "target": "Gda\u0144sk Wrzeszcz"
+            },
+            {
+                "weight": 3.800000000000068,
+                "source": "Gda\u0144sk Wrzeszcz",
+                "target": "Gda\u0144sk Oliwa"
+            },
+            {
+                "weight": 3.6000000000000227,
+                "source": "Gda\u0144sk Oliwa",
+                "target": "Sopot"
+            },
+            {
+                "weight": 9.399999999999977,
+                "source": "Sopot",
+                "target": "Gdynia G\u0142\u00f3wna"
+            }
+        ]
+    }
+}

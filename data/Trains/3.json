@@ -1,0 +1,1238 @@
+{
+    "id": 3,
+    "carrages": {
+        "0": {
+            "id": 0,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "9",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "10",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "11",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "12",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ],
+                [
+                    ".",
+                    "S9",
+                    "S10"
+                ],
+                [
+                    ".",
+                    "S11",
+                    "S12"
+                ]
+            ],
+            "graph": {
+                "11": {
+                    "id": 11,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T13:50:00",
+                                "id": "Przemy\u015bl G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:06:00",
+                                "arrival_time": "2025-01-16T14:05:00",
+                                "id": "Radymno"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:16:00",
+                                "arrival_time": "2025-01-16T14:15:00",
+                                "id": "Jaros\u0142aw"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:27:00",
+                                "arrival_time": "2025-01-16T14:26:00",
+                                "id": "Przeworsk"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:40:00",
+                                "arrival_time": "2025-01-16T14:39:00",
+                                "id": "\u0141a\u0144cut"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:54:00",
+                                "arrival_time": "2025-01-16T14:51:00",
+                                "id": "Rzesz\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:08:00",
+                                "arrival_time": "2025-01-16T15:07:00",
+                                "id": "S\u0119dzisz\u00f3w Ma\u0142opolski"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:15:00",
+                                "arrival_time": "2025-01-16T15:14:00",
+                                "id": "Ropczyce"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:23:00",
+                                "arrival_time": "2025-01-16T15:22:00",
+                                "id": "D\u0119bica"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:42:00",
+                                "arrival_time": "2025-01-16T15:40:00",
+                                "id": "Tarn\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:55:00",
+                                "arrival_time": "2025-01-16T15:54:00",
+                                "id": "Brzesko Okocim"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:03:00",
+                                "arrival_time": "2025-01-16T16:02:00",
+                                "id": "Bochnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:21:00",
+                                "arrival_time": "2025-01-16T16:20:00",
+                                "id": "Krak\u00f3w P\u0142asz\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:31:00",
+                                "arrival_time": "2025-01-16T16:26:00",
+                                "id": "Krak\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:49:00",
+                                "arrival_time": "2025-01-16T16:47:00",
+                                "id": "Krzeszowice"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:59:00",
+                                "arrival_time": "2025-01-16T16:57:00",
+                                "id": "Trzebinia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:09:00",
+                                "arrival_time": "2025-01-16T17:08:00",
+                                "id": "Jaworzno Szczakowa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:21:00",
+                                "arrival_time": "2025-01-16T17:18:00",
+                                "id": "Mys\u0142owice"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:40:00",
+                                "arrival_time": "2025-01-16T17:36:00",
+                                "id": "Katowice"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:55:00",
+                                "arrival_time": "2025-01-16T17:54:00",
+                                "id": "Zabrze"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:09:00",
+                                "arrival_time": "2025-01-16T18:02:00",
+                                "id": "Gliwice"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:39:00",
+                                "arrival_time": "2025-01-16T18:38:00",
+                                "id": "Strzelce Opolskie"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:02:00",
+                                "arrival_time": "2025-01-16T19:00:00",
+                                "id": "Opole G\u0142\u00f3wne"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:22:00",
+                                "arrival_time": "2025-01-16T19:21:00",
+                                "id": "Brzeg"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:31:00",
+                                "arrival_time": "2025-01-16T19:30:00",
+                                "id": "O\u0142awa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:53:00",
+                                "arrival_time": "2025-01-16T19:48:00",
+                                "id": "Wroc\u0142aw G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:09:00",
+                                "arrival_time": "2025-01-16T20:08:00",
+                                "id": "Oborniki \u015al\u0105skie"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:21:00",
+                                "arrival_time": "2025-01-16T20:20:00",
+                                "id": "\u017bmigr\u00f3d"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:31:00",
+                                "arrival_time": "2025-01-16T20:30:00",
+                                "id": "Rawicz"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:49:00",
+                                "arrival_time": "2025-01-16T20:47:00",
+                                "id": "Leszno"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:03:00",
+                                "arrival_time": "2025-01-16T21:02:00",
+                                "id": "Ko\u015bcian"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T21:26:00",
+                                "id": "Pozna\u0144 G\u0142\u00f3wny"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 21.2,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Przemy\u015bl G\u0142\u00f3wny",
+                                "target": "Radymno"
+                            },
+                            {
+                                "weight": 13.8,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Radymno",
+                                "target": "Jaros\u0142aw"
+                            },
+                            {
+                                "weight": 14.899999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Jaros\u0142aw",
+                                "target": "Przeworsk"
+                            },
+                            {
+                                "weight": 20.199999999999996,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Przeworsk",
+                                "target": "\u0141a\u0144cut"
+                            },
+                            {
+                                "weight": 16.700000000000003,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "\u0141a\u0144cut",
+                                "target": "Rzesz\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 25.700000000000003,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Rzesz\u00f3w G\u0142\u00f3wny",
+                                "target": "S\u0119dzisz\u00f3w Ma\u0142opolski"
+                            },
+                            {
+                                "weight": 8.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "S\u0119dzisz\u00f3w Ma\u0142opolski",
+                                "target": "Ropczyce"
+                            },
+                            {
+                                "weight": 13.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Ropczyce",
+                                "target": "D\u0119bica"
+                            },
+                            {
+                                "weight": 33.20000000000002,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "D\u0119bica",
+                                "target": "Tarn\u00f3w"
+                            },
+                            {
+                                "weight": 26.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Tarn\u00f3w",
+                                "target": "Brzesko Okocim"
+                            },
+                            {
+                                "weight": 12.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Brzesko Okocim",
+                                "target": "Bochnia"
+                            },
+                            {
+                                "weight": 33.89999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Bochnia",
+                                "target": "Krak\u00f3w P\u0142asz\u00f3w"
+                            },
+                            {
+                                "weight": 4.400000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Krak\u00f3w P\u0142asz\u00f3w",
+                                "target": "Krak\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 25.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Krak\u00f3w G\u0142\u00f3wny",
+                                "target": "Krzeszowice"
+                            },
+                            {
+                                "weight": 13.699999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Krzeszowice",
+                                "target": "Trzebinia"
+                            },
+                            {
+                                "weight": 15.900000000000034,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Trzebinia",
+                                "target": "Jaworzno Szczakowa"
+                            },
+                            {
+                                "weight": 12.399999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Jaworzno Szczakowa",
+                                "target": "Mys\u0142owice"
+                            },
+                            {
+                                "weight": 10.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Mys\u0142owice",
+                                "target": "Katowice"
+                            },
+                            {
+                                "weight": 18.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Katowice",
+                                "target": "Zabrze"
+                            },
+                            {
+                                "weight": 8.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Zabrze",
+                                "target": "Gliwice"
+                            },
+                            {
+                                "weight": 38.30000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gliwice",
+                                "target": "Strzelce Opolskie"
+                            },
+                            {
+                                "weight": 32.39999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Strzelce Opolskie",
+                                "target": "Opole G\u0142\u00f3wne"
+                            },
+                            {
+                                "weight": 40.10000000000002,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Opole G\u0142\u00f3wne",
+                                "target": "Brzeg"
+                            },
+                            {
+                                "weight": 15.099999999999966,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Brzeg",
+                                "target": "O\u0142awa"
+                            },
+                            {
+                                "weight": 26.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "O\u0142awa",
+                                "target": "Wroc\u0142aw G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 26.399999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Wroc\u0142aw G\u0142\u00f3wny",
+                                "target": "Oborniki \u015al\u0105skie"
+                            },
+                            {
+                                "weight": 20.700000000000045,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Oborniki \u015al\u0105skie",
+                                "target": "\u017bmigr\u00f3d"
+                            },
+                            {
+                                "weight": 16.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "\u017bmigr\u00f3d",
+                                "target": "Rawicz"
+                            },
+                            {
+                                "weight": 32.700000000000045,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Rawicz",
+                                "target": "Leszno"
+                            },
+                            {
+                                "weight": 26.899999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Leszno",
+                                "target": "Ko\u015bcian"
+                            },
+                            {
+                                "weight": 41.799999999999955,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Ko\u015bcian",
+                                "target": "Pozna\u0144 G\u0142\u00f3wny"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "11": {
+            "id": 11,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T13:50:00",
+                        "id": "Przemy\u015bl G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:06:00",
+                        "arrival_time": "2025-01-16T14:05:00",
+                        "id": "Radymno"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:16:00",
+                        "arrival_time": "2025-01-16T14:15:00",
+                        "id": "Jaros\u0142aw"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:27:00",
+                        "arrival_time": "2025-01-16T14:26:00",
+                        "id": "Przeworsk"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:40:00",
+                        "arrival_time": "2025-01-16T14:39:00",
+                        "id": "\u0141a\u0144cut"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:54:00",
+                        "arrival_time": "2025-01-16T14:51:00",
+                        "id": "Rzesz\u00f3w G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:08:00",
+                        "arrival_time": "2025-01-16T15:07:00",
+                        "id": "S\u0119dzisz\u00f3w Ma\u0142opolski"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:15:00",
+                        "arrival_time": "2025-01-16T15:14:00",
+                        "id": "Ropczyce"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:23:00",
+                        "arrival_time": "2025-01-16T15:22:00",
+                        "id": "D\u0119bica"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:42:00",
+                        "arrival_time": "2025-01-16T15:40:00",
+                        "id": "Tarn\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:55:00",
+                        "arrival_time": "2025-01-16T15:54:00",
+                        "id": "Brzesko Okocim"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:03:00",
+                        "arrival_time": "2025-01-16T16:02:00",
+                        "id": "Bochnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:21:00",
+                        "arrival_time": "2025-01-16T16:20:00",
+                        "id": "Krak\u00f3w P\u0142asz\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:31:00",
+                        "arrival_time": "2025-01-16T16:26:00",
+                        "id": "Krak\u00f3w G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:49:00",
+                        "arrival_time": "2025-01-16T16:47:00",
+                        "id": "Krzeszowice"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:59:00",
+                        "arrival_time": "2025-01-16T16:57:00",
+                        "id": "Trzebinia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:09:00",
+                        "arrival_time": "2025-01-16T17:08:00",
+                        "id": "Jaworzno Szczakowa"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:21:00",
+                        "arrival_time": "2025-01-16T17:18:00",
+                        "id": "Mys\u0142owice"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:40:00",
+                        "arrival_time": "2025-01-16T17:36:00",
+                        "id": "Katowice"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:55:00",
+                        "arrival_time": "2025-01-16T17:54:00",
+                        "id": "Zabrze"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:09:00",
+                        "arrival_time": "2025-01-16T18:02:00",
+                        "id": "Gliwice"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:39:00",
+                        "arrival_time": "2025-01-16T18:38:00",
+                        "id": "Strzelce Opolskie"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:02:00",
+                        "arrival_time": "2025-01-16T19:00:00",
+                        "id": "Opole G\u0142\u00f3wne"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:22:00",
+                        "arrival_time": "2025-01-16T19:21:00",
+                        "id": "Brzeg"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:31:00",
+                        "arrival_time": "2025-01-16T19:30:00",
+                        "id": "O\u0142awa"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:53:00",
+                        "arrival_time": "2025-01-16T19:48:00",
+                        "id": "Wroc\u0142aw G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:09:00",
+                        "arrival_time": "2025-01-16T20:08:00",
+                        "id": "Oborniki \u015al\u0105skie"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:21:00",
+                        "arrival_time": "2025-01-16T20:20:00",
+                        "id": "\u017bmigr\u00f3d"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:31:00",
+                        "arrival_time": "2025-01-16T20:30:00",
+                        "id": "Rawicz"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:49:00",
+                        "arrival_time": "2025-01-16T20:47:00",
+                        "id": "Leszno"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:03:00",
+                        "arrival_time": "2025-01-16T21:02:00",
+                        "id": "Ko\u015bcian"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T21:26:00",
+                        "id": "Pozna\u0144 G\u0142\u00f3wny"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 21.2,
+                        "source": "Przemy\u015bl G\u0142\u00f3wny",
+                        "target": "Radymno"
+                    },
+                    {
+                        "weight": 13.8,
+                        "source": "Radymno",
+                        "target": "Jaros\u0142aw"
+                    },
+                    {
+                        "weight": 14.899999999999999,
+                        "source": "Jaros\u0142aw",
+                        "target": "Przeworsk"
+                    },
+                    {
+                        "weight": 20.199999999999996,
+                        "source": "Przeworsk",
+                        "target": "\u0141a\u0144cut"
+                    },
+                    {
+                        "weight": 16.700000000000003,
+                        "source": "\u0141a\u0144cut",
+                        "target": "Rzesz\u00f3w G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 25.700000000000003,
+                        "source": "Rzesz\u00f3w G\u0142\u00f3wny",
+                        "target": "S\u0119dzisz\u00f3w Ma\u0142opolski"
+                    },
+                    {
+                        "weight": 8.099999999999994,
+                        "source": "S\u0119dzisz\u00f3w Ma\u0142opolski",
+                        "target": "Ropczyce"
+                    },
+                    {
+                        "weight": 13.099999999999994,
+                        "source": "Ropczyce",
+                        "target": "D\u0119bica"
+                    },
+                    {
+                        "weight": 33.20000000000002,
+                        "source": "D\u0119bica",
+                        "target": "Tarn\u00f3w"
+                    },
+                    {
+                        "weight": 26.5,
+                        "source": "Tarn\u00f3w",
+                        "target": "Brzesko Okocim"
+                    },
+                    {
+                        "weight": 12.900000000000006,
+                        "source": "Brzesko Okocim",
+                        "target": "Bochnia"
+                    },
+                    {
+                        "weight": 33.89999999999998,
+                        "source": "Bochnia",
+                        "target": "Krak\u00f3w P\u0142asz\u00f3w"
+                    },
+                    {
+                        "weight": 4.400000000000006,
+                        "source": "Krak\u00f3w P\u0142asz\u00f3w",
+                        "target": "Krak\u00f3w G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 25.099999999999994,
+                        "source": "Krak\u00f3w G\u0142\u00f3wny",
+                        "target": "Krzeszowice"
+                    },
+                    {
+                        "weight": 13.699999999999989,
+                        "source": "Krzeszowice",
+                        "target": "Trzebinia"
+                    },
+                    {
+                        "weight": 15.900000000000034,
+                        "source": "Trzebinia",
+                        "target": "Jaworzno Szczakowa"
+                    },
+                    {
+                        "weight": 12.399999999999977,
+                        "source": "Jaworzno Szczakowa",
+                        "target": "Mys\u0142owice"
+                    },
+                    {
+                        "weight": 10.100000000000023,
+                        "source": "Mys\u0142owice",
+                        "target": "Katowice"
+                    },
+                    {
+                        "weight": 18.5,
+                        "source": "Katowice",
+                        "target": "Zabrze"
+                    },
+                    {
+                        "weight": 8.199999999999989,
+                        "source": "Zabrze",
+                        "target": "Gliwice"
+                    },
+                    {
+                        "weight": 38.30000000000001,
+                        "source": "Gliwice",
+                        "target": "Strzelce Opolskie"
+                    },
+                    {
+                        "weight": 32.39999999999998,
+                        "source": "Strzelce Opolskie",
+                        "target": "Opole G\u0142\u00f3wne"
+                    },
+                    {
+                        "weight": 40.10000000000002,
+                        "source": "Opole G\u0142\u00f3wne",
+                        "target": "Brzeg"
+                    },
+                    {
+                        "weight": 15.099999999999966,
+                        "source": "Brzeg",
+                        "target": "O\u0142awa"
+                    },
+                    {
+                        "weight": 26.5,
+                        "source": "O\u0142awa",
+                        "target": "Wroc\u0142aw G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 26.399999999999977,
+                        "source": "Wroc\u0142aw G\u0142\u00f3wny",
+                        "target": "Oborniki \u015al\u0105skie"
+                    },
+                    {
+                        "weight": 20.700000000000045,
+                        "source": "Oborniki \u015al\u0105skie",
+                        "target": "\u017bmigr\u00f3d"
+                    },
+                    {
+                        "weight": 16.0,
+                        "source": "\u017bmigr\u00f3d",
+                        "target": "Rawicz"
+                    },
+                    {
+                        "weight": 32.700000000000045,
+                        "source": "Rawicz",
+                        "target": "Leszno"
+                    },
+                    {
+                        "weight": 26.899999999999977,
+                        "source": "Leszno",
+                        "target": "Ko\u015bcian"
+                    },
+                    {
+                        "weight": 41.799999999999955,
+                        "source": "Ko\u015bcian",
+                        "target": "Pozna\u0144 G\u0142\u00f3wny"
+                    }
+                ]
+            }
+        }
+    }
+}

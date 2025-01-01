@@ -1,0 +1,245 @@
+{
+    "id": 6,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T14:51:00",
+                "id": "Jelenia G\u00f3ra"
+            },
+            {
+                "departure_time": "2025-01-16T15:17:00",
+                "arrival_time": "2025-01-16T15:16:00",
+                "id": "S\u0119dzis\u0142aw"
+            },
+            {
+                "departure_time": "2025-01-16T15:36:00",
+                "arrival_time": "2025-01-16T15:34:00",
+                "id": "Wa\u0142brzych G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T15:49:00",
+                "arrival_time": "2025-01-16T15:48:00",
+                "id": "Wa\u0142brzych Miasto"
+            },
+            {
+                "departure_time": "2025-01-16T16:02:00",
+                "arrival_time": "2025-01-16T16:01:00",
+                "id": "\u015awiebodzice"
+            },
+            {
+                "departure_time": "2025-01-16T16:10:00",
+                "arrival_time": "2025-01-16T16:09:00",
+                "id": "Jaworzyna \u015al\u0105ska"
+            },
+            {
+                "departure_time": "2025-01-16T17:02:00",
+                "arrival_time": "2025-01-16T16:42:00",
+                "id": "Wroc\u0142aw G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T17:18:00",
+                "arrival_time": "2025-01-16T17:17:00",
+                "id": "Oborniki \u015al\u0105skie"
+            },
+            {
+                "departure_time": "2025-01-16T17:30:00",
+                "arrival_time": "2025-01-16T17:29:00",
+                "id": "\u017bmigr\u00f3d"
+            },
+            {
+                "departure_time": "2025-01-16T17:40:00",
+                "arrival_time": "2025-01-16T17:39:00",
+                "id": "Rawicz"
+            },
+            {
+                "departure_time": "2025-01-16T17:57:00",
+                "arrival_time": "2025-01-16T17:56:00",
+                "id": "Leszno"
+            },
+            {
+                "departure_time": "2025-01-16T18:12:00",
+                "arrival_time": "2025-01-16T18:11:00",
+                "id": "Ko\u015bcian"
+            },
+            {
+                "departure_time": "2025-01-16T18:40:00",
+                "arrival_time": "2025-01-16T18:35:00",
+                "id": "Pozna\u0144 G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T19:07:00",
+                "arrival_time": "2025-01-16T19:06:00",
+                "id": "Gniezno"
+            },
+            {
+                "departure_time": "2025-01-16T19:24:00",
+                "arrival_time": "2025-01-16T19:23:00",
+                "id": "Mogilno"
+            },
+            {
+                "departure_time": "2025-01-16T19:41:00",
+                "arrival_time": "2025-01-16T19:40:00",
+                "id": "Inowroc\u0142aw"
+            },
+            {
+                "departure_time": "2025-01-16T20:12:00",
+                "arrival_time": "2025-01-16T20:09:00",
+                "id": "Bydgoszcz G\u0142\u00f3wna"
+            },
+            {
+                "departure_time": "2025-01-16T20:43:00",
+                "arrival_time": "2025-01-16T20:42:00",
+                "id": "Laskowice Pomorskie"
+            },
+            {
+                "departure_time": "2025-01-16T21:24:00",
+                "arrival_time": "2025-01-16T21:23:00",
+                "id": "Tczew"
+            },
+            {
+                "departure_time": "2025-01-16T21:44:00",
+                "arrival_time": "2025-01-16T21:41:00",
+                "id": "Gda\u0144sk G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T21:49:00",
+                "arrival_time": "2025-01-16T21:48:00",
+                "id": "Gda\u0144sk Wrzeszcz"
+            },
+            {
+                "departure_time": "2025-01-16T21:53:00",
+                "arrival_time": "2025-01-16T21:52:00",
+                "id": "Gda\u0144sk Oliwa"
+            },
+            {
+                "departure_time": "2025-01-16T21:59:00",
+                "arrival_time": "2025-01-16T21:57:00",
+                "id": "Sopot"
+            },
+            {
+                "arrival_time": "2025-01-16T22:08:00",
+                "id": "Gdynia G\u0142\u00f3wna"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 27.0,
+                "source": "Jelenia G\u00f3ra",
+                "target": "S\u0119dzis\u0142aw"
+            },
+            {
+                "weight": 19.9,
+                "source": "S\u0119dzis\u0142aw",
+                "target": "Wa\u0142brzych G\u0142\u00f3wny"
+            },
+            {
+                "weight": 9.100000000000001,
+                "source": "Wa\u0142brzych G\u0142\u00f3wny",
+                "target": "Wa\u0142brzych Miasto"
+            },
+            {
+                "weight": 12.299999999999997,
+                "source": "Wa\u0142brzych Miasto",
+                "target": "\u015awiebodzice"
+            },
+            {
+                "weight": 9.400000000000006,
+                "source": "\u015awiebodzice",
+                "target": "Jaworzyna \u015al\u0105ska"
+            },
+            {
+                "weight": 49.3,
+                "source": "Jaworzyna \u015al\u0105ska",
+                "target": "Wroc\u0142aw G\u0142\u00f3wny"
+            },
+            {
+                "weight": 26.400000000000006,
+                "source": "Wroc\u0142aw G\u0142\u00f3wny",
+                "target": "Oborniki \u015al\u0105skie"
+            },
+            {
+                "weight": 20.799999999999983,
+                "source": "Oborniki \u015al\u0105skie",
+                "target": "\u017bmigr\u00f3d"
+            },
+            {
+                "weight": 15.900000000000006,
+                "source": "\u017bmigr\u00f3d",
+                "target": "Rawicz"
+            },
+            {
+                "weight": 32.70000000000002,
+                "source": "Rawicz",
+                "target": "Leszno"
+            },
+            {
+                "weight": 26.899999999999977,
+                "source": "Leszno",
+                "target": "Ko\u015bcian"
+            },
+            {
+                "weight": 41.80000000000001,
+                "source": "Ko\u015bcian",
+                "target": "Pozna\u0144 G\u0142\u00f3wny"
+            },
+            {
+                "weight": 50.30000000000001,
+                "source": "Pozna\u0144 G\u0142\u00f3wny",
+                "target": "Gniezno"
+            },
+            {
+                "weight": 29.69999999999999,
+                "source": "Gniezno",
+                "target": "Mogilno"
+            },
+            {
+                "weight": 26.600000000000023,
+                "source": "Mogilno",
+                "target": "Inowroc\u0142aw"
+            },
+            {
+                "weight": 45.39999999999998,
+                "source": "Inowroc\u0142aw",
+                "target": "Bydgoszcz G\u0142\u00f3wna"
+            },
+            {
+                "weight": 52.19999999999999,
+                "source": "Bydgoszcz G\u0142\u00f3wna",
+                "target": "Laskowice Pomorskie"
+            },
+            {
+                "weight": 75.59999999999997,
+                "source": "Laskowice Pomorskie",
+                "target": "Tczew"
+            },
+            {
+                "weight": 31.90000000000009,
+                "source": "Tczew",
+                "target": "Gda\u0144sk G\u0142\u00f3wny"
+            },
+            {
+                "weight": 4.199999999999932,
+                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                "target": "Gda\u0144sk Wrzeszcz"
+            },
+            {
+                "weight": 3.800000000000068,
+                "source": "Gda\u0144sk Wrzeszcz",
+                "target": "Gda\u0144sk Oliwa"
+            },
+            {
+                "weight": 3.599999999999909,
+                "source": "Gda\u0144sk Oliwa",
+                "target": "Sopot"
+            },
+            {
+                "weight": 9.400000000000091,
+                "source": "Sopot",
+                "target": "Gdynia G\u0142\u00f3wna"
+            }
+        ]
+    }
+}

@@ -1,0 +1,830 @@
+{
+    "id": 13,
+    "carrages": {
+        "0": {
+            "id": 0,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "9",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "10",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "11",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "12",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ],
+                [
+                    ".",
+                    "S9",
+                    "S10"
+                ],
+                [
+                    ".",
+                    "S11",
+                    "S12"
+                ]
+            ],
+            "graph": {
+                "5": {
+                    "id": 5,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T17:35:00",
+                                "id": "Rzesz\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:47:00",
+                                "arrival_time": "2025-01-16T17:46:00",
+                                "id": "\u0141a\u0144cut"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:20:00",
+                                "arrival_time": "2025-01-16T18:19:00",
+                                "id": "Le\u017cajsk"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:28:00",
+                                "arrival_time": "2025-01-16T18:27:00",
+                                "id": "Nowa Sarzyna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:42:00",
+                                "arrival_time": "2025-01-16T18:41:00",
+                                "id": "Rudnik nad Sanem"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:55:00",
+                                "arrival_time": "2025-01-16T18:54:00",
+                                "id": "Nisko"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:02:00",
+                                "arrival_time": "2025-01-16T19:01:00",
+                                "id": "Stalowa Wola Centrum"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:06:00",
+                                "arrival_time": "2025-01-16T19:05:00",
+                                "id": "Stalowa Wola Rozwad\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:24:00",
+                                "arrival_time": "2025-01-16T19:23:00",
+                                "id": "Zaklik\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:47:00",
+                                "arrival_time": "2025-01-16T19:46:00",
+                                "id": "Kra\u015bnik"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:34:00",
+                                "arrival_time": "2025-01-16T20:14:00",
+                                "id": "Lublin G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:40:00",
+                                "arrival_time": "2025-01-16T20:39:00",
+                                "id": "Lublin Zachodni"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:53:00",
+                                "arrival_time": "2025-01-16T20:52:00",
+                                "id": "Na\u0142\u0119cz\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:04:00",
+                                "arrival_time": "2025-01-16T21:03:00",
+                                "id": "Pu\u0142awy Miasto"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:16:00",
+                                "arrival_time": "2025-01-16T21:15:00",
+                                "id": "D\u0119blin"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:39:00",
+                                "arrival_time": "2025-01-16T21:38:00",
+                                "id": "Pilawa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:52:00",
+                                "arrival_time": "2025-01-16T21:51:00",
+                                "id": "Otwock"
+                            },
+                            {
+                                "departure_time": "2025-01-16T22:14:00",
+                                "arrival_time": "2025-01-16T22:11:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T22:30:00",
+                                "arrival_time": "2025-01-16T22:20:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T22:34:00",
+                                "id": "Warszawa Zachodnia"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 16.7,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Rzesz\u00f3w G\u0142\u00f3wny",
+                                "target": "\u0141a\u0144cut"
+                            },
+                            {
+                                "weight": 44.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "\u0141a\u0144cut",
+                                "target": "Le\u017cajsk"
+                            },
+                            {
+                                "weight": 8.499999999999993,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Le\u017cajsk",
+                                "target": "Nowa Sarzyna"
+                            },
+                            {
+                                "weight": 16.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Nowa Sarzyna",
+                                "target": "Rudnik nad Sanem"
+                            },
+                            {
+                                "weight": 11.800000000000011,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Rudnik nad Sanem",
+                                "target": "Nisko"
+                            },
+                            {
+                                "weight": 9.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Nisko",
+                                "target": "Stalowa Wola Centrum"
+                            },
+                            {
+                                "weight": 2.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Stalowa Wola Centrum",
+                                "target": "Stalowa Wola Rozwad\u00f3w"
+                            },
+                            {
+                                "weight": 23.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Stalowa Wola Rozwad\u00f3w",
+                                "target": "Zaklik\u00f3w"
+                            },
+                            {
+                                "weight": 34.69999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Zaklik\u00f3w",
+                                "target": "Kra\u015bnik"
+                            },
+                            {
+                                "weight": 44.10000000000002,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Kra\u015bnik",
+                                "target": "Lublin G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 4.599999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Lublin G\u0142\u00f3wny",
+                                "target": "Lublin Zachodni"
+                            },
+                            {
+                                "weight": 25.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Lublin Zachodni",
+                                "target": "Na\u0142\u0119cz\u00f3w"
+                            },
+                            {
+                                "weight": 21.19999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Na\u0142\u0119cz\u00f3w",
+                                "target": "Pu\u0142awy Miasto"
+                            },
+                            {
+                                "weight": 20.69999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Pu\u0142awy Miasto",
+                                "target": "D\u0119blin"
+                            },
+                            {
+                                "weight": 48.900000000000034,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "D\u0119blin",
+                                "target": "Pilawa"
+                            },
+                            {
+                                "weight": 26.80000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Pilawa",
+                                "target": "Otwock"
+                            },
+                            {
+                                "weight": 24.099999999999966,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Otwock",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 4.300000000000011,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 3.1000000000000227,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Zachodnia"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "5": {
+            "id": 5,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T17:35:00",
+                        "id": "Rzesz\u00f3w G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:47:00",
+                        "arrival_time": "2025-01-16T17:46:00",
+                        "id": "\u0141a\u0144cut"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:20:00",
+                        "arrival_time": "2025-01-16T18:19:00",
+                        "id": "Le\u017cajsk"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:28:00",
+                        "arrival_time": "2025-01-16T18:27:00",
+                        "id": "Nowa Sarzyna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:42:00",
+                        "arrival_time": "2025-01-16T18:41:00",
+                        "id": "Rudnik nad Sanem"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:55:00",
+                        "arrival_time": "2025-01-16T18:54:00",
+                        "id": "Nisko"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:02:00",
+                        "arrival_time": "2025-01-16T19:01:00",
+                        "id": "Stalowa Wola Centrum"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:06:00",
+                        "arrival_time": "2025-01-16T19:05:00",
+                        "id": "Stalowa Wola Rozwad\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:24:00",
+                        "arrival_time": "2025-01-16T19:23:00",
+                        "id": "Zaklik\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:47:00",
+                        "arrival_time": "2025-01-16T19:46:00",
+                        "id": "Kra\u015bnik"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:34:00",
+                        "arrival_time": "2025-01-16T20:14:00",
+                        "id": "Lublin G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:40:00",
+                        "arrival_time": "2025-01-16T20:39:00",
+                        "id": "Lublin Zachodni"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:53:00",
+                        "arrival_time": "2025-01-16T20:52:00",
+                        "id": "Na\u0142\u0119cz\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:04:00",
+                        "arrival_time": "2025-01-16T21:03:00",
+                        "id": "Pu\u0142awy Miasto"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:16:00",
+                        "arrival_time": "2025-01-16T21:15:00",
+                        "id": "D\u0119blin"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:39:00",
+                        "arrival_time": "2025-01-16T21:38:00",
+                        "id": "Pilawa"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:52:00",
+                        "arrival_time": "2025-01-16T21:51:00",
+                        "id": "Otwock"
+                    },
+                    {
+                        "departure_time": "2025-01-16T22:14:00",
+                        "arrival_time": "2025-01-16T22:11:00",
+                        "id": "Warszawa Wschodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T22:30:00",
+                        "arrival_time": "2025-01-16T22:20:00",
+                        "id": "Warszawa Centralna"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T22:34:00",
+                        "id": "Warszawa Zachodnia"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 16.7,
+                        "source": "Rzesz\u00f3w G\u0142\u00f3wny",
+                        "target": "\u0141a\u0144cut"
+                    },
+                    {
+                        "weight": 44.900000000000006,
+                        "source": "\u0141a\u0144cut",
+                        "target": "Le\u017cajsk"
+                    },
+                    {
+                        "weight": 8.499999999999993,
+                        "source": "Le\u017cajsk",
+                        "target": "Nowa Sarzyna"
+                    },
+                    {
+                        "weight": 16.5,
+                        "source": "Nowa Sarzyna",
+                        "target": "Rudnik nad Sanem"
+                    },
+                    {
+                        "weight": 11.800000000000011,
+                        "source": "Rudnik nad Sanem",
+                        "target": "Nisko"
+                    },
+                    {
+                        "weight": 9.199999999999989,
+                        "source": "Nisko",
+                        "target": "Stalowa Wola Centrum"
+                    },
+                    {
+                        "weight": 2.5,
+                        "source": "Stalowa Wola Centrum",
+                        "target": "Stalowa Wola Rozwad\u00f3w"
+                    },
+                    {
+                        "weight": 23.900000000000006,
+                        "source": "Stalowa Wola Rozwad\u00f3w",
+                        "target": "Zaklik\u00f3w"
+                    },
+                    {
+                        "weight": 34.69999999999999,
+                        "source": "Zaklik\u00f3w",
+                        "target": "Kra\u015bnik"
+                    },
+                    {
+                        "weight": 44.10000000000002,
+                        "source": "Kra\u015bnik",
+                        "target": "Lublin G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 4.599999999999994,
+                        "source": "Lublin G\u0142\u00f3wny",
+                        "target": "Lublin Zachodni"
+                    },
+                    {
+                        "weight": 25.099999999999994,
+                        "source": "Lublin Zachodni",
+                        "target": "Na\u0142\u0119cz\u00f3w"
+                    },
+                    {
+                        "weight": 21.19999999999999,
+                        "source": "Na\u0142\u0119cz\u00f3w",
+                        "target": "Pu\u0142awy Miasto"
+                    },
+                    {
+                        "weight": 20.69999999999999,
+                        "source": "Pu\u0142awy Miasto",
+                        "target": "D\u0119blin"
+                    },
+                    {
+                        "weight": 48.900000000000034,
+                        "source": "D\u0119blin",
+                        "target": "Pilawa"
+                    },
+                    {
+                        "weight": 26.80000000000001,
+                        "source": "Pilawa",
+                        "target": "Otwock"
+                    },
+                    {
+                        "weight": 24.099999999999966,
+                        "source": "Otwock",
+                        "target": "Warszawa Wschodnia"
+                    },
+                    {
+                        "weight": 4.300000000000011,
+                        "source": "Warszawa Wschodnia",
+                        "target": "Warszawa Centralna"
+                    },
+                    {
+                        "weight": 3.1000000000000227,
+                        "source": "Warszawa Centralna",
+                        "target": "Warszawa Zachodnia"
+                    }
+                ]
+            }
+        }
+    }
+}

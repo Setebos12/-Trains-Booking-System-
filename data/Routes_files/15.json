@@ -1,0 +1,335 @@
+{
+    "id": 15,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T13:02:00",
+                "id": "Katowice"
+            },
+            {
+                "departure_time": "2025-01-16T13:16:00",
+                "arrival_time": "2025-01-16T13:15:00",
+                "id": "Sosnowiec G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T13:27:00",
+                "arrival_time": "2025-01-16T13:27:00",
+                "id": "B\u0119dzin Miasto"
+            },
+            {
+                "departure_time": "2025-01-16T13:34:00",
+                "arrival_time": "2025-01-16T13:31:00",
+                "id": "D\u0105browa G\u00f3rnicza"
+            },
+            {
+                "departure_time": "2025-01-16T14:00:00",
+                "arrival_time": "2025-01-16T13:49:00",
+                "id": "Zawiercie"
+            },
+            {
+                "departure_time": "2025-01-16T14:10:00",
+                "arrival_time": "2025-01-16T14:07:00",
+                "id": "Myszk\u00f3w"
+            },
+            {
+                "departure_time": "2025-01-16T14:28:00",
+                "arrival_time": "2025-01-16T14:25:00",
+                "id": "Cz\u0119stochowa"
+            },
+            {
+                "departure_time": "2025-01-16T14:54:00",
+                "arrival_time": "2025-01-16T14:53:00",
+                "id": "Radomsko"
+            },
+            {
+                "departure_time": "2025-01-16T15:21:00",
+                "arrival_time": "2025-01-16T15:19:00",
+                "id": "Piotrk\u00f3w Trybunalski"
+            },
+            {
+                "departure_time": "2025-01-16T15:58:00",
+                "arrival_time": "2025-01-16T15:56:00",
+                "id": "\u0141\u00f3d\u017a Widzew"
+            },
+            {
+                "departure_time": "2025-01-16T16:06:00",
+                "arrival_time": "2025-01-16T16:04:00",
+                "id": "\u0141\u00f3d\u017a Chojny"
+            },
+            {
+                "departure_time": "2025-01-16T16:14:00",
+                "arrival_time": "2025-01-16T16:12:00",
+                "id": "\u0141\u00f3d\u017a Kaliska"
+            },
+            {
+                "departure_time": "2025-01-16T16:20:00",
+                "arrival_time": "2025-01-16T16:19:00",
+                "id": "\u0141\u00f3d\u017a \u017babieniec"
+            },
+            {
+                "departure_time": "2025-01-16T16:26:00",
+                "arrival_time": "2025-01-16T16:25:00",
+                "id": "Zgierz"
+            },
+            {
+                "departure_time": "2025-01-16T16:45:00",
+                "arrival_time": "2025-01-16T16:45:00",
+                "id": "Ozork\u00f3w"
+            },
+            {
+                "departure_time": "2025-01-16T16:53:00",
+                "arrival_time": "2025-01-16T16:52:00",
+                "id": "\u0141\u0119czyca"
+            },
+            {
+                "departure_time": "2025-01-16T17:19:00",
+                "arrival_time": "2025-01-16T17:18:00",
+                "id": "Kutno"
+            },
+            {
+                "departure_time": "2025-01-16T17:50:00",
+                "arrival_time": "2025-01-16T17:49:00",
+                "id": "W\u0142oc\u0142awek"
+            },
+            {
+                "departure_time": "2025-01-16T18:09:00",
+                "arrival_time": "2025-01-16T18:09:00",
+                "id": "Aleksandr\u00f3w Kujawski"
+            },
+            {
+                "departure_time": "2025-01-16T18:24:00",
+                "arrival_time": "2025-01-16T18:22:00",
+                "id": "Toru\u0144 G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T18:43:00",
+                "arrival_time": "2025-01-16T18:42:00",
+                "id": "Solec Kujawski"
+            },
+            {
+                "departure_time": "2025-01-16T18:51:00",
+                "arrival_time": "2025-01-16T18:51:00",
+                "id": "Bydgoszcz Wsch\u00f3d"
+            },
+            {
+                "departure_time": "2025-01-16T18:56:00",
+                "arrival_time": "2025-01-16T18:55:00",
+                "id": "Bydgoszcz Le\u015bna"
+            },
+            {
+                "departure_time": "2025-01-16T19:10:00",
+                "arrival_time": "2025-01-16T19:01:00",
+                "id": "Bydgoszcz G\u0142\u00f3wna"
+            },
+            {
+                "departure_time": "2025-01-16T19:38:00",
+                "arrival_time": "2025-01-16T19:37:00",
+                "id": "Laskowice Pomorskie"
+            },
+            {
+                "departure_time": "2025-01-16T19:55:00",
+                "arrival_time": "2025-01-16T19:55:00",
+                "id": "Sm\u0119towo"
+            },
+            {
+                "departure_time": "2025-01-16T20:19:00",
+                "arrival_time": "2025-01-16T20:18:00",
+                "id": "Tczew"
+            },
+            {
+                "departure_time": "2025-01-16T20:30:00",
+                "arrival_time": "2025-01-16T20:29:00",
+                "id": "Pruszcz Gda\u0144ski"
+            },
+            {
+                "departure_time": "2025-01-16T20:39:00",
+                "arrival_time": "2025-01-16T20:36:00",
+                "id": "Gda\u0144sk G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T20:44:00",
+                "arrival_time": "2025-01-16T20:43:00",
+                "id": "Gda\u0144sk Wrzeszcz"
+            },
+            {
+                "departure_time": "2025-01-16T20:49:00",
+                "arrival_time": "2025-01-16T20:48:00",
+                "id": "Gda\u0144sk Oliwa"
+            },
+            {
+                "departure_time": "2025-01-16T20:53:00",
+                "arrival_time": "2025-01-16T20:52:00",
+                "id": "Sopot"
+            },
+            {
+                "arrival_time": "2025-01-16T21:02:00",
+                "id": "Gdynia G\u0142\u00f3wna"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 8.8,
+                "source": "Katowice",
+                "target": "Sosnowiec G\u0142\u00f3wny"
+            },
+            {
+                "weight": 5.199999999999999,
+                "source": "Sosnowiec G\u0142\u00f3wny",
+                "target": "B\u0119dzin Miasto"
+            },
+            {
+                "weight": 4.100000000000001,
+                "source": "B\u0119dzin Miasto",
+                "target": "D\u0105browa G\u00f3rnicza"
+            },
+            {
+                "weight": 26.1,
+                "source": "D\u0105browa G\u00f3rnicza",
+                "target": "Zawiercie"
+            },
+            {
+                "weight": 13.199999999999996,
+                "source": "Zawiercie",
+                "target": "Myszk\u00f3w"
+            },
+            {
+                "weight": 31.300000000000004,
+                "source": "Myszk\u00f3w",
+                "target": "Cz\u0119stochowa"
+            },
+            {
+                "weight": 40.60000000000001,
+                "source": "Cz\u0119stochowa",
+                "target": "Radomsko"
+            },
+            {
+                "weight": 44.89999999999998,
+                "source": "Radomsko",
+                "target": "Piotrk\u00f3w Trybunalski"
+            },
+            {
+                "weight": 57.400000000000006,
+                "source": "Piotrk\u00f3w Trybunalski",
+                "target": "\u0141\u00f3d\u017a Widzew"
+            },
+            {
+                "weight": 7.599999999999994,
+                "source": "\u0141\u00f3d\u017a Widzew",
+                "target": "\u0141\u00f3d\u017a Chojny"
+            },
+            {
+                "weight": 7.0,
+                "source": "\u0141\u00f3d\u017a Chojny",
+                "target": "\u0141\u00f3d\u017a Kaliska"
+            },
+            {
+                "weight": 4.200000000000017,
+                "source": "\u0141\u00f3d\u017a Kaliska",
+                "target": "\u0141\u00f3d\u017a \u017babieniec"
+            },
+            {
+                "weight": 6.599999999999994,
+                "source": "\u0141\u00f3d\u017a \u017babieniec",
+                "target": "Zgierz"
+            },
+            {
+                "weight": 22.69999999999999,
+                "source": "Zgierz",
+                "target": "Ozork\u00f3w"
+            },
+            {
+                "weight": 10.0,
+                "source": "Ozork\u00f3w",
+                "target": "\u0141\u0119czyca"
+            },
+            {
+                "weight": 24.600000000000023,
+                "source": "\u0141\u0119czyca",
+                "target": "Kutno"
+            },
+            {
+                "weight": 54.80000000000001,
+                "source": "Kutno",
+                "target": "W\u0142oc\u0142awek"
+            },
+            {
+                "weight": 36.89999999999998,
+                "source": "W\u0142oc\u0142awek",
+                "target": "Aleksandr\u00f3w Kujawski"
+            },
+            {
+                "weight": 17.30000000000001,
+                "source": "Aleksandr\u00f3w Kujawski",
+                "target": "Toru\u0144 G\u0142\u00f3wny"
+            },
+            {
+                "weight": 29.69999999999999,
+                "source": "Toru\u0144 G\u0142\u00f3wny",
+                "target": "Solec Kujawski"
+            },
+            {
+                "weight": 13.600000000000023,
+                "source": "Solec Kujawski",
+                "target": "Bydgoszcz Wsch\u00f3d"
+            },
+            {
+                "weight": 4.0,
+                "source": "Bydgoszcz Wsch\u00f3d",
+                "target": "Bydgoszcz Le\u015bna"
+            },
+            {
+                "weight": 3.6999999999999886,
+                "source": "Bydgoszcz Le\u015bna",
+                "target": "Bydgoszcz G\u0142\u00f3wna"
+            },
+            {
+                "weight": 52.30000000000001,
+                "source": "Bydgoszcz G\u0142\u00f3wna",
+                "target": "Laskowice Pomorskie"
+            },
+            {
+                "weight": 34.69999999999993,
+                "source": "Laskowice Pomorskie",
+                "target": "Sm\u0119towo"
+            },
+            {
+                "weight": 40.90000000000009,
+                "source": "Sm\u0119towo",
+                "target": "Tczew"
+            },
+            {
+                "weight": 20.899999999999977,
+                "source": "Tczew",
+                "target": "Pruszcz Gda\u0144ski"
+            },
+            {
+                "weight": 11.0,
+                "source": "Pruszcz Gda\u0144ski",
+                "target": "Gda\u0144sk G\u0142\u00f3wny"
+            },
+            {
+                "weight": 4.100000000000023,
+                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                "target": "Gda\u0144sk Wrzeszcz"
+            },
+            {
+                "weight": 3.8999999999999773,
+                "source": "Gda\u0144sk Wrzeszcz",
+                "target": "Gda\u0144sk Oliwa"
+            },
+            {
+                "weight": 3.6000000000000227,
+                "source": "Gda\u0144sk Oliwa",
+                "target": "Sopot"
+            },
+            {
+                "weight": 9.299999999999955,
+                "source": "Sopot",
+                "target": "Gdynia G\u0142\u00f3wna"
+            }
+        ]
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "id": 1,
+    "seats": [
+        {
+            "id": "1",
+            "compartments": true,
+            "window_middle_corridor": 2,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "2",
+            "compartments": true,
+            "window_middle_corridor": 0,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "3",
+            "compartments": true,
+            "window_middle_corridor": 2,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "4",
+            "compartments": true,
+            "window_middle_corridor": 0,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "5",
+            "compartments": true,
+            "window_middle_corridor": 2,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "6",
+            "compartments": true,
+            "window_middle_corridor": 0,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "7",
+            "compartments": true,
+            "window_middle_corridor": 2,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        },
+        {
+            "id": "8",
+            "compartments": true,
+            "window_middle_corridor": 0,
+            "table": true,
+            "bike": false,
+            "pregnat": false,
+            "invalid": false
+        }
+    ],
+    "carriage_look": [
+        [
+            ".",
+            "S1",
+            "S2"
+        ],
+        [
+            ".",
+            "T",
+            "T"
+        ],
+        [
+            ".",
+            "S3",
+            "S4"
+        ],
+        [
+            ".",
+            "S5",
+            "S6"
+        ],
+        [
+            ".",
+            "T",
+            "T"
+        ],
+        [
+            ".",
+            "S7",
+            "S8"
+        ]
+    ],
+    "graph": {}
+}

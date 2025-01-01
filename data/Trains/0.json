@@ -1,0 +1,748 @@
+{
+    "id": 0,
+    "carrages": {
+        "1": {
+            "id": 1,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ]
+            ],
+            "graph": {
+                "4": {
+                    "id": 4,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T16:34:00",
+                                "id": "Bydgoszcz G\u0142\u00f3wna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:39:00",
+                                "arrival_time": "2025-01-16T16:38:00",
+                                "id": "Bydgoszcz Le\u015bna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:43:00",
+                                "arrival_time": "2025-01-16T16:42:00",
+                                "id": "Bydgoszcz Wsch\u00f3d"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:52:00",
+                                "arrival_time": "2025-01-16T16:51:00",
+                                "id": "Solec Kujawski"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:15:00",
+                                "arrival_time": "2025-01-16T17:10:00",
+                                "id": "Toru\u0144 G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:27:00",
+                                "arrival_time": "2025-01-16T17:26:00",
+                                "id": "Aleksandr\u00f3w Kujawski"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:48:00",
+                                "arrival_time": "2025-01-16T17:47:00",
+                                "id": "W\u0142oc\u0142awek"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:22:00",
+                                "arrival_time": "2025-01-16T18:19:00",
+                                "id": "Kutno"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:43:00",
+                                "arrival_time": "2025-01-16T18:42:00",
+                                "id": "\u0141owicz G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:57:00",
+                                "arrival_time": "2025-01-16T18:56:00",
+                                "id": "Sochaczew"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:25:00",
+                                "arrival_time": "2025-01-16T19:24:00",
+                                "id": "Warszawa Zachodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:40:00",
+                                "arrival_time": "2025-01-16T19:30:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:49:00",
+                                "arrival_time": "2025-01-16T19:46:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:10:00",
+                                "arrival_time": "2025-01-16T20:09:00",
+                                "id": "Otwock"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:24:00",
+                                "arrival_time": "2025-01-16T20:23:00",
+                                "id": "Pilawa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:36:00",
+                                "arrival_time": "2025-01-16T20:35:00",
+                                "id": "Sobolew"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:48:00",
+                                "arrival_time": "2025-01-16T20:47:00",
+                                "id": "D\u0119blin"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:00:00",
+                                "arrival_time": "2025-01-16T20:59:00",
+                                "id": "Pu\u0142awy Miasto"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:12:00",
+                                "arrival_time": "2025-01-16T21:11:00",
+                                "id": "Na\u0142\u0119cz\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:25:00",
+                                "arrival_time": "2025-01-16T21:24:00",
+                                "id": "Lublin Zachodni"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T21:30:00",
+                                "id": "Lublin G\u0142\u00f3wny"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 3.7,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Bydgoszcz G\u0142\u00f3wna",
+                                "target": "Bydgoszcz Le\u015bna"
+                            },
+                            {
+                                "weight": 4.1,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Bydgoszcz Le\u015bna",
+                                "target": "Bydgoszcz Wsch\u00f3d"
+                            },
+                            {
+                                "weight": 13.599999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Bydgoszcz Wsch\u00f3d",
+                                "target": "Solec Kujawski"
+                            },
+                            {
+                                "weight": 29.6,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Solec Kujawski",
+                                "target": "Toru\u0144 G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 17.400000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Toru\u0144 G\u0142\u00f3wny",
+                                "target": "Aleksandr\u00f3w Kujawski"
+                            },
+                            {
+                                "weight": 36.8,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Aleksandr\u00f3w Kujawski",
+                                "target": "W\u0142oc\u0142awek"
+                            },
+                            {
+                                "weight": 54.89999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "W\u0142oc\u0142awek",
+                                "target": "Kutno"
+                            },
+                            {
+                                "weight": 45.400000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Kutno",
+                                "target": "\u0141owicz G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 26.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "\u0141owicz G\u0142\u00f3wny",
+                                "target": "Sochaczew"
+                            },
+                            {
+                                "weight": 51.29999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Sochaczew",
+                                "target": "Warszawa Zachodnia"
+                            },
+                            {
+                                "weight": 3.1000000000000227,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Zachodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 4.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 24.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Otwock"
+                            },
+                            {
+                                "weight": 26.80000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Otwock",
+                                "target": "Pilawa"
+                            },
+                            {
+                                "weight": 26.299999999999955,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Pilawa",
+                                "target": "Sobolew"
+                            },
+                            {
+                                "weight": 22.600000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Sobolew",
+                                "target": "D\u0119blin"
+                            },
+                            {
+                                "weight": 20.69999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "D\u0119blin",
+                                "target": "Pu\u0142awy Miasto"
+                            },
+                            {
+                                "weight": 21.30000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Pu\u0142awy Miasto",
+                                "target": "Na\u0142\u0119cz\u00f3w"
+                            },
+                            {
+                                "weight": 25.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Na\u0142\u0119cz\u00f3w",
+                                "target": "Lublin Zachodni"
+                            },
+                            {
+                                "weight": 4.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Lublin Zachodni",
+                                "target": "Lublin G\u0142\u00f3wny"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "4": {
+            "id": 4,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T16:34:00",
+                        "id": "Bydgoszcz G\u0142\u00f3wna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:39:00",
+                        "arrival_time": "2025-01-16T16:38:00",
+                        "id": "Bydgoszcz Le\u015bna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:43:00",
+                        "arrival_time": "2025-01-16T16:42:00",
+                        "id": "Bydgoszcz Wsch\u00f3d"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:52:00",
+                        "arrival_time": "2025-01-16T16:51:00",
+                        "id": "Solec Kujawski"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:15:00",
+                        "arrival_time": "2025-01-16T17:10:00",
+                        "id": "Toru\u0144 G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:27:00",
+                        "arrival_time": "2025-01-16T17:26:00",
+                        "id": "Aleksandr\u00f3w Kujawski"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:48:00",
+                        "arrival_time": "2025-01-16T17:47:00",
+                        "id": "W\u0142oc\u0142awek"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:22:00",
+                        "arrival_time": "2025-01-16T18:19:00",
+                        "id": "Kutno"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:43:00",
+                        "arrival_time": "2025-01-16T18:42:00",
+                        "id": "\u0141owicz G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:57:00",
+                        "arrival_time": "2025-01-16T18:56:00",
+                        "id": "Sochaczew"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:25:00",
+                        "arrival_time": "2025-01-16T19:24:00",
+                        "id": "Warszawa Zachodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:40:00",
+                        "arrival_time": "2025-01-16T19:30:00",
+                        "id": "Warszawa Centralna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:49:00",
+                        "arrival_time": "2025-01-16T19:46:00",
+                        "id": "Warszawa Wschodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:10:00",
+                        "arrival_time": "2025-01-16T20:09:00",
+                        "id": "Otwock"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:24:00",
+                        "arrival_time": "2025-01-16T20:23:00",
+                        "id": "Pilawa"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:36:00",
+                        "arrival_time": "2025-01-16T20:35:00",
+                        "id": "Sobolew"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:48:00",
+                        "arrival_time": "2025-01-16T20:47:00",
+                        "id": "D\u0119blin"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:00:00",
+                        "arrival_time": "2025-01-16T20:59:00",
+                        "id": "Pu\u0142awy Miasto"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:12:00",
+                        "arrival_time": "2025-01-16T21:11:00",
+                        "id": "Na\u0142\u0119cz\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:25:00",
+                        "arrival_time": "2025-01-16T21:24:00",
+                        "id": "Lublin Zachodni"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T21:30:00",
+                        "id": "Lublin G\u0142\u00f3wny"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 3.7,
+                        "source": "Bydgoszcz G\u0142\u00f3wna",
+                        "target": "Bydgoszcz Le\u015bna"
+                    },
+                    {
+                        "weight": 4.1,
+                        "source": "Bydgoszcz Le\u015bna",
+                        "target": "Bydgoszcz Wsch\u00f3d"
+                    },
+                    {
+                        "weight": 13.599999999999998,
+                        "source": "Bydgoszcz Wsch\u00f3d",
+                        "target": "Solec Kujawski"
+                    },
+                    {
+                        "weight": 29.6,
+                        "source": "Solec Kujawski",
+                        "target": "Toru\u0144 G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 17.400000000000006,
+                        "source": "Toru\u0144 G\u0142\u00f3wny",
+                        "target": "Aleksandr\u00f3w Kujawski"
+                    },
+                    {
+                        "weight": 36.8,
+                        "source": "Aleksandr\u00f3w Kujawski",
+                        "target": "W\u0142oc\u0142awek"
+                    },
+                    {
+                        "weight": 54.89999999999999,
+                        "source": "W\u0142oc\u0142awek",
+                        "target": "Kutno"
+                    },
+                    {
+                        "weight": 45.400000000000006,
+                        "source": "Kutno",
+                        "target": "\u0141owicz G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 26.099999999999994,
+                        "source": "\u0141owicz G\u0142\u00f3wny",
+                        "target": "Sochaczew"
+                    },
+                    {
+                        "weight": 51.29999999999998,
+                        "source": "Sochaczew",
+                        "target": "Warszawa Zachodnia"
+                    },
+                    {
+                        "weight": 3.1000000000000227,
+                        "source": "Warszawa Zachodnia",
+                        "target": "Warszawa Centralna"
+                    },
+                    {
+                        "weight": 4.199999999999989,
+                        "source": "Warszawa Centralna",
+                        "target": "Warszawa Wschodnia"
+                    },
+                    {
+                        "weight": 24.100000000000023,
+                        "source": "Warszawa Wschodnia",
+                        "target": "Otwock"
+                    },
+                    {
+                        "weight": 26.80000000000001,
+                        "source": "Otwock",
+                        "target": "Pilawa"
+                    },
+                    {
+                        "weight": 26.299999999999955,
+                        "source": "Pilawa",
+                        "target": "Sobolew"
+                    },
+                    {
+                        "weight": 22.600000000000023,
+                        "source": "Sobolew",
+                        "target": "D\u0119blin"
+                    },
+                    {
+                        "weight": 20.69999999999999,
+                        "source": "D\u0119blin",
+                        "target": "Pu\u0142awy Miasto"
+                    },
+                    {
+                        "weight": 21.30000000000001,
+                        "source": "Pu\u0142awy Miasto",
+                        "target": "Na\u0142\u0119cz\u00f3w"
+                    },
+                    {
+                        "weight": 25.100000000000023,
+                        "source": "Na\u0142\u0119cz\u00f3w",
+                        "target": "Lublin Zachodni"
+                    },
+                    {
+                        "weight": 4.5,
+                        "source": "Lublin Zachodni",
+                        "target": "Lublin G\u0142\u00f3wny"
+                    }
+                ]
+            }
+        }
+    }
+}

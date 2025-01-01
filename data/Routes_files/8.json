@@ -1,0 +1,75 @@
+{
+    "id": 8,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T17:10:00",
+                "id": "Bia\u0142ystok"
+            },
+            {
+                "departure_time": "2025-01-16T17:14:00",
+                "arrival_time": "2025-01-16T17:13:00",
+                "id": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+            },
+            {
+                "departure_time": "2025-01-16T18:34:00",
+                "arrival_time": "2025-01-16T18:33:00",
+                "id": "Warszawa Wschodnia"
+            },
+            {
+                "departure_time": "2025-01-16T18:48:00",
+                "arrival_time": "2025-01-16T18:40:00",
+                "id": "Warszawa Centralna"
+            },
+            {
+                "departure_time": "2025-01-16T18:53:00",
+                "arrival_time": "2025-01-16T18:52:00",
+                "id": "Warszawa Zachodnia"
+            },
+            {
+                "departure_time": "2025-01-16T19:49:00",
+                "arrival_time": "2025-01-16T19:48:00",
+                "id": "\u0141\u00f3d\u017a Widzew"
+            },
+            {
+                "arrival_time": "2025-01-16T19:54:00",
+                "id": "\u0141\u00f3d\u017a Fabryczna"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 3.0,
+                "source": "Bia\u0142ystok",
+                "target": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+            },
+            {
+                "weight": 177.3,
+                "source": "Bia\u0142ystok Zielone Wzg\u00f3rza",
+                "target": "Warszawa Wschodnia"
+            },
+            {
+                "weight": 4.299999999999983,
+                "source": "Warszawa Wschodnia",
+                "target": "Warszawa Centralna"
+            },
+            {
+                "weight": 3.0999999999999943,
+                "source": "Warszawa Centralna",
+                "target": "Warszawa Zachodnia"
+            },
+            {
+                "weight": 123.0,
+                "source": "Warszawa Zachodnia",
+                "target": "\u0141\u00f3d\u017a Widzew"
+            },
+            {
+                "weight": 5.199999999999989,
+                "source": "\u0141\u00f3d\u017a Widzew",
+                "target": "\u0141\u00f3d\u017a Fabryczna"
+            }
+        ]
+    }
+}

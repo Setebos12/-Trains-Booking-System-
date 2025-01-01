@@ -1,0 +1,335 @@
+{
+    "id": 12,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T05:03:00",
+                "id": "Pi\u0142a G\u0142\u00f3wna"
+            },
+            {
+                "departure_time": "2025-01-16T05:37:00",
+                "arrival_time": "2025-01-16T05:36:00",
+                "id": "Wyrzysk Osiek"
+            },
+            {
+                "departure_time": "2025-01-16T05:59:00",
+                "arrival_time": "2025-01-16T05:52:00",
+                "id": "Nak\u0142o nad Noteci\u0105"
+            },
+            {
+                "departure_time": "2025-01-16T06:26:00",
+                "arrival_time": "2025-01-16T06:22:00",
+                "id": "Bydgoszcz G\u0142\u00f3wna"
+            },
+            {
+                "departure_time": "2025-01-16T06:30:00",
+                "arrival_time": "2025-01-16T06:29:00",
+                "id": "Bydgoszcz Le\u015bna"
+            },
+            {
+                "departure_time": "2025-01-16T06:35:00",
+                "arrival_time": "2025-01-16T06:34:00",
+                "id": "Bydgoszcz Wsch\u00f3d"
+            },
+            {
+                "departure_time": "2025-01-16T06:44:00",
+                "arrival_time": "2025-01-16T06:43:00",
+                "id": "Solec Kujawski"
+            },
+            {
+                "departure_time": "2025-01-16T07:19:00",
+                "arrival_time": "2025-01-16T07:02:00",
+                "id": "Toru\u0144 G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T07:31:00",
+                "arrival_time": "2025-01-16T07:30:00",
+                "id": "Aleksandr\u00f3w Kujawski"
+            },
+            {
+                "departure_time": "2025-01-16T07:51:00",
+                "arrival_time": "2025-01-16T07:50:00",
+                "id": "W\u0142oc\u0142awek"
+            },
+            {
+                "departure_time": "2025-01-16T08:22:00",
+                "arrival_time": "2025-01-16T08:21:00",
+                "id": "Kutno"
+            },
+            {
+                "departure_time": "2025-01-16T08:44:00",
+                "arrival_time": "2025-01-16T08:43:00",
+                "id": "\u0141owicz G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T08:58:00",
+                "arrival_time": "2025-01-16T08:57:00",
+                "id": "Sochaczew"
+            },
+            {
+                "departure_time": "2025-01-16T09:25:00",
+                "arrival_time": "2025-01-16T09:24:00",
+                "id": "Warszawa Zachodnia"
+            },
+            {
+                "departure_time": "2025-01-16T09:40:00",
+                "arrival_time": "2025-01-16T09:30:00",
+                "id": "Warszawa Centralna"
+            },
+            {
+                "departure_time": "2025-01-16T09:49:00",
+                "arrival_time": "2025-01-16T09:46:00",
+                "id": "Warszawa Wschodnia"
+            },
+            {
+                "departure_time": "2025-01-16T10:10:00",
+                "arrival_time": "2025-01-16T10:08:00",
+                "id": "Otwock"
+            },
+            {
+                "departure_time": "2025-01-16T10:24:00",
+                "arrival_time": "2025-01-16T10:23:00",
+                "id": "Pilawa"
+            },
+            {
+                "departure_time": "2025-01-16T10:46:00",
+                "arrival_time": "2025-01-16T10:45:00",
+                "id": "D\u0119blin"
+            },
+            {
+                "departure_time": "2025-01-16T10:59:00",
+                "arrival_time": "2025-01-16T10:58:00",
+                "id": "Pu\u0142awy Miasto"
+            },
+            {
+                "departure_time": "2025-01-16T11:10:00",
+                "arrival_time": "2025-01-16T11:09:00",
+                "id": "Na\u0142\u0119cz\u00f3w"
+            },
+            {
+                "departure_time": "2025-01-16T11:23:00",
+                "arrival_time": "2025-01-16T11:22:00",
+                "id": "Lublin Zachodni"
+            },
+            {
+                "departure_time": "2025-01-16T12:00:00",
+                "arrival_time": "2025-01-16T11:28:00",
+                "id": "Lublin G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T12:28:00",
+                "arrival_time": "2025-01-16T12:27:00",
+                "id": "Kra\u015bnik"
+            },
+            {
+                "departure_time": "2025-01-16T12:51:00",
+                "arrival_time": "2025-01-16T12:50:00",
+                "id": "Zaklik\u00f3w"
+            },
+            {
+                "departure_time": "2025-01-16T13:08:00",
+                "arrival_time": "2025-01-16T13:07:00",
+                "id": "Stalowa Wola Rozwad\u00f3w"
+            },
+            {
+                "departure_time": "2025-01-16T13:12:00",
+                "arrival_time": "2025-01-16T13:11:00",
+                "id": "Stalowa Wola Centrum"
+            },
+            {
+                "departure_time": "2025-01-16T13:21:00",
+                "arrival_time": "2025-01-16T13:19:00",
+                "id": "Nisko"
+            },
+            {
+                "departure_time": "2025-01-16T13:30:00",
+                "arrival_time": "2025-01-16T13:29:00",
+                "id": "Rudnik nad Sanem"
+            },
+            {
+                "departure_time": "2025-01-16T13:43:00",
+                "arrival_time": "2025-01-16T13:42:00",
+                "id": "Nowa Sarzyna"
+            },
+            {
+                "departure_time": "2025-01-16T13:53:00",
+                "arrival_time": "2025-01-16T13:51:00",
+                "id": "Le\u017cajsk"
+            },
+            {
+                "departure_time": "2025-01-16T14:26:00",
+                "arrival_time": "2025-01-16T14:25:00",
+                "id": "\u0141a\u0144cut"
+            },
+            {
+                "arrival_time": "2025-01-16T14:37:00",
+                "id": "Rzesz\u00f3w G\u0142\u00f3wny"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 39.0,
+                "source": "Pi\u0142a G\u0142\u00f3wna",
+                "target": "Wyrzysk Osiek"
+            },
+            {
+                "weight": 21.299999999999997,
+                "source": "Wyrzysk Osiek",
+                "target": "Nak\u0142o nad Noteci\u0105"
+            },
+            {
+                "weight": 26.799999999999997,
+                "source": "Nak\u0142o nad Noteci\u0105",
+                "target": "Bydgoszcz G\u0142\u00f3wna"
+            },
+            {
+                "weight": 3.700000000000003,
+                "source": "Bydgoszcz G\u0142\u00f3wna",
+                "target": "Bydgoszcz Le\u015bna"
+            },
+            {
+                "weight": 4.1000000000000085,
+                "source": "Bydgoszcz Le\u015bna",
+                "target": "Bydgoszcz Wsch\u00f3d"
+            },
+            {
+                "weight": 13.599999999999994,
+                "source": "Bydgoszcz Wsch\u00f3d",
+                "target": "Solec Kujawski"
+            },
+            {
+                "weight": 29.599999999999994,
+                "source": "Solec Kujawski",
+                "target": "Toru\u0144 G\u0142\u00f3wny"
+            },
+            {
+                "weight": 17.400000000000006,
+                "source": "Toru\u0144 G\u0142\u00f3wny",
+                "target": "Aleksandr\u00f3w Kujawski"
+            },
+            {
+                "weight": 36.900000000000006,
+                "source": "Aleksandr\u00f3w Kujawski",
+                "target": "W\u0142oc\u0142awek"
+            },
+            {
+                "weight": 54.79999999999998,
+                "source": "W\u0142oc\u0142awek",
+                "target": "Kutno"
+            },
+            {
+                "weight": 45.400000000000034,
+                "source": "Kutno",
+                "target": "\u0141owicz G\u0142\u00f3wny"
+            },
+            {
+                "weight": 26.19999999999999,
+                "source": "\u0141owicz G\u0142\u00f3wny",
+                "target": "Sochaczew"
+            },
+            {
+                "weight": 51.19999999999999,
+                "source": "Sochaczew",
+                "target": "Warszawa Zachodnia"
+            },
+            {
+                "weight": 3.1000000000000227,
+                "source": "Warszawa Zachodnia",
+                "target": "Warszawa Centralna"
+            },
+            {
+                "weight": 4.199999999999989,
+                "source": "Warszawa Centralna",
+                "target": "Warszawa Wschodnia"
+            },
+            {
+                "weight": 24.19999999999999,
+                "source": "Warszawa Wschodnia",
+                "target": "Otwock"
+            },
+            {
+                "weight": 26.69999999999999,
+                "source": "Otwock",
+                "target": "Pilawa"
+            },
+            {
+                "weight": 49.0,
+                "source": "Pilawa",
+                "target": "D\u0119blin"
+            },
+            {
+                "weight": 20.69999999999999,
+                "source": "D\u0119blin",
+                "target": "Pu\u0142awy Miasto"
+            },
+            {
+                "weight": 21.200000000000045,
+                "source": "Pu\u0142awy Miasto",
+                "target": "Na\u0142\u0119cz\u00f3w"
+            },
+            {
+                "weight": 25.100000000000023,
+                "source": "Na\u0142\u0119cz\u00f3w",
+                "target": "Lublin Zachodni"
+            },
+            {
+                "weight": 4.5,
+                "source": "Lublin Zachodni",
+                "target": "Lublin G\u0142\u00f3wny"
+            },
+            {
+                "weight": 44.09999999999991,
+                "source": "Lublin G\u0142\u00f3wny",
+                "target": "Kra\u015bnik"
+            },
+            {
+                "weight": 34.80000000000007,
+                "source": "Kra\u015bnik",
+                "target": "Zaklik\u00f3w"
+            },
+            {
+                "weight": 23.899999999999977,
+                "source": "Zaklik\u00f3w",
+                "target": "Stalowa Wola Rozwad\u00f3w"
+            },
+            {
+                "weight": 2.5,
+                "source": "Stalowa Wola Rozwad\u00f3w",
+                "target": "Stalowa Wola Centrum"
+            },
+            {
+                "weight": 9.200000000000045,
+                "source": "Stalowa Wola Centrum",
+                "target": "Nisko"
+            },
+            {
+                "weight": 11.699999999999932,
+                "source": "Nisko",
+                "target": "Rudnik nad Sanem"
+            },
+            {
+                "weight": 16.600000000000023,
+                "source": "Rudnik nad Sanem",
+                "target": "Nowa Sarzyna"
+            },
+            {
+                "weight": 8.399999999999977,
+                "source": "Nowa Sarzyna",
+                "target": "Le\u017cajsk"
+            },
+            {
+                "weight": 45.0,
+                "source": "Le\u017cajsk",
+                "target": "\u0141a\u0144cut"
+            },
+            {
+                "weight": 16.700000000000045,
+                "source": "\u0141a\u0144cut",
+                "target": "Rzesz\u00f3w G\u0142\u00f3wny"
+            }
+        ]
+    }
+}

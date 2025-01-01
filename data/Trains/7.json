@@ -1,0 +1,808 @@
+{
+    "id": 7,
+    "carrages": {
+        "1": {
+            "id": 1,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ]
+            ],
+            "graph": {
+                "3": {
+                    "id": 3,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T07:35:00",
+                                "id": "Olsztyn G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T07:39:00",
+                                "arrival_time": "2025-01-16T07:38:00",
+                                "id": "Olsztyn Zachodni"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:00:00",
+                                "arrival_time": "2025-01-16T07:56:00",
+                                "id": "Olsztynek"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:19:00",
+                                "arrival_time": "2025-01-16T08:18:00",
+                                "id": "Nidzica"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:36:00",
+                                "arrival_time": "2025-01-16T08:35:00",
+                                "id": "Dzia\u0142dowo"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:46:00",
+                                "arrival_time": "2025-01-16T08:45:00",
+                                "id": "M\u0142awa Miasto"
+                            },
+                            {
+                                "departure_time": "2025-01-16T09:01:00",
+                                "arrival_time": "2025-01-16T09:00:00",
+                                "id": "Ciechan\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T09:30:00",
+                                "arrival_time": "2025-01-16T09:29:00",
+                                "id": "Nowy Dw\u00f3r Mazowiecki"
+                            },
+                            {
+                                "departure_time": "2025-01-16T09:39:00",
+                                "arrival_time": "2025-01-16T09:38:00",
+                                "id": "Legionowo"
+                            },
+                            {
+                                "departure_time": "2025-01-16T09:54:00",
+                                "arrival_time": "2025-01-16T09:52:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:10:00",
+                                "arrival_time": "2025-01-16T10:00:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:15:00",
+                                "arrival_time": "2025-01-16T10:14:00",
+                                "id": "Warszawa Zachodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:24:00",
+                                "arrival_time": "2025-01-16T10:23:00",
+                                "id": "Warszawa S\u0142u\u017cewiec"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:33:00",
+                                "arrival_time": "2025-01-16T10:32:00",
+                                "id": "Piaseczno"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:49:00",
+                                "arrival_time": "2025-01-16T10:48:00",
+                                "id": "Warka"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:14:00",
+                                "arrival_time": "2025-01-16T11:12:00",
+                                "id": "Radom G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:40:00",
+                                "arrival_time": "2025-01-16T11:38:00",
+                                "id": "Skar\u017cysko-Kamienna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:48:00",
+                                "arrival_time": "2025-01-16T11:47:00",
+                                "id": "Suchedni\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T12:16:00",
+                                "arrival_time": "2025-01-16T12:13:00",
+                                "id": "Kielce G\u0142\u00f3wne"
+                            },
+                            {
+                                "departure_time": "2025-01-16T12:46:00",
+                                "arrival_time": "2025-01-16T12:45:00",
+                                "id": "J\u0119drzej\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T13:00:00",
+                                "arrival_time": "2025-01-16T12:59:00",
+                                "id": "S\u0119dzisz\u00f3w"
+                            },
+                            {
+                                "departure_time": "2025-01-16T13:18:00",
+                                "arrival_time": "2025-01-16T13:17:00",
+                                "id": "Miech\u00f3w"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T13:45:00",
+                                "id": "Krak\u00f3w G\u0142\u00f3wny"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 2.2,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Olsztyn G\u0142\u00f3wny",
+                                "target": "Olsztyn Zachodni"
+                            },
+                            {
+                                "weight": 28.1,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Olsztyn Zachodni",
+                                "target": "Olsztynek"
+                            },
+                            {
+                                "weight": 28.599999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Olsztynek",
+                                "target": "Nidzica"
+                            },
+                            {
+                                "weight": 24.4,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Nidzica",
+                                "target": "Dzia\u0142dowo"
+                            },
+                            {
+                                "weight": 20.10000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Dzia\u0142dowo",
+                                "target": "M\u0142awa Miasto"
+                            },
+                            {
+                                "weight": 30.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "M\u0142awa Miasto",
+                                "target": "Ciechan\u00f3w"
+                            },
+                            {
+                                "weight": 57.599999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Ciechan\u00f3w",
+                                "target": "Nowy Dw\u00f3r Mazowiecki"
+                            },
+                            {
+                                "weight": 15.200000000000017,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Nowy Dw\u00f3r Mazowiecki",
+                                "target": "Legionowo"
+                            },
+                            {
+                                "weight": 21.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Legionowo",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 4.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 3.0999999999999943,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Zachodnia"
+                            },
+                            {
+                                "weight": 7.700000000000017,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Zachodnia",
+                                "target": "Warszawa S\u0142u\u017cewiec"
+                            },
+                            {
+                                "weight": 13.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa S\u0142u\u017cewiec",
+                                "target": "Piaseczno"
+                            },
+                            {
+                                "weight": 32.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Piaseczno",
+                                "target": "Warka"
+                            },
+                            {
+                                "weight": 46.69999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warka",
+                                "target": "Radom G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 40.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Radom G\u0142\u00f3wny",
+                                "target": "Skar\u017cysko-Kamienna"
+                            },
+                            {
+                                "weight": 8.899999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Skar\u017cysko-Kamienna",
+                                "target": "Suchedni\u00f3w"
+                            },
+                            {
+                                "weight": 35.30000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Suchedni\u00f3w",
+                                "target": "Kielce G\u0142\u00f3wne"
+                            },
+                            {
+                                "weight": 44.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Kielce G\u0142\u00f3wne",
+                                "target": "J\u0119drzej\u00f3w"
+                            },
+                            {
+                                "weight": 19.5,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "J\u0119drzej\u00f3w",
+                                "target": "S\u0119dzisz\u00f3w"
+                            },
+                            {
+                                "weight": 26.19999999999999,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "S\u0119dzisz\u00f3w",
+                                "target": "Miech\u00f3w"
+                            },
+                            {
+                                "weight": 42.10000000000002,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Miech\u00f3w",
+                                "target": "Krak\u00f3w G\u0142\u00f3wny"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "3": {
+            "id": 3,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T07:35:00",
+                        "id": "Olsztyn G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T07:39:00",
+                        "arrival_time": "2025-01-16T07:38:00",
+                        "id": "Olsztyn Zachodni"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:00:00",
+                        "arrival_time": "2025-01-16T07:56:00",
+                        "id": "Olsztynek"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:19:00",
+                        "arrival_time": "2025-01-16T08:18:00",
+                        "id": "Nidzica"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:36:00",
+                        "arrival_time": "2025-01-16T08:35:00",
+                        "id": "Dzia\u0142dowo"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:46:00",
+                        "arrival_time": "2025-01-16T08:45:00",
+                        "id": "M\u0142awa Miasto"
+                    },
+                    {
+                        "departure_time": "2025-01-16T09:01:00",
+                        "arrival_time": "2025-01-16T09:00:00",
+                        "id": "Ciechan\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T09:30:00",
+                        "arrival_time": "2025-01-16T09:29:00",
+                        "id": "Nowy Dw\u00f3r Mazowiecki"
+                    },
+                    {
+                        "departure_time": "2025-01-16T09:39:00",
+                        "arrival_time": "2025-01-16T09:38:00",
+                        "id": "Legionowo"
+                    },
+                    {
+                        "departure_time": "2025-01-16T09:54:00",
+                        "arrival_time": "2025-01-16T09:52:00",
+                        "id": "Warszawa Wschodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T10:10:00",
+                        "arrival_time": "2025-01-16T10:00:00",
+                        "id": "Warszawa Centralna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T10:15:00",
+                        "arrival_time": "2025-01-16T10:14:00",
+                        "id": "Warszawa Zachodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T10:24:00",
+                        "arrival_time": "2025-01-16T10:23:00",
+                        "id": "Warszawa S\u0142u\u017cewiec"
+                    },
+                    {
+                        "departure_time": "2025-01-16T10:33:00",
+                        "arrival_time": "2025-01-16T10:32:00",
+                        "id": "Piaseczno"
+                    },
+                    {
+                        "departure_time": "2025-01-16T10:49:00",
+                        "arrival_time": "2025-01-16T10:48:00",
+                        "id": "Warka"
+                    },
+                    {
+                        "departure_time": "2025-01-16T11:14:00",
+                        "arrival_time": "2025-01-16T11:12:00",
+                        "id": "Radom G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T11:40:00",
+                        "arrival_time": "2025-01-16T11:38:00",
+                        "id": "Skar\u017cysko-Kamienna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T11:48:00",
+                        "arrival_time": "2025-01-16T11:47:00",
+                        "id": "Suchedni\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T12:16:00",
+                        "arrival_time": "2025-01-16T12:13:00",
+                        "id": "Kielce G\u0142\u00f3wne"
+                    },
+                    {
+                        "departure_time": "2025-01-16T12:46:00",
+                        "arrival_time": "2025-01-16T12:45:00",
+                        "id": "J\u0119drzej\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T13:00:00",
+                        "arrival_time": "2025-01-16T12:59:00",
+                        "id": "S\u0119dzisz\u00f3w"
+                    },
+                    {
+                        "departure_time": "2025-01-16T13:18:00",
+                        "arrival_time": "2025-01-16T13:17:00",
+                        "id": "Miech\u00f3w"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T13:45:00",
+                        "id": "Krak\u00f3w G\u0142\u00f3wny"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 2.2,
+                        "source": "Olsztyn G\u0142\u00f3wny",
+                        "target": "Olsztyn Zachodni"
+                    },
+                    {
+                        "weight": 28.1,
+                        "source": "Olsztyn Zachodni",
+                        "target": "Olsztynek"
+                    },
+                    {
+                        "weight": 28.599999999999998,
+                        "source": "Olsztynek",
+                        "target": "Nidzica"
+                    },
+                    {
+                        "weight": 24.4,
+                        "source": "Nidzica",
+                        "target": "Dzia\u0142dowo"
+                    },
+                    {
+                        "weight": 20.10000000000001,
+                        "source": "Dzia\u0142dowo",
+                        "target": "M\u0142awa Miasto"
+                    },
+                    {
+                        "weight": 30.099999999999994,
+                        "source": "M\u0142awa Miasto",
+                        "target": "Ciechan\u00f3w"
+                    },
+                    {
+                        "weight": 57.599999999999994,
+                        "source": "Ciechan\u00f3w",
+                        "target": "Nowy Dw\u00f3r Mazowiecki"
+                    },
+                    {
+                        "weight": 15.200000000000017,
+                        "source": "Nowy Dw\u00f3r Mazowiecki",
+                        "target": "Legionowo"
+                    },
+                    {
+                        "weight": 21.0,
+                        "source": "Legionowo",
+                        "target": "Warszawa Wschodnia"
+                    },
+                    {
+                        "weight": 4.199999999999989,
+                        "source": "Warszawa Wschodnia",
+                        "target": "Warszawa Centralna"
+                    },
+                    {
+                        "weight": 3.0999999999999943,
+                        "source": "Warszawa Centralna",
+                        "target": "Warszawa Zachodnia"
+                    },
+                    {
+                        "weight": 7.700000000000017,
+                        "source": "Warszawa Zachodnia",
+                        "target": "Warszawa S\u0142u\u017cewiec"
+                    },
+                    {
+                        "weight": 13.0,
+                        "source": "Warszawa S\u0142u\u017cewiec",
+                        "target": "Piaseczno"
+                    },
+                    {
+                        "weight": 32.5,
+                        "source": "Piaseczno",
+                        "target": "Warka"
+                    },
+                    {
+                        "weight": 46.69999999999999,
+                        "source": "Warka",
+                        "target": "Radom G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 40.5,
+                        "source": "Radom G\u0142\u00f3wny",
+                        "target": "Skar\u017cysko-Kamienna"
+                    },
+                    {
+                        "weight": 8.899999999999977,
+                        "source": "Skar\u017cysko-Kamienna",
+                        "target": "Suchedni\u00f3w"
+                    },
+                    {
+                        "weight": 35.30000000000001,
+                        "source": "Suchedni\u00f3w",
+                        "target": "Kielce G\u0142\u00f3wne"
+                    },
+                    {
+                        "weight": 44.0,
+                        "source": "Kielce G\u0142\u00f3wne",
+                        "target": "J\u0119drzej\u00f3w"
+                    },
+                    {
+                        "weight": 19.5,
+                        "source": "J\u0119drzej\u00f3w",
+                        "target": "S\u0119dzisz\u00f3w"
+                    },
+                    {
+                        "weight": 26.19999999999999,
+                        "source": "S\u0119dzisz\u00f3w",
+                        "target": "Miech\u00f3w"
+                    },
+                    {
+                        "weight": 42.10000000000002,
+                        "source": "Miech\u00f3w",
+                        "target": "Krak\u00f3w G\u0142\u00f3wny"
+                    }
+                ]
+            }
+        }
+    }
+}

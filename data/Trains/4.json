@@ -1,0 +1,634 @@
+{
+    "id": 4,
+    "carrages": {
+        "1": {
+            "id": 1,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ]
+            ],
+            "graph": {
+                "8": {
+                    "id": 8,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T17:10:00",
+                                "id": "Bia\u0142ystok"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:14:00",
+                                "arrival_time": "2025-01-16T17:13:00",
+                                "id": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:34:00",
+                                "arrival_time": "2025-01-16T18:33:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:48:00",
+                                "arrival_time": "2025-01-16T18:40:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:53:00",
+                                "arrival_time": "2025-01-16T18:52:00",
+                                "id": "Warszawa Zachodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:49:00",
+                                "arrival_time": "2025-01-16T19:48:00",
+                                "id": "\u0141\u00f3d\u017a Widzew"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T19:54:00",
+                                "id": "\u0141\u00f3d\u017a Fabryczna"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 3.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Bia\u0142ystok",
+                                "target": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+                            },
+                            {
+                                "weight": 177.3,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Bia\u0142ystok Zielone Wzg\u00f3rza",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 4.299999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 3.0999999999999943,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Zachodnia"
+                            },
+                            {
+                                "weight": 123.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Zachodnia",
+                                "target": "\u0141\u00f3d\u017a Widzew"
+                            },
+                            {
+                                "weight": 5.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "\u0141\u00f3d\u017a Widzew",
+                                "target": "\u0141\u00f3d\u017a Fabryczna"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "0": {
+            "id": 0,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "9",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "10",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "11",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "12",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ],
+                [
+                    ".",
+                    "S9",
+                    "S10"
+                ],
+                [
+                    ".",
+                    "S11",
+                    "S12"
+                ]
+            ],
+            "graph": {
+                "8": {
+                    "id": 8,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T17:10:00",
+                                "id": "Bia\u0142ystok"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:14:00",
+                                "arrival_time": "2025-01-16T17:13:00",
+                                "id": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:34:00",
+                                "arrival_time": "2025-01-16T18:33:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:48:00",
+                                "arrival_time": "2025-01-16T18:40:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:53:00",
+                                "arrival_time": "2025-01-16T18:52:00",
+                                "id": "Warszawa Zachodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:49:00",
+                                "arrival_time": "2025-01-16T19:48:00",
+                                "id": "\u0141\u00f3d\u017a Widzew"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T19:54:00",
+                                "id": "\u0141\u00f3d\u017a Fabryczna"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 3.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Bia\u0142ystok",
+                                "target": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+                            },
+                            {
+                                "weight": 177.3,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Bia\u0142ystok Zielone Wzg\u00f3rza",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 4.299999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 3.0999999999999943,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Zachodnia"
+                            },
+                            {
+                                "weight": 123.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Zachodnia",
+                                "target": "\u0141\u00f3d\u017a Widzew"
+                            },
+                            {
+                                "weight": 5.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "\u0141\u00f3d\u017a Widzew",
+                                "target": "\u0141\u00f3d\u017a Fabryczna"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "8": {
+            "id": 8,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T17:10:00",
+                        "id": "Bia\u0142ystok"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:14:00",
+                        "arrival_time": "2025-01-16T17:13:00",
+                        "id": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:34:00",
+                        "arrival_time": "2025-01-16T18:33:00",
+                        "id": "Warszawa Wschodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:48:00",
+                        "arrival_time": "2025-01-16T18:40:00",
+                        "id": "Warszawa Centralna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:53:00",
+                        "arrival_time": "2025-01-16T18:52:00",
+                        "id": "Warszawa Zachodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:49:00",
+                        "arrival_time": "2025-01-16T19:48:00",
+                        "id": "\u0141\u00f3d\u017a Widzew"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T19:54:00",
+                        "id": "\u0141\u00f3d\u017a Fabryczna"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 3.0,
+                        "source": "Bia\u0142ystok",
+                        "target": "Bia\u0142ystok Zielone Wzg\u00f3rza"
+                    },
+                    {
+                        "weight": 177.3,
+                        "source": "Bia\u0142ystok Zielone Wzg\u00f3rza",
+                        "target": "Warszawa Wschodnia"
+                    },
+                    {
+                        "weight": 4.299999999999983,
+                        "source": "Warszawa Wschodnia",
+                        "target": "Warszawa Centralna"
+                    },
+                    {
+                        "weight": 3.0999999999999943,
+                        "source": "Warszawa Centralna",
+                        "target": "Warszawa Zachodnia"
+                    },
+                    {
+                        "weight": 123.0,
+                        "source": "Warszawa Zachodnia",
+                        "target": "\u0141\u00f3d\u017a Widzew"
+                    },
+                    {
+                        "weight": 5.199999999999989,
+                        "source": "\u0141\u00f3d\u017a Widzew",
+                        "target": "\u0141\u00f3d\u017a Fabryczna"
+                    }
+                ]
+            }
+        }
+    }
+}

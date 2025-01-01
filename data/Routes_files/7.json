@@ -1,0 +1,135 @@
+{
+    "id": 7,
+    "graph": {
+        "directed": true,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "departure_time": "2025-01-16T17:36:00",
+                "id": "Zakopane"
+            },
+            {
+                "departure_time": "2025-01-16T17:43:00",
+                "arrival_time": "2025-01-16T17:42:00",
+                "id": "Poronin"
+            },
+            {
+                "departure_time": "2025-01-16T17:54:00",
+                "arrival_time": "2025-01-16T17:53:00",
+                "id": "Nowy Targ"
+            },
+            {
+                "departure_time": "2025-01-16T18:16:00",
+                "arrival_time": "2025-01-16T18:15:00",
+                "id": "Chab\u00f3wka Stadion"
+            },
+            {
+                "departure_time": "2025-01-16T18:55:00",
+                "arrival_time": "2025-01-16T18:54:00",
+                "id": "Sucha Beskidzka Zamek"
+            },
+            {
+                "departure_time": "2025-01-16T19:20:00",
+                "arrival_time": "2025-01-16T19:18:00",
+                "id": "Kalwaria Zebrzydowska Lanckorona"
+            },
+            {
+                "departure_time": "2025-01-16T20:17:00",
+                "arrival_time": "2025-01-16T19:52:00",
+                "id": "Krak\u00f3w G\u0142\u00f3wny"
+            },
+            {
+                "departure_time": "2025-01-16T20:46:00",
+                "arrival_time": "2025-01-16T20:45:00",
+                "id": "Miech\u00f3w"
+            },
+            {
+                "departure_time": "2025-01-16T21:21:00",
+                "arrival_time": "2025-01-16T21:20:00",
+                "id": "W\u0142oszczowa P\u00f3\u0142noc"
+            },
+            {
+                "departure_time": "2025-01-16T21:49:00",
+                "arrival_time": "2025-01-16T21:48:00",
+                "id": "Opoczno Po\u0142udnie"
+            },
+            {
+                "departure_time": "2025-01-16T22:41:00",
+                "arrival_time": "2025-01-16T22:40:00",
+                "id": "Warszawa Zachodnia"
+            },
+            {
+                "departure_time": "2025-01-16T22:50:00",
+                "arrival_time": "2025-01-16T22:46:00",
+                "id": "Warszawa Centralna"
+            },
+            {
+                "arrival_time": "2025-01-16T22:56:00",
+                "id": "Warszawa Wschodnia"
+            }
+        ],
+        "edges": [
+            {
+                "weight": 5.9,
+                "source": "Zakopane",
+                "target": "Poronin"
+            },
+            {
+                "weight": 14.799999999999999,
+                "source": "Poronin",
+                "target": "Nowy Targ"
+            },
+            {
+                "weight": 21.000000000000004,
+                "source": "Nowy Targ",
+                "target": "Chab\u00f3wka Stadion"
+            },
+            {
+                "weight": 32.5,
+                "source": "Chab\u00f3wka Stadion",
+                "target": "Sucha Beskidzka Zamek"
+            },
+            {
+                "weight": 22.39999999999999,
+                "source": "Sucha Beskidzka Zamek",
+                "target": "Kalwaria Zebrzydowska Lanckorona"
+            },
+            {
+                "weight": 39.80000000000001,
+                "source": "Kalwaria Zebrzydowska Lanckorona",
+                "target": "Krak\u00f3w G\u0142\u00f3wny"
+            },
+            {
+                "weight": 42.099999999999994,
+                "source": "Krak\u00f3w G\u0142\u00f3wny",
+                "target": "Miech\u00f3w"
+            },
+            {
+                "weight": 67.69999999999999,
+                "source": "Miech\u00f3w",
+                "target": "W\u0142oszczowa P\u00f3\u0142noc"
+            },
+            {
+                "weight": 61.10000000000002,
+                "source": "W\u0142oszczowa P\u00f3\u0142noc",
+                "target": "Opoczno Po\u0142udnie"
+            },
+            {
+                "weight": 119.0,
+                "source": "Opoczno Po\u0142udnie",
+                "target": "Warszawa Zachodnia"
+            },
+            {
+                "weight": 3.099999999999966,
+                "source": "Warszawa Zachodnia",
+                "target": "Warszawa Centralna"
+            },
+            {
+                "weight": 4.2000000000000455,
+                "source": "Warszawa Centralna",
+                "target": "Warszawa Wschodnia"
+            }
+        ]
+    }
+}

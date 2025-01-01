@@ -1,0 +1,742 @@
+{
+    "id": 1,
+    "carrages": {
+        "0": {
+            "id": 0,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "9",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "10",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "11",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "12",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ],
+                [
+                    ".",
+                    "S9",
+                    "S10"
+                ],
+                [
+                    ".",
+                    "S11",
+                    "S12"
+                ]
+            ],
+            "graph": {
+                "2": {
+                    "id": 2,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T06:05:00",
+                                "id": "Krak\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:20:00",
+                                "arrival_time": "2025-01-16T08:19:00",
+                                "id": "Warszawa Zachodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:30:00",
+                                "arrival_time": "2025-01-16T08:25:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:37:00",
+                                "arrival_time": "2025-01-16T08:36:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:57:00",
+                                "arrival_time": "2025-01-16T10:55:00",
+                                "id": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:02:00",
+                                "arrival_time": "2025-01-16T11:01:00",
+                                "id": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:07:00",
+                                "arrival_time": "2025-01-16T11:06:00",
+                                "id": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:12:00",
+                                "arrival_time": "2025-01-16T11:11:00",
+                                "id": "Sopot"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T11:21:00",
+                                "id": "Gdynia G\u0142\u00f3wna"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 289.9,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Krak\u00f3w G\u0142\u00f3wny",
+                                "target": "Warszawa Zachodnia"
+                            },
+                            {
+                                "weight": 3.1000000000000227,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Zachodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 4.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 323.90000000000003,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 4.199999999999932,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                                "target": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "weight": 3.800000000000068,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gda\u0144sk Wrzeszcz",
+                                "target": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "weight": 3.6000000000000227,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gda\u0144sk Oliwa",
+                                "target": "Sopot"
+                            },
+                            {
+                                "weight": 9.399999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Sopot",
+                                "target": "Gdynia G\u0142\u00f3wna"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "1": {
+            "id": 1,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ]
+            ],
+            "graph": {
+                "2": {
+                    "id": 2,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T06:05:00",
+                                "id": "Krak\u00f3w G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:20:00",
+                                "arrival_time": "2025-01-16T08:19:00",
+                                "id": "Warszawa Zachodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:30:00",
+                                "arrival_time": "2025-01-16T08:25:00",
+                                "id": "Warszawa Centralna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T08:37:00",
+                                "arrival_time": "2025-01-16T08:36:00",
+                                "id": "Warszawa Wschodnia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T10:57:00",
+                                "arrival_time": "2025-01-16T10:55:00",
+                                "id": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:02:00",
+                                "arrival_time": "2025-01-16T11:01:00",
+                                "id": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:07:00",
+                                "arrival_time": "2025-01-16T11:06:00",
+                                "id": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T11:12:00",
+                                "arrival_time": "2025-01-16T11:11:00",
+                                "id": "Sopot"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T11:21:00",
+                                "id": "Gdynia G\u0142\u00f3wna"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 289.9,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Krak\u00f3w G\u0142\u00f3wny",
+                                "target": "Warszawa Zachodnia"
+                            },
+                            {
+                                "weight": 3.1000000000000227,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Zachodnia",
+                                "target": "Warszawa Centralna"
+                            },
+                            {
+                                "weight": 4.199999999999989,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Centralna",
+                                "target": "Warszawa Wschodnia"
+                            },
+                            {
+                                "weight": 323.90000000000003,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Warszawa Wschodnia",
+                                "target": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 4.199999999999932,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                                "target": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "weight": 3.800000000000068,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gda\u0144sk Wrzeszcz",
+                                "target": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "weight": 3.6000000000000227,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gda\u0144sk Oliwa",
+                                "target": "Sopot"
+                            },
+                            {
+                                "weight": 9.399999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Sopot",
+                                "target": "Gdynia G\u0142\u00f3wna"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "2": {
+            "id": 2,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T06:05:00",
+                        "id": "Krak\u00f3w G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:20:00",
+                        "arrival_time": "2025-01-16T08:19:00",
+                        "id": "Warszawa Zachodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:30:00",
+                        "arrival_time": "2025-01-16T08:25:00",
+                        "id": "Warszawa Centralna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T08:37:00",
+                        "arrival_time": "2025-01-16T08:36:00",
+                        "id": "Warszawa Wschodnia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T10:57:00",
+                        "arrival_time": "2025-01-16T10:55:00",
+                        "id": "Gda\u0144sk G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T11:02:00",
+                        "arrival_time": "2025-01-16T11:01:00",
+                        "id": "Gda\u0144sk Wrzeszcz"
+                    },
+                    {
+                        "departure_time": "2025-01-16T11:07:00",
+                        "arrival_time": "2025-01-16T11:06:00",
+                        "id": "Gda\u0144sk Oliwa"
+                    },
+                    {
+                        "departure_time": "2025-01-16T11:12:00",
+                        "arrival_time": "2025-01-16T11:11:00",
+                        "id": "Sopot"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T11:21:00",
+                        "id": "Gdynia G\u0142\u00f3wna"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 289.9,
+                        "source": "Krak\u00f3w G\u0142\u00f3wny",
+                        "target": "Warszawa Zachodnia"
+                    },
+                    {
+                        "weight": 3.1000000000000227,
+                        "source": "Warszawa Zachodnia",
+                        "target": "Warszawa Centralna"
+                    },
+                    {
+                        "weight": 4.199999999999989,
+                        "source": "Warszawa Centralna",
+                        "target": "Warszawa Wschodnia"
+                    },
+                    {
+                        "weight": 323.90000000000003,
+                        "source": "Warszawa Wschodnia",
+                        "target": "Gda\u0144sk G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 4.199999999999932,
+                        "source": "Gda\u0144sk G\u0142\u00f3wny",
+                        "target": "Gda\u0144sk Wrzeszcz"
+                    },
+                    {
+                        "weight": 3.800000000000068,
+                        "source": "Gda\u0144sk Wrzeszcz",
+                        "target": "Gda\u0144sk Oliwa"
+                    },
+                    {
+                        "weight": 3.6000000000000227,
+                        "source": "Gda\u0144sk Oliwa",
+                        "target": "Sopot"
+                    },
+                    {
+                        "weight": 9.399999999999977,
+                        "source": "Sopot",
+                        "target": "Gdynia G\u0142\u00f3wna"
+                    }
+                ]
+            }
+        }
+    }
+}

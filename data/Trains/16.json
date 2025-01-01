@@ -1,0 +1,1660 @@
+{
+    "id": 16,
+    "carrages": {
+        "0": {
+            "id": 0,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "9",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "10",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "11",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "12",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": false,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ],
+                [
+                    ".",
+                    "S9",
+                    "S10"
+                ],
+                [
+                    ".",
+                    "S11",
+                    "S12"
+                ]
+            ],
+            "graph": {
+                "9": {
+                    "id": 9,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T13:45:00",
+                                "id": "Olsztyn G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T13:49:00",
+                                "arrival_time": "2025-01-16T13:48:00",
+                                "id": "Olsztyn Zachodni"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:24:00",
+                                "arrival_time": "2025-01-16T14:23:00",
+                                "id": "Mor\u0105g"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:48:00",
+                                "arrival_time": "2025-01-16T14:47:00",
+                                "id": "Pas\u0142\u0119k"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:11:00",
+                                "arrival_time": "2025-01-16T15:07:00",
+                                "id": "Elbl\u0105g"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:32:00",
+                                "arrival_time": "2025-01-16T15:31:00",
+                                "id": "Malbork"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:46:00",
+                                "arrival_time": "2025-01-16T15:45:00",
+                                "id": "Tczew"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:07:00",
+                                "arrival_time": "2025-01-16T16:04:00",
+                                "id": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:12:00",
+                                "arrival_time": "2025-01-16T16:11:00",
+                                "id": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:16:00",
+                                "arrival_time": "2025-01-16T16:15:00",
+                                "id": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:21:00",
+                                "arrival_time": "2025-01-16T16:20:00",
+                                "id": "Sopot"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:40:00",
+                                "arrival_time": "2025-01-16T16:30:00",
+                                "id": "Gdynia G\u0142\u00f3wna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:53:00",
+                                "arrival_time": "2025-01-16T16:50:00",
+                                "id": "Rumia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:11:00",
+                                "arrival_time": "2025-01-16T17:02:00",
+                                "id": "Wejherowo"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:50:00",
+                                "arrival_time": "2025-01-16T17:36:00",
+                                "id": "L\u0119bork"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:48:00",
+                                "arrival_time": "2025-01-16T18:37:00",
+                                "id": "S\u0142upsk"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:08:00",
+                                "arrival_time": "2025-01-16T19:07:00",
+                                "id": "S\u0142awno"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:33:00",
+                                "arrival_time": "2025-01-16T19:31:00",
+                                "id": "Koszalin"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:50:00",
+                                "arrival_time": "2025-01-16T19:48:00",
+                                "id": "Bia\u0142ogard"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:12:00",
+                                "arrival_time": "2025-01-16T20:11:00",
+                                "id": "\u015awidwin"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:26:00",
+                                "arrival_time": "2025-01-16T20:25:00",
+                                "id": "\u0141obez"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:34:00",
+                                "arrival_time": "2025-01-16T20:33:00",
+                                "id": "Runowo Pomorskie"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:46:00",
+                                "arrival_time": "2025-01-16T20:45:00",
+                                "id": "Chociwel"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:07:00",
+                                "arrival_time": "2025-01-16T21:03:00",
+                                "id": "Stargard"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:26:00",
+                                "arrival_time": "2025-01-16T21:25:00",
+                                "id": "Szczecin D\u0105bie"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T21:40:00",
+                                "id": "Szczecin G\u0142\u00f3wny"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 2.2,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Olsztyn G\u0142\u00f3wny",
+                                "target": "Olsztyn Zachodni"
+                            },
+                            {
+                                "weight": 43.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Olsztyn Zachodni",
+                                "target": "Mor\u0105g"
+                            },
+                            {
+                                "weight": 31.200000000000003,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Mor\u0105g",
+                                "target": "Pas\u0142\u0119k"
+                            },
+                            {
+                                "weight": 21.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Pas\u0142\u0119k",
+                                "target": "Elbl\u0105g"
+                            },
+                            {
+                                "weight": 28.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Elbl\u0105g",
+                                "target": "Malbork"
+                            },
+                            {
+                                "weight": 18.400000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Malbork",
+                                "target": "Tczew"
+                            },
+                            {
+                                "weight": 31.799999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Tczew",
+                                "target": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 4.200000000000017,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                                "target": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "weight": 3.799999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gda\u0144sk Wrzeszcz",
+                                "target": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "weight": 3.700000000000017,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gda\u0144sk Oliwa",
+                                "target": "Sopot"
+                            },
+                            {
+                                "weight": 9.299999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Sopot",
+                                "target": "Gdynia G\u0142\u00f3wna"
+                            },
+                            {
+                                "weight": 10.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Gdynia G\u0142\u00f3wna",
+                                "target": "Rumia"
+                            },
+                            {
+                                "weight": 12.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Rumia",
+                                "target": "Wejherowo"
+                            },
+                            {
+                                "weight": 35.80000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Wejherowo",
+                                "target": "L\u0119bork"
+                            },
+                            {
+                                "weight": 51.39999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "L\u0119bork",
+                                "target": "S\u0142upsk"
+                            },
+                            {
+                                "weight": 27.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "S\u0142upsk",
+                                "target": "S\u0142awno"
+                            },
+                            {
+                                "weight": 40.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "S\u0142awno",
+                                "target": "Koszalin"
+                            },
+                            {
+                                "weight": 24.399999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Koszalin",
+                                "target": "Bia\u0142ogard"
+                            },
+                            {
+                                "weight": 32.400000000000034,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Bia\u0142ogard",
+                                "target": "\u015awidwin"
+                            },
+                            {
+                                "weight": 21.599999999999966,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "\u015awidwin",
+                                "target": "\u0141obez"
+                            },
+                            {
+                                "weight": 12.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "\u0141obez",
+                                "target": "Runowo Pomorskie"
+                            },
+                            {
+                                "weight": 17.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Runowo Pomorskie",
+                                "target": "Chociwel"
+                            },
+                            {
+                                "weight": 27.799999999999955,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Chociwel",
+                                "target": "Stargard"
+                            },
+                            {
+                                "weight": 25.200000000000045,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Stargard",
+                                "target": "Szczecin D\u0105bie"
+                            },
+                            {
+                                "weight": 14.799999999999955,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null,
+                                    "9": null,
+                                    "10": null,
+                                    "11": null,
+                                    "12": null
+                                },
+                                "source": "Szczecin D\u0105bie",
+                                "target": "Szczecin G\u0142\u00f3wny"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "1": {
+            "id": 1,
+            "seats": [
+                {
+                    "id": "1",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "2",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "3",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "4",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "5",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "6",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "7",
+                    "compartments": true,
+                    "window_middle_corridor": 2,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                },
+                {
+                    "id": "8",
+                    "compartments": true,
+                    "window_middle_corridor": 0,
+                    "table": true,
+                    "bike": false,
+                    "pregnat": false,
+                    "invalid": false
+                }
+            ],
+            "carriage_look": [
+                [
+                    ".",
+                    "S1",
+                    "S2"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S3",
+                    "S4"
+                ],
+                [
+                    ".",
+                    "S5",
+                    "S6"
+                ],
+                [
+                    ".",
+                    "T",
+                    "T"
+                ],
+                [
+                    ".",
+                    "S7",
+                    "S8"
+                ]
+            ],
+            "graph": {
+                "9": {
+                    "id": 9,
+                    "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                            {
+                                "departure_time": "2025-01-16T13:45:00",
+                                "id": "Olsztyn G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T13:49:00",
+                                "arrival_time": "2025-01-16T13:48:00",
+                                "id": "Olsztyn Zachodni"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:24:00",
+                                "arrival_time": "2025-01-16T14:23:00",
+                                "id": "Mor\u0105g"
+                            },
+                            {
+                                "departure_time": "2025-01-16T14:48:00",
+                                "arrival_time": "2025-01-16T14:47:00",
+                                "id": "Pas\u0142\u0119k"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:11:00",
+                                "arrival_time": "2025-01-16T15:07:00",
+                                "id": "Elbl\u0105g"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:32:00",
+                                "arrival_time": "2025-01-16T15:31:00",
+                                "id": "Malbork"
+                            },
+                            {
+                                "departure_time": "2025-01-16T15:46:00",
+                                "arrival_time": "2025-01-16T15:45:00",
+                                "id": "Tczew"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:07:00",
+                                "arrival_time": "2025-01-16T16:04:00",
+                                "id": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:12:00",
+                                "arrival_time": "2025-01-16T16:11:00",
+                                "id": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:16:00",
+                                "arrival_time": "2025-01-16T16:15:00",
+                                "id": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:21:00",
+                                "arrival_time": "2025-01-16T16:20:00",
+                                "id": "Sopot"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:40:00",
+                                "arrival_time": "2025-01-16T16:30:00",
+                                "id": "Gdynia G\u0142\u00f3wna"
+                            },
+                            {
+                                "departure_time": "2025-01-16T16:53:00",
+                                "arrival_time": "2025-01-16T16:50:00",
+                                "id": "Rumia"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:11:00",
+                                "arrival_time": "2025-01-16T17:02:00",
+                                "id": "Wejherowo"
+                            },
+                            {
+                                "departure_time": "2025-01-16T17:50:00",
+                                "arrival_time": "2025-01-16T17:36:00",
+                                "id": "L\u0119bork"
+                            },
+                            {
+                                "departure_time": "2025-01-16T18:48:00",
+                                "arrival_time": "2025-01-16T18:37:00",
+                                "id": "S\u0142upsk"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:08:00",
+                                "arrival_time": "2025-01-16T19:07:00",
+                                "id": "S\u0142awno"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:33:00",
+                                "arrival_time": "2025-01-16T19:31:00",
+                                "id": "Koszalin"
+                            },
+                            {
+                                "departure_time": "2025-01-16T19:50:00",
+                                "arrival_time": "2025-01-16T19:48:00",
+                                "id": "Bia\u0142ogard"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:12:00",
+                                "arrival_time": "2025-01-16T20:11:00",
+                                "id": "\u015awidwin"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:26:00",
+                                "arrival_time": "2025-01-16T20:25:00",
+                                "id": "\u0141obez"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:34:00",
+                                "arrival_time": "2025-01-16T20:33:00",
+                                "id": "Runowo Pomorskie"
+                            },
+                            {
+                                "departure_time": "2025-01-16T20:46:00",
+                                "arrival_time": "2025-01-16T20:45:00",
+                                "id": "Chociwel"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:07:00",
+                                "arrival_time": "2025-01-16T21:03:00",
+                                "id": "Stargard"
+                            },
+                            {
+                                "departure_time": "2025-01-16T21:26:00",
+                                "arrival_time": "2025-01-16T21:25:00",
+                                "id": "Szczecin D\u0105bie"
+                            },
+                            {
+                                "arrival_time": "2025-01-16T21:40:00",
+                                "id": "Szczecin G\u0142\u00f3wny"
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "weight": 2.2,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Olsztyn G\u0142\u00f3wny",
+                                "target": "Olsztyn Zachodni"
+                            },
+                            {
+                                "weight": 43.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Olsztyn Zachodni",
+                                "target": "Mor\u0105g"
+                            },
+                            {
+                                "weight": 31.200000000000003,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Mor\u0105g",
+                                "target": "Pas\u0142\u0119k"
+                            },
+                            {
+                                "weight": 21.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Pas\u0142\u0119k",
+                                "target": "Elbl\u0105g"
+                            },
+                            {
+                                "weight": 28.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Elbl\u0105g",
+                                "target": "Malbork"
+                            },
+                            {
+                                "weight": 18.400000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Malbork",
+                                "target": "Tczew"
+                            },
+                            {
+                                "weight": 31.799999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Tczew",
+                                "target": "Gda\u0144sk G\u0142\u00f3wny"
+                            },
+                            {
+                                "weight": 4.200000000000017,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gda\u0144sk G\u0142\u00f3wny",
+                                "target": "Gda\u0144sk Wrzeszcz"
+                            },
+                            {
+                                "weight": 3.799999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gda\u0144sk Wrzeszcz",
+                                "target": "Gda\u0144sk Oliwa"
+                            },
+                            {
+                                "weight": 3.700000000000017,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gda\u0144sk Oliwa",
+                                "target": "Sopot"
+                            },
+                            {
+                                "weight": 9.299999999999983,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Sopot",
+                                "target": "Gdynia G\u0142\u00f3wna"
+                            },
+                            {
+                                "weight": 10.900000000000006,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Gdynia G\u0142\u00f3wna",
+                                "target": "Rumia"
+                            },
+                            {
+                                "weight": 12.099999999999994,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Rumia",
+                                "target": "Wejherowo"
+                            },
+                            {
+                                "weight": 35.80000000000001,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Wejherowo",
+                                "target": "L\u0119bork"
+                            },
+                            {
+                                "weight": 51.39999999999998,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "L\u0119bork",
+                                "target": "S\u0142upsk"
+                            },
+                            {
+                                "weight": 27.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "S\u0142upsk",
+                                "target": "S\u0142awno"
+                            },
+                            {
+                                "weight": 40.0,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "S\u0142awno",
+                                "target": "Koszalin"
+                            },
+                            {
+                                "weight": 24.399999999999977,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Koszalin",
+                                "target": "Bia\u0142ogard"
+                            },
+                            {
+                                "weight": 32.400000000000034,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Bia\u0142ogard",
+                                "target": "\u015awidwin"
+                            },
+                            {
+                                "weight": 21.599999999999966,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "\u015awidwin",
+                                "target": "\u0141obez"
+                            },
+                            {
+                                "weight": 12.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "\u0141obez",
+                                "target": "Runowo Pomorskie"
+                            },
+                            {
+                                "weight": 17.100000000000023,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Runowo Pomorskie",
+                                "target": "Chociwel"
+                            },
+                            {
+                                "weight": 27.799999999999955,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Chociwel",
+                                "target": "Stargard"
+                            },
+                            {
+                                "weight": 25.200000000000045,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Stargard",
+                                "target": "Szczecin D\u0105bie"
+                            },
+                            {
+                                "weight": 14.799999999999955,
+                                "seats": {
+                                    "1": null,
+                                    "2": null,
+                                    "3": null,
+                                    "4": null,
+                                    "5": null,
+                                    "6": null,
+                                    "7": null,
+                                    "8": null
+                                },
+                                "source": "Szczecin D\u0105bie",
+                                "target": "Szczecin G\u0142\u00f3wny"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "routes": {
+        "9": {
+            "id": 9,
+            "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                    {
+                        "departure_time": "2025-01-16T13:45:00",
+                        "id": "Olsztyn G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T13:49:00",
+                        "arrival_time": "2025-01-16T13:48:00",
+                        "id": "Olsztyn Zachodni"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:24:00",
+                        "arrival_time": "2025-01-16T14:23:00",
+                        "id": "Mor\u0105g"
+                    },
+                    {
+                        "departure_time": "2025-01-16T14:48:00",
+                        "arrival_time": "2025-01-16T14:47:00",
+                        "id": "Pas\u0142\u0119k"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:11:00",
+                        "arrival_time": "2025-01-16T15:07:00",
+                        "id": "Elbl\u0105g"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:32:00",
+                        "arrival_time": "2025-01-16T15:31:00",
+                        "id": "Malbork"
+                    },
+                    {
+                        "departure_time": "2025-01-16T15:46:00",
+                        "arrival_time": "2025-01-16T15:45:00",
+                        "id": "Tczew"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:07:00",
+                        "arrival_time": "2025-01-16T16:04:00",
+                        "id": "Gda\u0144sk G\u0142\u00f3wny"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:12:00",
+                        "arrival_time": "2025-01-16T16:11:00",
+                        "id": "Gda\u0144sk Wrzeszcz"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:16:00",
+                        "arrival_time": "2025-01-16T16:15:00",
+                        "id": "Gda\u0144sk Oliwa"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:21:00",
+                        "arrival_time": "2025-01-16T16:20:00",
+                        "id": "Sopot"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:40:00",
+                        "arrival_time": "2025-01-16T16:30:00",
+                        "id": "Gdynia G\u0142\u00f3wna"
+                    },
+                    {
+                        "departure_time": "2025-01-16T16:53:00",
+                        "arrival_time": "2025-01-16T16:50:00",
+                        "id": "Rumia"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:11:00",
+                        "arrival_time": "2025-01-16T17:02:00",
+                        "id": "Wejherowo"
+                    },
+                    {
+                        "departure_time": "2025-01-16T17:50:00",
+                        "arrival_time": "2025-01-16T17:36:00",
+                        "id": "L\u0119bork"
+                    },
+                    {
+                        "departure_time": "2025-01-16T18:48:00",
+                        "arrival_time": "2025-01-16T18:37:00",
+                        "id": "S\u0142upsk"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:08:00",
+                        "arrival_time": "2025-01-16T19:07:00",
+                        "id": "S\u0142awno"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:33:00",
+                        "arrival_time": "2025-01-16T19:31:00",
+                        "id": "Koszalin"
+                    },
+                    {
+                        "departure_time": "2025-01-16T19:50:00",
+                        "arrival_time": "2025-01-16T19:48:00",
+                        "id": "Bia\u0142ogard"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:12:00",
+                        "arrival_time": "2025-01-16T20:11:00",
+                        "id": "\u015awidwin"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:26:00",
+                        "arrival_time": "2025-01-16T20:25:00",
+                        "id": "\u0141obez"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:34:00",
+                        "arrival_time": "2025-01-16T20:33:00",
+                        "id": "Runowo Pomorskie"
+                    },
+                    {
+                        "departure_time": "2025-01-16T20:46:00",
+                        "arrival_time": "2025-01-16T20:45:00",
+                        "id": "Chociwel"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:07:00",
+                        "arrival_time": "2025-01-16T21:03:00",
+                        "id": "Stargard"
+                    },
+                    {
+                        "departure_time": "2025-01-16T21:26:00",
+                        "arrival_time": "2025-01-16T21:25:00",
+                        "id": "Szczecin D\u0105bie"
+                    },
+                    {
+                        "arrival_time": "2025-01-16T21:40:00",
+                        "id": "Szczecin G\u0142\u00f3wny"
+                    }
+                ],
+                "edges": [
+                    {
+                        "weight": 2.2,
+                        "source": "Olsztyn G\u0142\u00f3wny",
+                        "target": "Olsztyn Zachodni"
+                    },
+                    {
+                        "weight": 43.099999999999994,
+                        "source": "Olsztyn Zachodni",
+                        "target": "Mor\u0105g"
+                    },
+                    {
+                        "weight": 31.200000000000003,
+                        "source": "Mor\u0105g",
+                        "target": "Pas\u0142\u0119k"
+                    },
+                    {
+                        "weight": 21.099999999999994,
+                        "source": "Pas\u0142\u0119k",
+                        "target": "Elbl\u0105g"
+                    },
+                    {
+                        "weight": 28.900000000000006,
+                        "source": "Elbl\u0105g",
+                        "target": "Malbork"
+                    },
+                    {
+                        "weight": 18.400000000000006,
+                        "source": "Malbork",
+                        "target": "Tczew"
+                    },
+                    {
+                        "weight": 31.799999999999983,
+                        "source": "Tczew",
+                        "target": "Gda\u0144sk G\u0142\u00f3wny"
+                    },
+                    {
+                        "weight": 4.200000000000017,
+                        "source": "Gda\u0144sk G\u0142\u00f3wny",
+                        "target": "Gda\u0144sk Wrzeszcz"
+                    },
+                    {
+                        "weight": 3.799999999999983,
+                        "source": "Gda\u0144sk Wrzeszcz",
+                        "target": "Gda\u0144sk Oliwa"
+                    },
+                    {
+                        "weight": 3.700000000000017,
+                        "source": "Gda\u0144sk Oliwa",
+                        "target": "Sopot"
+                    },
+                    {
+                        "weight": 9.299999999999983,
+                        "source": "Sopot",
+                        "target": "Gdynia G\u0142\u00f3wna"
+                    },
+                    {
+                        "weight": 10.900000000000006,
+                        "source": "Gdynia G\u0142\u00f3wna",
+                        "target": "Rumia"
+                    },
+                    {
+                        "weight": 12.099999999999994,
+                        "source": "Rumia",
+                        "target": "Wejherowo"
+                    },
+                    {
+                        "weight": 35.80000000000001,
+                        "source": "Wejherowo",
+                        "target": "L\u0119bork"
+                    },
+                    {
+                        "weight": 51.39999999999998,
+                        "source": "L\u0119bork",
+                        "target": "S\u0142upsk"
+                    },
+                    {
+                        "weight": 27.100000000000023,
+                        "source": "S\u0142upsk",
+                        "target": "S\u0142awno"
+                    },
+                    {
+                        "weight": 40.0,
+                        "source": "S\u0142awno",
+                        "target": "Koszalin"
+                    },
+                    {
+                        "weight": 24.399999999999977,
+                        "source": "Koszalin",
+                        "target": "Bia\u0142ogard"
+                    },
+                    {
+                        "weight": 32.400000000000034,
+                        "source": "Bia\u0142ogard",
+                        "target": "\u015awidwin"
+                    },
+                    {
+                        "weight": 21.599999999999966,
+                        "source": "\u015awidwin",
+                        "target": "\u0141obez"
+                    },
+                    {
+                        "weight": 12.100000000000023,
+                        "source": "\u0141obez",
+                        "target": "Runowo Pomorskie"
+                    },
+                    {
+                        "weight": 17.100000000000023,
+                        "source": "Runowo Pomorskie",
+                        "target": "Chociwel"
+                    },
+                    {
+                        "weight": 27.799999999999955,
+                        "source": "Chociwel",
+                        "target": "Stargard"
+                    },
+                    {
+                        "weight": 25.200000000000045,
+                        "source": "Stargard",
+                        "target": "Szczecin D\u0105bie"
+                    },
+                    {
+                        "weight": 14.799999999999955,
+                        "source": "Szczecin D\u0105bie",
+                        "target": "Szczecin G\u0142\u00f3wny"
+                    }
+                ]
+            }
+        }
+    }
+}

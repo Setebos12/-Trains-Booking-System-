@@ -5,6 +5,7 @@ from datetime import timedelta
 from user.user import get_all_users, User, write_user_file
 from System.MonitorUser import MonitorUserSystem
 from user.ticket import Ticket
+from train.train_files import read_all_trains
 
 """System Save data to files"""
 
@@ -18,13 +19,15 @@ class RouteError(Exception):
 
 
 class System:
-    def __init__(self, trains: list[Train]):
+    def __init__(self):
+        trains = read_all_trains()
         self.trains = {train.id: train for train in trains}
         self.create_graph_from_trains()
         self.all_stations = self.network.nodes.keys()
         list_user = get_all_users()
         self.users = {user.id: user for user in list_user}
-        self.monitor_user = None
+        self.monitor_user = MonitorUserSystem(0)
+        self.change_current_user(0)
 
     def add_user(self, user_id):
         user = User(user_id)
@@ -32,13 +35,12 @@ class System:
             raise ValueError
         self.users[user.id] = user
         write_user_file(user)
-        self.monitor_user = MonitorUserSystem(user.id)
+        self.monitor_user.user_id = user_id
 
     def change_current_user(self, user_id):
         if user_id not in self.users.keys():
             self.add_user(user_id)
-
-        self.monitor_user = MonitorUserSystem(user_id)
+        self.monitor_user.user_id = user_id
 
     def create_graph_from_trains(self):
         trains = read_all_trains()
@@ -77,24 +79,22 @@ class System:
 
         return list(sorted_keys)
 
-
     def sort_keys(self, keys ,station):
         list_of_trains = []
         self.network.nodes[station]['departure']
 
-
-    def check_no_direct_connections(self, starting_station, destination_station):
+    def check_no_direct_connections(self, starting_station, destination_station, time=None, time_wait=None):
         if has_path(self.network, starting_station, destination_station) is False:
-            raise ValueError # create some error no path error
+            raise RouteError("No path exists between the stations.")
 
         paths = list(all_simple_paths(self.network, starting_station, destination_station))
         all_paths = []
         for path in paths:
             begin_station = path[0]
             end_station = path[-1]
-            path_stations = []
+            path_stations = set()
             for station in path[1:-1]:
-                trains1 = self.check_direct_connection(begin_station, station)
+                trains1 = self.check_direct_connection(begin_station, station, time)
                 if trains1 == []:
                     continue
                 trains2 = self.check_direct_connection(station, end_station)
@@ -105,14 +105,19 @@ class System:
                         if train1 == train2:
                             continue
                         tran, tran_time = self.check_stations_correct_transfers(train1, train2, station)
+                        if time_wait:
+                            if not time_wait[0] < tran_time < time_wait[1]:
+                                continue
                         if tran == 1:
-                            path_stations.append({'train1': train1,
-                                                  'train2': train2,
-                                                  'station': station,
-                                                  'time_wait': tran_time})
+                            one_path = (train1,
+                                        train2,
+                                        station,
+                                        tran_time)
+
+                            path_stations.add(one_path)
 
             all_paths.extend(path_stations)
-        return all_paths
+        return set(all_paths)
 
     def check_stations_correct_transfers(self, arrival_train, departure_train, station, transfer_tim=0):
         arrival_time = self.network.nodes[station]['arrivals'][arrival_train]

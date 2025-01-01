@@ -4,7 +4,7 @@ from PySide6.QtWidgets import QListWidget
 from PySide6.QtCore import QDate, QTime, Qt
 from ui_trains import Ui_Trains
 import sys
-from System.system import System, read_all_trains
+from System.system import System
 from System.system import RouteError, InvalidStationError
 from datetime import datetime
 from io import BytesIO
@@ -56,12 +56,11 @@ class TrainWindow(QMainWindow):
         self.ui.Booker.clicked.connect(self._Booker)
         self.ui.Tickets.clicked.connect(self._Go_ticket)
         self.ui.Enter.clicked.connect(self._user)
-        self.system = System(read_all_trains())
+        self.system = System()
         self._set_completer()
         self.selected_train = None
         self.selected_carriage = None
         self.selected_seat = None
-        self.route = None
 
     def _user(self):
         get_id = self.ui.Logger.text()
@@ -97,12 +96,12 @@ class TrainWindow(QMainWindow):
         button = self.sender()
         ticket = button.ticket
         self.system.remove_ticket(ticket)
-        self._go_home()
+        self._Go_ticket()
         button.deleteLater()
 
     def _set_data(self):
-        self.ui.dateEdit.setMinimumDate(QDate.currentDate().addYears(-4))
-        self.ui.dateEdit.setMaximumDate(QDate.currentDate().addYears(1))
+        self.ui.dateEdit.setMinimumDate(QDate.currentDate())
+        self.ui.dateEdit.setMaximumDate(QDate.currentDate())
         self.ui.timeEdit.setMinimumTime(QTime.currentTime())
         self.ui.timeEdit.setMaximumTime(QTime(23, 59, 59))
 
@@ -127,12 +126,9 @@ class TrainWindow(QMainWindow):
         departure = self.ui.Departure.text()
         arrival = self.ui.Arrival.text()
         datatime_time = self.get_time()
-        try:
-            self.system.monitor_user.arrival = arrival
-            self.system.monitor_user.deparute = departure
-        except:
-            self.ui.info.setText("Log first")
-            return
+
+        self.system.monitor_user.arrival = arrival
+        self.system.monitor_user.deparute = departure
 
         if self.ui.checkBox.isChecked():
             try:
@@ -166,10 +162,10 @@ class TrainWindow(QMainWindow):
     def no_direct_train_list(self, ids, departure, arrival):
         self.ui.listWidget.clear()
         for trains_info in ids:
-            train1_id = trains_info['train1']
-            train2_id = trains_info['train2']
-            transfer = trains_info['station']
-            time_wait = trains_info['time_wait']
+            train1_id = trains_info[0]
+            train2_id = trains_info[1]
+            transfer = trains_info[2]
+            time_wait = trains_info[3]
             transfer_info = f"Transfer at {transfer}\n time_wait {str(time_wait)[:-3]}"
             info_item = QListWidgetItem(transfer_info)
             info_item.setFlags(Qt.ItemFlag.NoItemFlags)
@@ -207,22 +203,22 @@ class TrainWindow(QMainWindow):
         self.ui.labelplot.setPixmap(qt_pixmap)
 
     def _Booker(self):
-        if self.selected_seat and self.selected_carriage and self.selected_train:
+        if self.system.monitor_user.check_if_all_not_none():
 
-            print(f"Rezerwacja dla pociągu {self.selected_train.id}, wagonu {self.selected_carriage.id}, siedzenia {self.selected_seat.data['id']}")
             self.system.book_seat_data()
             if self.ui.checkBox.isChecked():
                 self._Go_ticket()
             else:
                 self.ui.stackedWidget.setCurrentIndex(3)
+            self.system.monitor_user.seat_id = None
 
     def _select_train(self, item):
         if item.flags() == Qt.ItemFlag.NoItemFlags:
             return
+        self.system.monitor_user.seat_id = None
         self.ui.SeatsLook.clear()
         self.ui.summary.setText("Choose Sit My friend")
         self.selected_train = item.train
-        self.route = item.route
         self.system.monitor_user.route_id = item.route
         self.system.monitor_user.train_id = item.train.id
         self.system.monitor_user.arrival = item.dep_arr[1]
@@ -242,8 +238,8 @@ class TrainWindow(QMainWindow):
         self.ui.SeatsLook.clear()
         self.selected_carriage = item.carriage
         self.system.monitor_user.carriage_id = item.carriage.id
-        departure = self.ui.Departure.text()
-        arrival = self.ui.Arrival.text()
+        departure = self.system.monitor_user.deparute
+        arrival = self.system.monitor_user.arrival
         r_data = self._get_r_data()
         seats = item.carriage.list_all_availabe_seats(departure, arrival, item.route, r_data)
         carriage_look = item.carriage.get_carriage_look(seats)

@@ -29,7 +29,7 @@ def read_data(id: str, base_path="data/Users"):
 def read_list(path):
     path = Path(path)
     with path.open('r') as file_handle:
-        data = json.load(file_handle)
+        data = file_handle.readlines()
     return data
 
 

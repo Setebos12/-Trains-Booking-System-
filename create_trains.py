@@ -1,7 +1,8 @@
 from train.train import Train
 from Routes.Routes_files import read_Route
 from train.carriage_files import read_carriage
-from train.train_files import write_train_file, read_train_file, read_all_trains
+from train.train_files import write_train_file, read_train_file
+from train.train_files import read_all_trains
 from pathlib import Path
 from random import choice, sample, randint
 
@@ -35,19 +36,3 @@ def get_ids(path):
 
 
 create_Random_trains()
-# train = create_train(1, [0, 1], [0])
-# train1 = create_train(2, [0], [1])
-# train2 = create_train(3, [1], [2])
-# train3 = create_train(4, [1, 0], [3])
-
-
-# write_train_file(train)
-# write_train_file(train1)
-# write_train_file(train2)
-# write_train_file(train3)
-# train = read_train_file(1)
-# write_train_file(train)
-
-
-# trains = read_all_trains()
-# pass

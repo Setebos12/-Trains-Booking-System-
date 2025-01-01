@@ -13,6 +13,10 @@ class User:
     def add_ticket(self, ticket: Ticket):
         self.tickets.append(ticket)
 
+    def remove_ticket(self, ticket: Ticket):
+        if ticket in self.tickets:
+            self.tickets.remove(ticket)
+
     def __str__(self):
         return f"{self.id}"
 
@@ -50,7 +54,9 @@ def read_user(id: str, base_path="data/Users"):
             ticket_data['train_id'],
             ticket_data['route_id'],
             ticket_data['carriage_id'],
-            ticket_data['seat_id']
+            ticket_data['seat_id'],
+            arrival_time=ticket_data.get('arrival_time', "N/A"),
+            departure_time=ticket_data.get('departure_time', "N/A")
         ) for ticket_data in data.get('tickets', [])
     ]
 
@@ -66,10 +72,7 @@ def get_all_users(base_path="data/Users"):
     users = []
     for file_path in base_path.glob("*.json"):
         user_id = file_path.stem
-        try:
-            user = read_user(user_id, base_path=base_path)
-            users.append(user)
-        except Exception as e:
-            print(f"Failed to read user from file {file_path.name}: {e}")
 
+        user = read_user(user_id, base_path=base_path)
+        users.append(user)
     return users

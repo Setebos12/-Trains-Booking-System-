@@ -77,8 +77,8 @@ class Routes:
         arrival_time = self.get_arrival_time(destination_station)
         route_distance = self.calculate_road(starting_station, destination_station)
         calculate_time = self.calculate_time(starting_station, destination_station)
-        return (str(departure_time)[:-2], str(arrival_time)[:-2],
-                f"{float(route_distance):.2f} km", f"Jurney time {str(calculate_time)[:-2]}")
+        return (str(departure_time)[:-3], str(arrival_time)[:-3],
+                f"{float(route_distance):.2f} km", f"Jurney time {str(calculate_time)[:-3]}")
 
 
 class CarriageRoutes(Routes):

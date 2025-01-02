@@ -47,11 +47,10 @@ class Cariage:
         return free_s, book_s
 
     def filter_seats(self, r_data):
-        seats_id = set()
-        for seat in self.seats.values():
-            if seat.check_requirments(r_data):
-                seats_id.add(seat.data['id'])
-        return seats_id
+        return {
+            seat.data['id'] for seat in self.seats.values()
+            if seat.check_requirments(r_data)
+        }
 
     def assing_seats(self, carriage_look):
         seats_id = self.seats_id

@@ -40,8 +40,8 @@ class Seat:
         Returns:
             bool: True if requirements are met, False otherwise.
         """
-        for key in r_data:
-            if r_data[key] is None:
+        for key, value in r_data.items():
+            if value is None:
                 continue
             if r_data.get(key, -1) != self.data.get(key, 0):
                 return False

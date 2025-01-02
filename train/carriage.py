@@ -18,23 +18,19 @@ class Cariage:
         self.current_route_id = 0
 
     def _initialize(self, routes: list[Routes], carriage_look=None):
-        self.routes = {route.id: CarriageRoutes(route.id,
-                                                route,
-                                                self.seats_id)
-                       for route in routes}
-        if carriage_look is not None:
-            self.carriage_look = self.assing_seats(carriage_look)
-        else:
-            self.carriage_look = None
+        self.routes = {
+            route.id: CarriageRoutes(route.id, route, self.seats_id) for route in routes
+        }
+        self.carriage_look = self.assign_seats(carriage_look) if carriage_look else None
 
     def book_seat_for_route(self, starting_station, destination_station,
                             seat_id, route_id, data):
         if route_id not in self.routes:
             raise ValueError
 
-        self.routes[route_id].booked_seats(starting_station,
-                                           destination_station,
-                                           seat_id, data)
+        self.routes[route_id].booked_seats(
+            starting_station, destination_station, seat_id, data
+        )
 
     def list_all_availabe_seats(self, starting_station, destination_station,
                                 route_id, r_data={}):

@@ -32,6 +32,19 @@ class Cariage:
         self, starting_station: str, destination_station: str,
         seat_id: str, route_id: int, data: Dict
     ) -> None:
+        """
+        Books a seat for a specific route.
+
+        Args:
+            starting_station (str): Starting station.
+            destination_station (str): Destination station.
+            seat_id (str): Seat ID.
+            route_id (int): Route ID.
+            data (dict): Booking data.
+
+        Raises:
+            ValueError: If the route ID is invalid.
+        """
         if route_id not in self.routes:
             raise ValueError
 
@@ -43,6 +56,18 @@ class Cariage:
         self, starting_station: str, destination_station: str,
         route_id: int, r_data: Dict = None
     ) -> tuple:
+        """
+        Lists all available seats for a given route and station range.
+
+        Args:
+            starting_station (str): Starting station.
+            destination_station (str): Destination station.
+            route_id (int): ID of the route.
+            r_data (dict, optional): Seat requirement filters. Defaults to None.
+
+        Returns:
+            tuple: (set of free seats, set of booked seats)
+        """
         if route_id not in self.routes:
             raise ValueError
         free_s, book_s = self.routes[route_id].list_booked_and_empty_seats(
@@ -71,6 +96,15 @@ class Cariage:
         return carriage_look
 
     def get_carriage_look(self, seats: tuple) -> List[List[str]]:
+        """
+        Returns the visual representation of the carriage layout.
+
+        Args:
+            seats (tuple): (set of free seats, set of booked seats).
+
+        Returns:
+            List[List[str]]: Visual layout with seat statuses.
+        """
         free_seats, booked_seats = seats
         layout = []
         for row in self.carriage_look:

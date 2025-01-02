@@ -68,22 +68,23 @@ class Cariage:
         return carriage_look
 
     def get_carriage_look(self, seats):
-        free_seat, booked_seats = seats
-        carriage_look = []
-        for x_dim in range(len(self.carriage_look)):
-            row = []
-            for y_dim in range(len(self.carriage_look[x_dim])):
-                if self.carriage_look[x_dim][y_dim][0] == 'S':
-                    index = int(self.carriage_look[x_dim][y_dim][1:3])
-                    if str(index) in free_seat:
-                        row.append(self.carriage_look[x_dim][y_dim] + 'F')
+        free_seats, booked_seats = seats
+        layout = []
+        for row in self.carriage_look:
+            new_row = []
+            for cell in row:
+                if cell[0] == 'S':
+                    seat_id = cell[1:]
+                    if seat_id in free_seats:
+                        new_row.append(f"{cell}F")
+                    elif seat_id in booked_seats:
+                        new_row.append(f"{cell}B")
                     else:
-                        row.append(self.carriage_look[x_dim][y_dim] + 'B')
+                        new_row.append(cell)
                 else:
-                    row.append(self.carriage_look[x_dim][y_dim])
-            carriage_look.append(row)
-
-        return carriage_look
+                    new_row.append(cell)
+            layout.append(new_row)
+        return layout
 
     def add_routes(self, route: Routes):
         self.routes[route.id] = CarriageRoutes(route.id, route, self.seats_id)

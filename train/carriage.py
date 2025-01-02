@@ -57,14 +57,13 @@ class Cariage:
         seats_id = self.seats_id
         seats_id.sort(key=int)
         index = 0
-        for x_dim in range(len(carriage_look)):
-            for y_dim in range(len(carriage_look[x_dim])):
-                if carriage_look[x_dim][y_dim] == 'S':
-                    carriage_look[x_dim][y_dim] = str(
-                        carriage_look[x_dim][y_dim]) + str(seats_id[index])
+        for x_dim, row in enumerate(carriage_look):
+            for y_dim, cell in enumerate(row):
+                if cell == 'S':
+                    if index >= len(seats_id):
+                        return carriage_look
+                    carriage_look[x_dim][y_dim] = f"S{seats_id[index]}"
                     index += 1
-                    if index > len(seats_id):
-                        return
         return carriage_look
 
     def get_carriage_look(self, seats):

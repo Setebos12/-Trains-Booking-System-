@@ -1,10 +1,13 @@
+from typing import List, Dict
 from Routes.Routes import CarriageRoutes, Routes
 from train.Seats import Seat
 
 
 class Cariage:
-    def __init__(self, id: int, routes: list[Routes], seats: list[Seat],
-                 carriage_look=None, initiation=True) -> None:
+    def __init__(
+        self, id: int, routes: List[Routes], seats: List[Seat],
+        carriage_look: List[List[str]] = None, initiation: bool = True
+    ) -> None:
         self.id = id
         self.seats = {seat.data['id']: seat for seat in seats}
         self.seats_id = [seat.data['id'] for seat in self.seats.values()]
@@ -17,14 +20,18 @@ class Cariage:
 
         self.current_route_id = 0
 
-    def _initialize(self, routes: list[Routes], carriage_look=None):
+    def _initialize(
+        self, routes: List[Routes], carriage_look: List[List[str]] = None
+    ) -> None:
         self.routes = {
             route.id: CarriageRoutes(route.id, route, self.seats_id) for route in routes
         }
         self.carriage_look = self.assign_seats(carriage_look) if carriage_look else None
 
-    def book_seat_for_route(self, starting_station, destination_station,
-                            seat_id, route_id, data):
+    def book_seat_for_route(
+        self, starting_station: str, destination_station: str,
+        seat_id: str, route_id: int, data: Dict
+    ) -> None:
         if route_id not in self.routes:
             raise ValueError
 
@@ -32,8 +39,10 @@ class Cariage:
             starting_station, destination_station, seat_id, data
         )
 
-    def list_all_availabe_seats(self, starting_station, destination_station,
-                                route_id, r_data={}):
+    def list_all_available_seats(
+        self, starting_station: str, destination_station: str,
+        route_id: int, r_data: Dict = None
+    ) -> tuple:
         if route_id not in self.routes:
             raise ValueError
         free_s, book_s = self.routes[route_id].list_booked_and_empty_seats(
@@ -48,7 +57,7 @@ class Cariage:
             if seat.check_requirments(r_data)
         }
 
-    def assing_seats(self, carriage_look):
+    def assign_seats(self, carriage_look: List[List[str]]) -> List[List[str]]:
         seats_id = self.seats_id
         seats_id.sort(key=int)
         index = 0
@@ -61,7 +70,7 @@ class Cariage:
                     index += 1
         return carriage_look
 
-    def get_carriage_look(self, seats):
+    def get_carriage_look(self, seats: tuple) -> List[List[str]]:
         free_seats, booked_seats = seats
         layout = []
         for row in self.carriage_look:
@@ -80,13 +89,13 @@ class Cariage:
             layout.append(new_row)
         return layout
 
-    def add_routes(self, route: Routes):
+    def add_routes(self, route: Routes) -> None:
         self.routes[route.id] = CarriageRoutes(route.id, route, self.seats_id)
 
-    def json_repr(self):
+    def json_repr(self) -> Dict:
         return {
             'id': self.id,
-            'seats': [seat.seat_repre() for seat in self.seats.values()],
+            'seats': [seat.seat_repr() for seat in self.seats.values()],
             'carriage_look': self.carriage_look,
             'graph': {route.id: route.json_repr()
                       for route in self.routes.values()}

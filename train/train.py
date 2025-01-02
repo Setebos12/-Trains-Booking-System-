@@ -61,13 +61,14 @@ class Train:
             r_data (dict): Seat requirement filters.
 
         Returns:
-            Dict[int, List[str]]: A dictionary of carriage IDs and their available seats.
+            Dict[int, List[str]]: A dictionary of carriage IDs
+            and their available seats.
         """
         if r_data is None:
             r_data = {}
         available = {}
         for carriage_id, carriage in self.carriages.items():
-            available_seats = carriage.list_all_available_seats(
+            available_seats = carriage.list_all_availabe_seats(
                 starting_station, destination_station, route_id, r_data
             )
             available[carriage_id] = available_seats
@@ -85,7 +86,8 @@ class Train:
         return {
             'id': self.id,
             'carriages': {
-                carriage.id: carriage.json_repr() for carriage in self.carriages.values()
+                carriage.id: carriage.json_repr()
+                for carriage in self.carriages.values()
             },
             'routes': {
                 route.id: route.json_repr() for route in self.routes.values()

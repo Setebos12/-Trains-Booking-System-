@@ -89,7 +89,7 @@ def json_repr_routes(routes: Routes):
 
 
 class CarriageRoutes(Routes):
-    def __init__(self, id, routes: Routes, seats_id, initation=True):
+    def __init__(self, id, routes: Routes, seats_id, initation=True) -> None:
         self.id = id
         if initation:
             self._initialize(routes, seats_id)
@@ -105,7 +105,7 @@ class CarriageRoutes(Routes):
         for u, v in self.routes.edges:
             self.routes.edges[u, v]['seats'] = seats_booked.copy()
 
-    def check_if_can_booked(self, starting_station: str, destination_station: str, seat_id: str):
+    def check_if_can_booked(self, starting_station: str, destination_station: str, seat_id: str) -> bool:
         if not self.check_if_route_exist(starting_station, destination_station):
             return False
 
@@ -115,8 +115,8 @@ class CarriageRoutes(Routes):
                 return False
         return True
 
-    def list_booked_and_empty_seats(self, starting_station: str, destination_station: str):
-        seats_values = set(self.seats_id.copy())
+    def list_booked_and_empty_seats(self, starting_station: str, destination_station: str) -> tuple:
+        seats_values = set(self.seats_id)
         booked_seats_id = set()
         tuple_stations = self.make_station_between_to_stations(starting_station, destination_station)
 
@@ -126,7 +126,7 @@ class CarriageRoutes(Routes):
                     booked_seats_id.add(seat_id)
         return set(seats_values - booked_seats_id), set(booked_seats_id)
 
-    def booked_seats(self, starting_station: str, destination_station: str, seat_id: str, data):
+    def booked_seats(self, starting_station: str, destination_station: str, seat_id: str, data: any) -> None:
         if data is not None and not self.check_if_can_booked(starting_station, destination_station, seat_id):
             raise SeatsinRouteBookedError
 
@@ -134,7 +134,7 @@ class CarriageRoutes(Routes):
         for begin_station, end_station in tuple_stations:
             self.routes.edges[begin_station, end_station]['seats'][seat_id] = data
 
-    def make_station_between_to_stations(self, starting_station: str, destination_station: str):
+    def make_station_between_to_stations(self, starting_station: str, destination_station: str) -> List[tuple]:
         stations = self.stations_between(starting_station, destination_station)
         return make_tuple_from_list(stations)
 

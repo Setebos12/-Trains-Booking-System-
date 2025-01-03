@@ -17,8 +17,8 @@ class Seat:
             window_middle_corridor (int): Position type (0: window, 1: middle, 2: corridor).
             table (bool): Whether the seat has a table.
             bike (bool): Whether the seat has space for a bike.
-            pregnant (bool): Whether the seat is reserved for pregnant passengers.
-            invalid (bool): Whether the seat is reserved for disabled passengers.
+            pregnant (bool): Whether the seat is for pregnant passengers.
+            invalid (bool): Whether the seat is for disabled passengers.
         """
         self.data = {
             "id": str(id),

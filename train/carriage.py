@@ -32,19 +32,7 @@ class Cariage:
         self, starting_station: str, destination_station: str,
         seat_id: str, route_id: int, data: Dict
     ) -> None:
-        """
-        Books a seat for a specific route.
 
-        Args:
-            starting_station (str): Starting station.
-            destination_station (str): Destination station.
-            seat_id (str): Seat ID.
-            route_id (int): Route ID.
-            data (dict): Booking data.
-
-        Raises:
-            ValueError: If the route ID is invalid.
-        """
         if route_id not in self.routes:
             raise ValueError
 

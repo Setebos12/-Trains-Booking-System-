@@ -1,4 +1,4 @@
-from train.carriage import Cariage
+from train.carriage import Cariage, json_repr_carriage
 from train.Seats import Seat
 from networkx.readwrite.json_graph import node_link_graph
 from Routes.Routes import CarriageRoutes
@@ -6,7 +6,7 @@ from file_handle.file_handle import read_data, write_data
 
 
 def write_to_file_carriage(carriage: Cariage):
-    write_data(carriage, base_path="data/Carriages")
+    write_data(json_repr_carriage(carriage), base_path="data/Carriages")
 
 
 def read_carriage(uniq_id):

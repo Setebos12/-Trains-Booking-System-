@@ -1,6 +1,6 @@
 from typing import List, Dict
-from train.carriage import Cariage
-from Routes.Routes import Routes
+from train.carriage import Cariage, json_repr_carriage
+from Routes.Routes import Routes, json_repr_routes
 
 
 class Train:
@@ -23,8 +23,7 @@ class Train:
         if carriage_id not in self.carriages:
             raise ValueError(f"Invalid carriage ID: {carriage_id}")
         self.carriages[carriage_id].book_seat_for_route(
-            starting_station, destination_station, str(seat_id), route_id, data
-        )
+            starting_station, destination_station, str(seat_id), route_id, data)
 
     def list_all_available_seats(
         self, starting_station: str, destination_station: str,
@@ -49,17 +48,30 @@ class Train:
     def list_of_ids(self) -> List[int]:
         return list(self.routes.keys())
 
-    def json_repr(self) -> Dict:
-        return {
-            'id': self.id,
-            'carriages': {
-                carriage.id: carriage.json_repr()
-                for carriage in self.carriages.values()
-            },
-            'routes': {
-                route.id: route.json_repr() for route in self.routes.values()
-            },
-        }
+    # def json_repr(self) -> Dict:
+    #     return {
+    #         'id': self.id,
+    #         'carriages': {
+    #             carriage.id: carriage.json_repr()
+    #             for carriage in self.carriages.values()
+    #         },
+    #         'routes': {
+    #             route.id: route.json_repr() for route in self.routes.values()
+    #         },
+    #     }
 
     def __str__(self) -> str:
         return f"Train ID: {self.id}"
+
+
+def json_repr_train(train: Train) -> Dict:
+    return {
+        'id': train.id,
+        'carriages': {
+            carriage.id: json_repr_carriage(carriage)
+            for carriage in train.carriages.values()
+        },
+        'routes': {
+            route.id: json_repr_routes(route) for route in train.routes.values()
+        },
+    }

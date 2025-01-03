@@ -1,5 +1,5 @@
 from typing import List, Dict
-from Routes.Routes import CarriageRoutes, Routes
+from Routes.Routes import CarriageRoutes, Routes, json_repr_routes
 from train.Seats import Seat
 
 
@@ -44,18 +44,9 @@ class Cariage:
         self, starting_station: str, destination_station: str,
         route_id: int, r_data: Dict = None
     ) -> tuple:
-        """
-        Lists all available seats for a given route and station range.
+        if r_data is None:
+            r_data = {}
 
-        Args:
-            starting_station (str): Starting station.
-            destination_station (str): Destination station.
-            route_id (int): ID of the route.
-            r_data (dict, optional): Seat requirement filters. Defaults to None.
-
-        Returns:
-            tuple: (set of free seats, set of booked seats)
-        """
         if route_id not in self.routes:
             raise ValueError
         free_s, book_s = self.routes[route_id].list_booked_and_empty_seats(
@@ -84,15 +75,7 @@ class Cariage:
         return carriage_look
 
     def get_carriage_look(self, seats: tuple) -> List[List[str]]:
-        """
-        Returns the visual representation of the carriage layout.
 
-        Args:
-            seats (tuple): (set of free seats, set of booked seats).
-
-        Returns:
-            List[List[str]]: Visual layout with seat statuses.
-        """
         free_seats, booked_seats = seats
         layout = []
         for row in self.carriage_look:
@@ -105,7 +88,7 @@ class Cariage:
                     elif seat_id in booked_seats:
                         new_row.append(f"{cell}B")
                     else:
-                        new_row.append(cell)
+                        new_row.append(f"{cell}R")
                 else:
                     new_row.append(cell)
             layout.append(new_row)
@@ -114,11 +97,21 @@ class Cariage:
     def add_routes(self, route: Routes) -> None:
         self.routes[route.id] = CarriageRoutes(route.id, route, self.seats_id)
 
-    def json_repr(self) -> Dict:
-        return {
-            'id': self.id,
-            'seats': [seat.seat_repr() for seat in self.seats.values()],
-            'carriage_look': self.carriage_look,
-            'graph': {route.id: route.json_repr()
-                      for route in self.routes.values()}
-        }
+    # def json_repr(self) -> Dict:
+    #     return {
+    #         'id': self.id,
+    #         'seats': [seat.seat_repr() for seat in self.seats.values()],
+    #         'carriage_look': self.carriage_look,
+    #         'graph': {route.id: route.json_repr()
+    #                   for route in self.routes.values()}
+    #     }
+
+
+def json_repr_carriage(cariage: Cariage) -> Dict:
+    return {
+        'id': cariage.id,
+        'seats': [seat.seat_repr() for seat in cariage.seats.values()],
+        'carriage_look': cariage.carriage_look,
+        'graph': {route.id: json_repr_routes(route)
+                  for route in cariage.routes.values()}
+    }

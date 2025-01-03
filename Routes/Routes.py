@@ -66,11 +66,11 @@ class Routes:
     def get_arrival_time(self, station: str) -> datetime:
         return self.routes.nodes[station]['arrival_time']
 
-    def json_repr(self):
-        return {
-            'id': self.id,
-            'graph': node_link_data(self.routes, edges="edges")
-        }
+    # def json_repr(self):
+    #     return {
+    #         'id': self.id,
+    #         'graph': node_link_data(self.routes, edges="edges")
+    #     }
 
     def info_route(self, starting_station: str, destination_station: str):
         departure_time = self.get_departure_time(starting_station)
@@ -79,6 +79,13 @@ class Routes:
         calculate_time = self.calculate_time(starting_station, destination_station)
         return (str(departure_time)[:-3], str(arrival_time)[:-3],
                 f"{float(route_distance):.2f} km", f"Jurney time {str(calculate_time)[:-3]}")
+
+
+def json_repr_routes(routes: Routes):
+    return {
+        'id': routes.id,
+        'graph': node_link_data(routes.routes, edges="edges")
+    }
 
 
 class CarriageRoutes(Routes):

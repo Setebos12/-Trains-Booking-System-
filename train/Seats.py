@@ -8,18 +8,7 @@ class Seat:
                  bike: bool = False,
                  pregnat: bool = False,
                  invalid: bool = False) -> None:
-        """
-        Initializes a Seat object with attributes.
 
-        Args:
-            id (int): Seat ID.
-            compartments (bool): Whether the seat is in a compartment.
-            window_middle_corridor (int): Position type (0: window, 1: middle, 2: corridor).
-            table (bool): Whether the seat has a table.
-            bike (bool): Whether the seat has space for a bike.
-            pregnant (bool): Whether the seat is for pregnant passengers.
-            invalid (bool): Whether the seat is for disabled passengers.
-        """
         self.data = {
             "id": str(id),
             "compartments": bool(compartments),
@@ -31,15 +20,6 @@ class Seat:
         }
 
     def check_requirments(self, r_data: Dict) -> bool:
-        """
-        Checks if the seat meets given requirements.
-
-        Args:
-            r_data (dict): Dictionary of seat requirements.
-
-        Returns:
-            bool: True if requirements are met, False otherwise.
-        """
         for key, value in r_data.items():
             if value is None:
                 continue

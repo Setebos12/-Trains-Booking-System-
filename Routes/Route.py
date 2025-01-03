@@ -7,29 +7,28 @@ class NotDateTimeDatError(Exception):
 
 class Route:
     def __init__(self, starting_station: str, destination_station: str,
-                 arrival_time, departure_time, distance):
+                 arrival_time, departure_time, distance) -> None:
         self.starting_station = starting_station
         self.destination_station = destination_station
         self.set_arrive_time_departure_time(arrival_time, departure_time)
         self.set_distance(distance)
-        self.booked_data = None
 
-    def arrival_time(self):
+    def arrival_time(self) -> datetime:
         return self._arrival_time
 
-    def departure_time(self):
+    def departure_time(self) -> datetime:
         return self._departure_time
 
-    def set_distance(self, distance):
+    def set_distance(self, distance) -> None:
         if distance < 0:
             raise ValueError("Distance cannot be negative.")
         self._distance = distance
 
-    def distance(self):
+    def distance(self) -> float:
         return self._distance
 
     def set_arrive_time_departure_time(self, arrival_time: datetime,
-                                       departure_time: datetime):
+                                       departure_time: datetime) -> None:
         if not isinstance(arrival_time, datetime) or not isinstance(
                 departure_time, datetime):
             raise NotDateTimeDatError(

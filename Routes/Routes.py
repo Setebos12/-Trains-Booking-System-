@@ -2,13 +2,13 @@ from Routes.Route import Route
 from networkx import DiGraph, has_path, shortest_path, shortest_path_length
 from networkx.readwrite.json_graph import node_link_data
 from datetime import datetime
-
+from typing import List
 
 class SeatsinRouteBookedError(Exception):
     pass
 
 
-def create_graph_from_routes(routes: list[Route]):
+def create_graph_from_routes(routes: list[Route]) -> DiGraph:
     DiGroutes = DiGraph()
     for route in routes:
         DiGroutes.add_node(
@@ -33,12 +33,8 @@ class Routes:
     Each node of graph is a station: data in node (departure_time, arrival_time).
     Each edge is a road: data is (distance, data_booked).
     """
-    def __init__(self, id, routes: DiGraph, create_graph=True):
+    def __init__(self, id, routes: DiGraph, create_graph=True) -> None:
         self.id = id
-        self.routes = DiGraph()
-        # if create_graph:
-        #     self.routes = create_graph_from_routes(routes)
-        # else:
         self.routes = routes
 
     def check_if_route_exist(self, starting_station: str, destination_station: str) -> bool:
@@ -52,10 +48,10 @@ class Routes:
             weight='weight'
         )
 
-    def stations_between(self, starting_station: str, destination_station: str):
+    def stations_between(self, starting_station: str, destination_station: str) -> List[str]:
         return shortest_path(self.routes, starting_station, destination_station)
 
-    def calculate_time(self, starting_station: str, destination_station: str):
+    def calculate_time(self, starting_station: str, destination_station: str) -> int:
         depart_time = self.routes.nodes[starting_station]['departure_time']
         arrive_time = self.routes.nodes[destination_station]['arrival_time']
         return arrive_time - depart_time
@@ -76,9 +72,13 @@ class Routes:
         departure_time = self.get_departure_time(starting_station)
         arrival_time = self.get_arrival_time(destination_station)
         route_distance = self.calculate_road(starting_station, destination_station)
-        calculate_time = self.calculate_time(starting_station, destination_station)
-        return (str(departure_time)[:-3], str(arrival_time)[:-3],
-                f"{float(route_distance):.2f} km", f"Jurney time {str(calculate_time)[:-3]}")
+        travel_time = self.calculate_time(starting_station, destination_station)
+        return (
+            str(departure_time)[:-3],
+            str(arrival_time)[:-3],
+            f"{float(route_distance):.2f} km",
+            f"Journey time {str(travel_time)[:-3]}"
+        )
 
 
 def json_repr_routes(routes: Routes):

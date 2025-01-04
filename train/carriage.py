@@ -5,28 +5,28 @@ from train.Seats import Seat
 
 class Cariage:
     def __init__(
-        self, id: int, routes: List[Routes], seats: List[Seat],
+        self, id: int, routes: Dict[str, Routes], seats: List[Seat],
         carriage_look: List[List[str]] = None, initiation: bool = True
     ) -> None:
         self.id = id
         self.seats = {seat.data['id']: seat for seat in seats}
         self.seats_id = [seat.data['id'] for seat in self.seats.values()]
 
-        if initiation:
-            self._initialize(routes, carriage_look)
-        else:
-            self.routes = routes
-            self.carriage_look = carriage_look
+        # if initiation:
+        #     self._initialize(routes, carriage_look)
+        # else:
+        #     self.routes = routes
+        #     self.carriage_look = carriage_look
+        self.routes = routes
+        self.carriage_look = carriage_look
 
-        self.current_route_id = 0
-
-    def _initialize(
-        self, routes: List[Routes], carriage_look: List[List[str]] = None
-    ) -> None:
-        self.routes = {
-            route.id: CarriageRoutes(route.id, route, self.seats_id) for route in routes
-        }
-        self.carriage_look = self.assign_seats(carriage_look) if carriage_look else None
+    # def _initialize(
+    #     self, routes: List[Routes], carriage_look: List[List[str]] = None
+    # ) -> None:
+    #     self.routes = {
+    #         route.id: CarriageRoutes(route.id, route, self.seats_id) for route in routes
+    #     }
+    #     self.carriage_look = self.assign_seats(carriage_look) if carriage_look else None
 
     def book_seat_for_route(
         self, starting_station: str, destination_station: str,
@@ -55,24 +55,24 @@ class Cariage:
         free_s = set(free_s) & set(seats_id)
         return free_s, book_s
 
-    def filter_seats(self, r_data):
+    def filter_seats(self, r_data: Dict) -> List[str]:
         return {
             seat.data['id'] for seat in self.seats.values()
             if seat.check_requirments(r_data)
         }
 
-    def assign_seats(self, carriage_look: List[List[str]]) -> List[List[str]]:
-        seats_id = self.seats_id
-        seats_id.sort(key=int)
-        index = 0
-        for x_dim, row in enumerate(carriage_look):
-            for y_dim, cell in enumerate(row):
-                if cell == 'S':
-                    if index >= len(seats_id):
-                        return carriage_look
-                    carriage_look[x_dim][y_dim] = f"S{seats_id[index]}"
-                    index += 1
-        return carriage_look
+    # def assign_seats(self, carriage_look: List[List[str]]) -> List[List[str]]:
+    #     seats_id = self.seats_id
+    #     seats_id.sort(key=int)
+    #     index = 0
+    #     for x_dim, row in enumerate(carriage_look):
+    #         for y_dim, cell in enumerate(row):
+    #             if cell == 'S':
+    #                 if index >= len(seats_id):
+    #                     return carriage_look
+    #                 carriage_look[x_dim][y_dim] = f"S{seats_id[index]}"
+    #                 index += 1
+    #     return carriage_look
 
     def get_carriage_look(self, seats: tuple) -> List[List[str]]:
 
@@ -115,3 +115,23 @@ def json_repr_carriage(cariage: Cariage) -> Dict:
         'graph': {route.id: json_repr_routes(route)
                   for route in cariage.routes.values()}
     }
+
+
+def create_carriage_routes(routes: List[Routes], seats_id: List[str]) -> Dict[str, CarriageRoutes]:
+    routes = {
+        route.id: CarriageRoutes(route.id, route, seats_id) for route in routes
+    }
+    return routes
+
+
+def assign_seats(carriage_look: List[List[str]], seats_id: List[str]) -> List[List[str]]:
+    seats_id.sort(key=int)
+    index = 0
+    for x_dim, row in enumerate(carriage_look):
+        for y_dim, cell in enumerate(row):
+            if cell == 'S':
+                if index >= len(seats_id):
+                    return carriage_look
+                carriage_look[x_dim][y_dim] = f"S{seats_id[index]}"
+                index += 1
+    return carriage_look

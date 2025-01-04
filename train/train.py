@@ -5,15 +5,14 @@ from Routes.Routes import Routes, json_repr_routes
 
 class Train:
     def __init__(
-        self, id: int, carriages: List[Cariage], routes: List[Routes],
-        initiating: bool = True
+        self, id: int, carriages: List[Cariage], routes: List[Routes]
     ) -> None:
 
         self.id = id
         self.carriages = {carriage.id: carriage for carriage in carriages}
         self.routes = {route.id: route for route in routes}
-        if initiating:
-            self.assign_routes_to_carriages()
+        # if initiating:
+        #     self.assign_routes_to_carriages()
 
     def book_seat_for_route(
         self, starting_station: str, destination_station: str,

@@ -199,7 +199,8 @@ class TrainWindow(QMainWindow):
 
         departure = self.user_system.monitor_user.deparute
         arrival = self.user_system.monitor_user.arrival
-        available_seats = item.carriage.list_all_available_seats(departure, arrival, self.user_system.monitor_user.route_id)
+        r_data = self._get_r_data()
+        available_seats = item.carriage.list_all_available_seats(departure, arrival, self.user_system.monitor_user.route_id, r_data)
         self._populate_seats_view(available_seats, item.carriage)
 
     def _populate_seats_view(self, seats, carriage):
@@ -280,7 +281,7 @@ class TrainWindow(QMainWindow):
             table = self.ui.Table1.isChecked()
             r_data['table'] = table
 
-        if self.ui.Compartemnts1.isChecked():
+        if self.ui.Compartemnts.isChecked():
             compartments = self.ui.Compartemnts1.isChecked()
             r_data['compartments'] = compartments
 

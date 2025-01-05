@@ -145,6 +145,11 @@ class Ui_Trains(object):
         self.page_2.setObjectName(u"page_2")
         self.verticalLayout_9 = QVBoxLayout(self.page_2)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.label_3 = QLabel(self.page_2)
+        self.label_3.setObjectName(u"label_3")
+
+        self.verticalLayout_9.addWidget(self.label_3)
+
         self.ListTicket = QListWidget(self.page_2)
         self.ListTicket.setObjectName(u"ListTicket")
 
@@ -297,6 +302,11 @@ class Ui_Trains(object):
 
         self.verticalLayout_10.addLayout(self.horizontalLayout_10)
 
+        self.label_2 = QLabel(self.page_6)
+        self.label_2.setObjectName(u"label_2")
+
+        self.verticalLayout_10.addWidget(self.label_2)
+
         self.stackedWidget.addWidget(self.page_6)
 
         self.verticalLayout_3.addWidget(self.stackedWidget)
@@ -312,7 +322,7 @@ class Ui_Trains(object):
 
         self.retranslateUi(Trains)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Trains)
@@ -330,6 +340,7 @@ class Ui_Trains(object):
         self.labelplot.setText(QCoreApplication.translate("Trains", u"TextLabel", None))
         self.summary.setText(QCoreApplication.translate("Trains", u"Choose your Seat my Friend", None))
         self.Booker.setText(QCoreApplication.translate("Trains", u"Book", None))
+        self.label_3.setText(QCoreApplication.translate("Trains", u"Your Tickets", None))
         self.Departure.setInputMask("")
         self.Departure.setText("")
         self.Departure.setPlaceholderText(QCoreApplication.translate("Trains", u"Departure", None))
@@ -340,9 +351,10 @@ class Ui_Trains(object):
         self.checkBox.setText(QCoreApplication.translate("Trains", u"Direct", None))
         self.Search.setText(QCoreApplication.translate("Trains", u"Search", None))
         self.Compartemnts.setText(QCoreApplication.translate("Trains", u"Compartemnts", None))
-        self.Compartemnts1.setText(QCoreApplication.translate("Trains", u"CheckBox", None))
+        self.Compartemnts1.setText(QCoreApplication.translate("Trains", u"Compartments", None))
         self.Table.setText(QCoreApplication.translate("Trains", u"Table", None))
         self.Table1.setText(QCoreApplication.translate("Trains", u"Table", None))
         self.corridor_middle_window.setText(QCoreApplication.translate("Trains", u"window_middle_corridor", None))
+        self.label_2.setText(QCoreApplication.translate("Trains", u"Check if you want to include in the filter.", None))
     # retranslateUi
 

@@ -39,8 +39,7 @@ class TrainWindow(QMainWindow):
         self.ui = Ui_Trains()
         self.ui.setupUi(self)
 
-        self.system = System()
-        self.user_system = UserSystem(self.system)
+        self.user_system = UserSystem(System())
 
         self.selected_train = None
         self.selected_carriage = None
@@ -63,7 +62,7 @@ class TrainWindow(QMainWindow):
 
     def _set_date_and_time_limits(self):
         self.ui.dateEdit.setMinimumDate(QDate.currentDate())
-        self.ui.dateEdit.setMaximumDate(QDate.currentDate())
+        self.ui.dateEdit.setMaximumDate(QDate.currentDate().addMonths(6))
         self.ui.timeEdit.setMinimumTime(QTime.currentTime())
         self.ui.timeEdit.setMaximumTime(QTime(23, 59, 59))
 

@@ -1,12 +1,12 @@
 from train.train import Train
 from networkx import DiGraph, compose, has_path, all_simple_paths
 from file_handle.train_files import read_all_trains, write_train_file
-from datetime import timedelta, datetime
 from user.user import get_all_users, User, write_user_file
 from System.MonitorUser import MonitorUserSystem
 from user.ticket import Ticket
 from typing import Dict, List
 from Routes.Routes import Routes
+from datetime import timedelta, datetime
 
 
 class InvalidStationError(Exception):
@@ -21,7 +21,6 @@ class System:
     def __init__(self) -> None:
         self.trains = self._load_trains()
         self.users = self._load_users()
-        self.monitor_user = MonitorUserSystem("0")
         self.network = self._create_graph_from_trains()
         self.all_stations = set(self.network.nodes)
 
@@ -30,6 +29,21 @@ class System:
 
     def _load_users(self) -> Dict:
         return {user.id: user for user in get_all_users()}
+
+    def add_user(self, user_id: str) -> None:
+        if user_id in self.users:
+            raise ValueError(f"User with ID {user_id} already exists.")
+        user = User(user_id)
+        self.users[user.id] = user
+        self.write_user_file(user)
+
+    def write_user_file(self, user: User) -> None:
+        write_user_file(user)
+
+    def get_user(self, user_id: str) -> User:
+        if user_id not in self.users:
+            raise ValueError(f"User with ID {user_id} does not exist.")
+        return self.users[user_id]
 
     def _create_graph_from_trains(self) -> DiGraph:
         graph = DiGraph()
@@ -41,21 +55,7 @@ class System:
         if station not in self.all_stations:
             raise InvalidStationError(f"Invalid station: {station}")
 
-    def add_user(self, user_id: str) -> None:
-        if user_id in self.users.keys():
-            raise ValueError(f"User with ID {user_id} already exists.")
-        user = User(user_id)
-        self.users[user.id] = user
-        write_user_file(user)
-        self.monitor_user.user_id = user_id
-
-    def change_current_user(self, user_id: str) -> None:
-        if user_id not in self.users.keys():
-            self.add_user(user_id)
-        self.monitor_user.user_id = user_id
-
     def check_direct_connection(self, starting_station: str, destination_station: str, time=None) -> List:
-
         self._validate_station(starting_station)
         self._validate_station(destination_station)
 
@@ -82,7 +82,6 @@ class System:
         self, starting_station: str, destination_station: str,
         time: datetime = None, time_wait: tuple = (0, 60)
     ) -> List:
-
         if not has_path(self.network, starting_station, destination_station):
             raise RouteError("No path exists between the stations.")
 
@@ -135,20 +134,59 @@ class System:
         return 1, time_diff
 
     def book_seat(self, starting_station: str, destination_station: str, train_id: int, route_id: int,
-                  carriage_id: int, seat_id: int, data: Dict) -> None:
+                  carriage_id: int, seat_id: int, user_id: str) -> None:
         if train_id not in self.trains:
             raise ValueError(f"Invalid train ID: {train_id}")
 
+        if user_id not in self.users:
+            raise ValueError(f"Invalid user ID: {user_id}")
+
         train = self.trains[train_id]
-        train.book_seat_for_route(starting_station, destination_station, carriage_id, seat_id, route_id, data)
+        train.book_seat_for_route(starting_station, destination_station, carriage_id, seat_id, route_id, user_id)
         write_train_file(train)
 
-    def remove_ticket(self, ticket: Ticket) -> None:
-        user_id = self.monitor_user.user_id
-        self.book_seat(ticket.start_station, ticket.end_station, ticket.train_id, ticket.route_id,
-                       ticket.carriage_id, ticket.seat_id, None)
-        self.users[user_id].remove_ticket(ticket)
-        write_user_file(self.users[user_id])
+        departure_time = train.routes[route_id].get_departure_time(starting_station)
+        arrival_time = train.routes[route_id].get_arrival_time(destination_station)
+        ticket = Ticket(starting_station, destination_station, train_id, route_id, carriage_id, seat_id,
+                        departure_time, arrival_time)
+
+        self.add_ticket_to_user(ticket, user_id)
+
+    def add_ticket_to_user(self, ticket: Ticket, user_id: str) -> None:
+        user = self.get_user(user_id)
+        user.add_ticket(ticket)
+        self.write_user_file(user)
+
+    def remove_ticket(self, ticket: Ticket, user_id: str) -> None:
+        user = self.get_user(user_id)
+        user.remove_ticket(ticket)
+        self.write_user_file(user)
+
+        train = self.trains[ticket.train_id]
+        train.book_seat_for_route(ticket.start_station, ticket.end_station, ticket.carriage_id, ticket.seat_id,
+                                  ticket.route_id, None)
+        write_train_file(train)
+
+    def list_all_available_seats(self, starting_station: str, destination_station: str, route_id: int,
+                                 train_id: int, r_data: Dict = None) -> Dict:
+        if r_data is None:
+            r_data = {}
+        return self.trains[train_id].list_all_availabe_seats(starting_station, destination_station, route_id, r_data)
+
+    def get_train_route(self, ids: tuple) -> Routes:
+        route_id, train_id = ids
+        return self.trains[train_id].routes[route_id]
+
+
+class UserSystem:
+    def __init__(self, system: System) -> None:
+        self.system = system
+        self.monitor_user = MonitorUserSystem("0")
+
+    def change_current_user(self, user_id: str) -> None:
+        if user_id not in self.system.users:
+            self.system.add_user(user_id)
+        self.monitor_user.user_id = user_id
 
     def book_seat_data(self) -> None:
         if not self.monitor_user or not self.monitor_user.check_if_all_not_none():
@@ -162,28 +200,7 @@ class System:
         carriage_id = self.monitor_user.carriage_id
         seat_id = self.monitor_user.seat_id
 
-        self.book_seat(starting_station, destination_station, train_id, route_id, carriage_id, seat_id, user_id)
-
-        departure_time = self.trains[train_id].routes[route_id].get_departure_time(starting_station)
-        arrival_time = self.trains[train_id].routes[route_id].get_arrival_time(destination_station)
-        ticket = Ticket(starting_station, destination_station, train_id, route_id, carriage_id, seat_id,
-                        departure_time, arrival_time)
-
-        self.users[user_id].add_ticket(ticket)
-        write_user_file(self.users[user_id])
-
-    def list_all_available_seats(self, starting_station: str, destination_station: str, route_id: int,
-                                 train_id: int, r_data: Dict = None) -> Dict:
-        if r_data is None:
-            r_data = {}
-        return self.trains[train_id].list_all_availabe_seats(starting_station, destination_station, route_id, r_data)
-
-    def get_train_route(self, ids: tuple) -> Routes:
-        route_id, train_id = ids
-        return self.trains[train_id].routes[route_id]
-
-    def get_random_seat():
-        pass
+        self.system.book_seat(starting_station, destination_station, train_id, route_id, carriage_id, seat_id, user_id)
 
 
 def get_common(nums1, nums2):
@@ -191,7 +208,6 @@ def get_common(nums1, nums2):
 
 
 def merge_Graphs(G: DiGraph, grap_routes: DiGraph, train_id: int, route_id: int) -> DiGraph:
-
     graph = grap_routes.copy()
     data_nodes = dict(grap_routes.nodes(data=True))
     for node in graph.nodes:

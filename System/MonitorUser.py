@@ -15,5 +15,5 @@ class MonitorUserSystem():
             self.train_id is not None,
             self.route_id is not None,
             self.carriage_id is not None,
-            self.seat_id is not None
+            self.seat_id is not None,
         ])

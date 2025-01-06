@@ -40,6 +40,9 @@ class System:
     def write_user_file(self, user: User) -> None:
         write_user_file(user)
 
+    def write_train_file(self, train: Train) -> None:
+        write_train_file(train)
+
     def get_user(self, user_id: str) -> User:
         if user_id not in self.users:
             raise ValueError(f"User with ID {user_id} does not exist.")
@@ -80,7 +83,7 @@ class System:
 
     def check_no_direct_connections(
         self, starting_station: str, destination_station: str,
-        time: datetime = None, time_wait: tuple = (0, 60)
+        time: datetime = None, time_wait: tuple = (0, 500)
     ) -> List:
         if not has_path(self.network, starting_station, destination_station):
             raise RouteError("No path exists between the stations.")
@@ -122,7 +125,7 @@ class System:
 
     def check_stations_correct_transfers(self, arrival_train: int,
                                          departure_train: int,
-                                         station: str, time_wait: tuple = (0, 60)) -> tuple:
+                                         station: str, time_wait: tuple = (0, 500)) -> tuple:
         arrival_time = self.network.nodes[station]['arrivals'][arrival_train]
         departure_time = self.network.nodes[station]['departure'][departure_train]
         time_diff = departure_time - arrival_time
@@ -143,7 +146,7 @@ class System:
 
         train = self.trains[train_id]
         train.book_seat_for_route(starting_station, destination_station, carriage_id, seat_id, route_id, user_id)
-        write_train_file(train)
+        self.write_train_file(train)
 
         departure_time = train.routes[route_id].get_departure_time(starting_station)
         arrival_time = train.routes[route_id].get_arrival_time(destination_station)
@@ -165,7 +168,7 @@ class System:
         train = self.trains[ticket.train_id]
         train.book_seat_for_route(ticket.start_station, ticket.end_station, ticket.carriage_id, ticket.seat_id,
                                   ticket.route_id, None)
-        write_train_file(train)
+        self.write_train_file(train)
 
     def list_all_available_seats(self, starting_station: str, destination_station: str, route_id: int,
                                  train_id: int, r_data: Dict = None) -> Dict:
@@ -182,6 +185,7 @@ class UserSystem:
     def __init__(self, system: System) -> None:
         self.system = system
         self.monitor_user = MonitorUserSystem("0")
+        self.change_current_user("0")
 
     def change_current_user(self, user_id: str) -> None:
         if user_id not in self.system.users:

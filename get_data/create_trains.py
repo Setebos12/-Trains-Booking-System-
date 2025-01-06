@@ -11,6 +11,7 @@ def create_train(id, carriages_ids, route_ids):
     routes = [read_Route(route) for route in route_ids]
     carriages = [read_carriage(carriage) for carriage in carriages_ids]
     train = Train(id, carriages, routes)
+    train.assign_routes_to_carriages()
     return train
 
 
@@ -34,5 +35,3 @@ def get_ids(path):
     return ids
 
 
-if __name__ == "__main__":
-    create_Random_trains()

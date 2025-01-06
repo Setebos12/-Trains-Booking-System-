@@ -19,7 +19,7 @@ def read_train_file(uniq_id):
     routes = [Routes(route['id'],
                      node_link_graph(route['graph'], edges="edges"),
                      False) for route in data['routes'].values()]
-    return Train(train_id, car, routes, False)
+    return Train(train_id, car, routes)
 
 
 def read_all_trains():

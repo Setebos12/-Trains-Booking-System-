@@ -22,7 +22,3 @@ def get_stations_gps(stations):
         station_positions[station] = (float(gps[1].replace(',', '.')), float(gps[0].replace(',', '.')))
     return station_positions
 
-
-if __name__ == '__main__':
-    system = System()
-    draw_graph(system.network)

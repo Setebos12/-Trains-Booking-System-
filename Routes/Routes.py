@@ -4,6 +4,7 @@ from networkx.readwrite.json_graph import node_link_data
 from datetime import datetime
 from typing import List
 
+
 class SeatsinRouteBookedError(Exception):
     pass
 
@@ -62,12 +63,6 @@ class Routes:
     def get_arrival_time(self, station: str) -> datetime:
         return self.routes.nodes[station]['arrival_time']
 
-    # def json_repr(self):
-    #     return {
-    #         'id': self.id,
-    #         'graph': node_link_data(self.routes, edges="edges")
-    #     }
-
     def info_route(self, starting_station: str, destination_station: str):
         departure_time = self.get_departure_time(starting_station)
         arrival_time = self.get_arrival_time(destination_station)
@@ -89,12 +84,12 @@ def json_repr_routes(routes: Routes):
 
 
 class CarriageRoutes(Routes):
-    def __init__(self, id, routes: Routes, seats_id, initation=True) -> None:
+    def __init__(self, id: int, routes: DiGraph, seats_id: List[int], initation: bool = True) -> None:
         self.id = id
         if initation:
             self._initialize(routes, seats_id)
         else:
-            self.routes = DiGraph(routes)
+            self.routes = routes
             self.seats_id = seats_id
 
     def _initialize(self, routes, seats_id):

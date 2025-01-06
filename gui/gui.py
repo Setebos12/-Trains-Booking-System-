@@ -179,6 +179,7 @@ class TrainWindow(QMainWindow):
         self.user_system.monitor_user.train_id = item.train.id
         self.user_system.monitor_user.arrival = item.dep_arr[1]
         self.user_system.monitor_user.deparute = item.dep_arr[0]
+        self.user_system.monitor_user.seat_id = None
 
         self._prepare_carriages_view(item.train, item.route)
         self.ui.stackedWidget.setCurrentIndex(0)
@@ -194,6 +195,7 @@ class TrainWindow(QMainWindow):
             self.ui.Carriages.addItem(carriage_item)
 
     def _select_carriage(self, item):
+        self.user_system.monitor_user.seat_id = None
         self.selected_carriage = item.carriage
         self.user_system.monitor_user.carriage_id = item.carriage.id
 

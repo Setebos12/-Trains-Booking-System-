@@ -5,6 +5,7 @@ import networkx as nx
 from matplotlib import pyplot as plt
 import pytest
 from System.system import RouteError
+from System.MonitorUser import MonitorUserSystem
 
 
 def test_incorpoate_To_bigger_graph():
@@ -17,19 +18,8 @@ def test_incorpoate_To_bigger_graph():
     assert len(graph.nodes['Warszawa Centralna']['departure']) > 0
 
 
-def test_direct_path():
-    system = System()
-
-
-    assert set(system.check_direct_connection("Radom Główny", "Sopot")) == set()
-    assert set(system.check_direct_connection("Olsztyn Główny", "Sopot")) == {(9, 12)}
-    assert set(system.check_direct_connection("Olsztyn Główny", "Kraków Główny")) == {(3, 5)}
-    assert len(set(system.check_direct_connection("Warszawa Centralna", "Warszawa Zachodnia"))) > 0
-
-
 def test_all_path():
     system = System()
-    system.create_graph_from_trains()
 
     paths = system.check_no_direct_connections("Radom Główny", "Sopot")
     assert len(paths) == 0
@@ -41,3 +31,19 @@ def test_set_common_elements():
     nums1 = [1, 2, 3, 4]
     nums2 = [2, 3]
     assert get_common(nums1, nums2) == {2, 3}
+
+
+def test_monitor_user():
+    mont_user = MonitorUserSystem("0")
+    assert mont_user.check_if_all_not_none() is False
+
+    mont_user.route_id = 1
+    mont_user.carriage_id = 1
+    mont_user.user_id = 1
+    mont_user.seat_id = 1
+    mont_user.train_id = 1
+    mont_user.deparute = 1
+    mont_user.arrival = 1
+
+    assert mont_user.check_if_all_not_none() is True
+

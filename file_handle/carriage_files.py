@@ -29,5 +29,5 @@ def create_carriage_from_data(data):
                                              edges='edges'),
                              seats_id, False) for key in data['graph']}
 
-    carriage = Cariage(data['id'], graphs, seats, data['carriage_look'], False)
+    carriage = Cariage(data['id'], graphs, seats, data['carriage_look'])
     return carriage

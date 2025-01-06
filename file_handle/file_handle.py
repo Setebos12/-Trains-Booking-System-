@@ -8,7 +8,6 @@ def write_data(data, base_path="data/Users"):
     base_path.mkdir(parents=True, exist_ok=True)
 
     file_path = base_path / f"{data['id']}.json"
-    # data = data.json_repr()
     s1 = json.dumps(data, default=serialize_datetime, indent=4)
     with file_path.open('w') as file_handle:
         file_handle.write(s1)

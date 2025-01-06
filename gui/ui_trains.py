@@ -116,12 +116,17 @@ class Ui_Trains(object):
 
         self.verticalLayout_5.addWidget(self.summary)
 
+        self.label_3 = QLabel(self.page)
+        self.label_3.setObjectName(u"label_3")
+
+        self.verticalLayout_5.addWidget(self.label_3)
+
         self.scrollArea = QScrollArea(self.page)
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 549, 150))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 549, 138))
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.verticalLayout_5.addWidget(self.scrollArea)
@@ -145,11 +150,6 @@ class Ui_Trains(object):
         self.page_2.setObjectName(u"page_2")
         self.verticalLayout_9 = QVBoxLayout(self.page_2)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.label_3 = QLabel(self.page_2)
-        self.label_3.setObjectName(u"label_3")
-
-        self.verticalLayout_9.addWidget(self.label_3)
-
         self.ListTicket = QListWidget(self.page_2)
         self.ListTicket.setObjectName(u"ListTicket")
 
@@ -322,7 +322,7 @@ class Ui_Trains(object):
 
         self.retranslateUi(Trains)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Trains)
@@ -339,8 +339,8 @@ class Ui_Trains(object):
         self.label.setText(QCoreApplication.translate("Trains", u"Book", None))
         self.labelplot.setText(QCoreApplication.translate("Trains", u"TextLabel", None))
         self.summary.setText(QCoreApplication.translate("Trains", u"Choose your Seat my Friend", None))
+        self.label_3.setText(QCoreApplication.translate("Trains", u"Legend R Requriments not met, B Booked, F Free", None))
         self.Booker.setText(QCoreApplication.translate("Trains", u"Book", None))
-        self.label_3.setText(QCoreApplication.translate("Trains", u"Your Tickets", None))
         self.Departure.setInputMask("")
         self.Departure.setText("")
         self.Departure.setPlaceholderText(QCoreApplication.translate("Trains", u"Departure", None))

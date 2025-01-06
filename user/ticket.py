@@ -10,18 +10,6 @@ class Ticket:
         self.arrival_time = str(arrival_time)
         self.departure_time = str(departure_time)
 
-    def json_repr(self):
-        return {
-            "start_station": self.start_station,
-            "end_station": self.end_station,
-            "train_id": self.train_id,
-            "route_id": self.route_id,
-            "carriage_id": self.carriage_id,
-            "seat_id": self.seat_id,
-            "arrival_time": self.arrival_time,
-            "departure_time": self.departure_time,
-        }
-
     def __str__(self):
         return (
             f"Ticket:\n"
@@ -36,3 +24,16 @@ class Ticket:
 
 
         )
+
+
+def json_repr_ticket(ticket: Ticket):
+    return {
+        "start_station": ticket.start_station,
+        "end_station": ticket.end_station,
+        "train_id": ticket.train_id,
+        "route_id": ticket.route_id,
+        "carriage_id": ticket.carriage_id,
+        "seat_id": ticket.seat_id,
+        "arrival_time": ticket.arrival_time,
+        "departure_time": ticket.departure_time,
+    }

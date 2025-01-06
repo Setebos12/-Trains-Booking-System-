@@ -1,32 +1,82 @@
-# Trains Booking System 🚄🚃🚃🚃🚃🚃🚃🚃
+# Train Booking System 🚄🚃🚃🚃🚃
 
+## Overview
+The **Train Booking System** is application designed for booking and managing train tickets. It integrates train data, user interactions, and route management into interface.
 
-## Contents
+---
 
-### System
-The system communicates with files to update seat availability in trains.
+## Features
 
-The system creates one large graph of trains from individual train graphs.
+### **System**
+- **Graph-based Train Management**:
+  - Combines individual train graphs into a unified network for efficient route planning.
+- **Seat Reservation**:
+  - Updates seat availability dynamically upon booking or cancellation.
+  - Supports various seat attributes such as window, aisle, compartment, and bicycle storage.
 
+### **Trains**
+- **Carriages**:
+  - Contain seating arrangements with detailed features.
+  - Manage routes and reserved seats dynamically.
+- **Routes**:
+  - Directed graphs representing station-to-station connections.
+  - Includes precise arrival and departure data.
 
-### Pociągi
-🚄 A train consists of 🚃 carriages and routes 🛤 that it operates.
+### **Users**
+- **Account Management**:
+  - Each user is assigned a unique ID.
+  - Enables personalized booking and ticket management.
 
-🚃 A carriage has a seating arrangement, 💺 seats, and the routes 🛤🚃 that it operates.
-
-💺 Seats have attributes such as (compartment, window-middle-aisle, bicycle, etc.).
-
-🛤 A route has no loop in a directed graph with node data for arrival at the station and departure data from the station.
-
-🛤🚃 A route in a carriage has edges representing seat reservations.
-
-### User
-
-🧍 Each user can book tickets.
-
-## Dane
-
-Data retrieved from portalpasportalpas(https://portalpasazera.pl/).
-
+---
 
 ## Installation
+
+### **Requirements**
+- Python 3.8 or newer
+- Libraries: PySide6, NetworkX, Matplotlib, Pillow
+
+### **Setup Instructions**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/train-booking-system.git
+   cd train-booking-system
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```bash
+   python app.py
+   ```
+
+---
+
+## Usage
+
+### **Login**
+1. Enter your unique user ID.
+2. Click `Enter` to access your account.
+
+### **Search for Trains**
+1. Provide departure and arrival stations.
+2. Select the travel date and time.
+3. Choose direct or indirect routes.
+
+### **Book a Seat**
+1. Browse available trains and carriages.
+2. Select a seat and confirm your booking.
+
+### **Manage Tickets**
+- View all booked tickets in the `Tickets` section.
+- Remove unwanted tickets with a single click.
+
+---
+
+## Data Sources
+- Train data retrieved from [Portal Pasażera](https://portalpasazera.pl/).
+
+---
+
+## Author
+- Krzysztof Rutkowski

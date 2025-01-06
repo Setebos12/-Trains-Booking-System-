@@ -11,8 +11,6 @@ class Train:
         self.id = id
         self.carriages = {carriage.id: carriage for carriage in carriages}
         self.routes = {route.id: route for route in routes}
-        # if initiating:
-        #     self.assign_routes_to_carriages()
 
     def book_seat_for_route(
         self, starting_station: str, destination_station: str,
@@ -47,17 +45,15 @@ class Train:
     def list_of_ids(self) -> List[int]:
         return list(self.routes.keys())
 
-    # def json_repr(self) -> Dict:
-    #     return {
-    #         'id': self.id,
-    #         'carriages': {
-    #             carriage.id: carriage.json_repr()
-    #             for carriage in self.carriages.values()
-    #         },
-    #         'routes': {
-    #             route.id: route.json_repr() for route in self.routes.values()
-    #         },
-    #     }
+    def add_carriage(self, carriage: Cariage) -> None:
+        if carriage.id in self.carriages:
+            raise ValueError(f"Carriage with ID {carriage.id} already exists.")
+        self.carriages[carriage.id] = carriage
+
+    def remove_carriage(self, carriage_id: int) -> None:
+        if carriage_id not in self.carriages:
+            raise ValueError(f"Carriage with ID {carriage_id} does not exist.")
+        del self.carriages[carriage_id]
 
     def __str__(self) -> str:
         return f"Train ID: {self.id}"

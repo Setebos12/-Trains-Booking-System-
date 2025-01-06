@@ -1,5 +1,5 @@
 import json
-from user.ticket import Ticket
+from user.ticket import Ticket, json_repr_ticket
 from pathlib import Path
 
 
@@ -20,11 +20,12 @@ class User:
     def __str__(self):
         return f"{self.id}"
 
-    def json_repr(self):
-        return {
-            'id': self.id,
-            'tickets': [ticket.json_repr() for ticket in self.tickets]
-        }
+
+def json_repr_user(user: User):
+    return {
+        'id': user.id,
+        'tickets': [json_repr_ticket(ticket) for ticket in user.tickets]
+    }
 
 
 def write_user_file(user: User, base_path="data/Users"):
@@ -32,7 +33,7 @@ def write_user_file(user: User, base_path="data/Users"):
     base_path.mkdir(parents=True, exist_ok=True)
 
     file_path = base_path / f"{user.id}.json"
-    data = user.json_repr()
+    data = json_repr_user(user)
     with file_path.open('w') as file_handle:
         json.dump(data, file_handle, indent=4)
 

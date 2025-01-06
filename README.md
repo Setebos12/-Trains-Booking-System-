@@ -1,7 +1,7 @@
-# Train Booking System 🚄🚃🚃🚃🚃
+# Train Booking System 🚅🚃🚃🚃
 
 ## Overview
-The **Train Booking System** is application designed for booking and managing train tickets. It integrates train data, user interactions, and route management into interface.
+The **Train Booking System** is an application designed for booking and managing train reservations.
 
 ---
 
@@ -10,9 +10,11 @@ The **Train Booking System** is application designed for booking and managing tr
 ### **System**
 - **Graph-based Train Management**:
   - Combines individual train graphs into a unified network for efficient route planning.
+  - Handles direct and indirect route searches with dynamic transfer handling.
 - **Seat Reservation**:
   - Updates seat availability dynamically upon booking or cancellation.
   - Supports various seat attributes such as window, aisle, compartment, and bicycle storage.
+
 
 ### **Trains**
 - **Carriages**:
@@ -20,12 +22,14 @@ The **Train Booking System** is application designed for booking and managing tr
   - Manage routes and reserved seats dynamically.
 - **Routes**:
   - Directed graphs representing station-to-station connections.
-  - Includes precise arrival and departure data.
+  - Includes precise arrival and departure data for better planning.
 
 ### **Users**
 - **Account Management**:
   - Each user is assigned a unique ID.
   - Enables personalized booking and ticket management.
+- **Ticket Management**:
+  - Users can book, view, and cancel tickets easily.
 
 ---
 
@@ -45,7 +49,11 @@ The **Train Booking System** is application designed for booking and managing tr
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the application:
+3. Refresh train data (optional):
+   ```bash
+   python refresh_data.py
+   ```
+4. Run the application:
    ```bash
    python app.py
    ```
@@ -73,6 +81,8 @@ The **Train Booking System** is application designed for booking and managing tr
 
 ---
 
+
+
 ## Data Sources
 - Train data retrieved from [Portal Pasażera](https://portalpasazera.pl/).
 
@@ -80,3 +90,4 @@ The **Train Booking System** is application designed for booking and managing tr
 
 ## Author
 - Krzysztof Rutkowski
+

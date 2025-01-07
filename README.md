@@ -1,4 +1,4 @@
-# Train Booking System 🚅🚃🚃🚃
+# Train Booking System 🚅🚃🚃🚃🚃🚃🚃🚃
 
 ## Overview
 The **Train Booking System** is an application designed for booking and managing train reservations.
@@ -37,7 +37,7 @@ The **Train Booking System** is an application designed for booking and managing
 
 ### **Requirements**
 - Python 3.8 or newer
-- Libraries: PySide6, NetworkX, Matplotlib, Pillow
+- Main Libraries: PySide6, NetworkX, Matplotlib, Pillow
 
 ### **Setup Instructions**
 1. Clone the repository:

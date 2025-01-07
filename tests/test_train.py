@@ -221,5 +221,83 @@ def test_all_avalble_seats():
     assert ans == {1: ({'2', '3'}, {'1'}), 2: ({'2', '3'}, {'1'}), 3: ({'1', '3'}, {'2'})}
 
 
-def test_read_train():
-    train = read_train_file(4)
+def test_remove_carriage():
+    seats = {Seat(1, True, 2),
+                Seat(2, True, 1),
+                Seat(3, True, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes2()
+    carriage1 = Cariage(1, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage2 = Cariage(2, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage3 = Cariage(3, {}, seats, [['.', 'S1', 'S2', 'S3']])
+
+    train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
+    train.remove_carriage(2)
+
+    assert 2 not in train.carriages
+    assert len(train.carriages) == 2
+
+
+def test_add_carriage():
+    seats = {Seat(1, True, 2),
+                Seat(2, True, 1),
+                Seat(3, True, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes2()
+    carriage1 = Cariage(1, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage2 = Cariage(2, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage3 = Cariage(3, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage4 = Cariage(4, {}, seats, [['.', 'S1', 'S2', 'S3']])
+
+    train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
+    train.add_carriage(carriage4)
+
+    assert train.carriages[4] == carriage4
+    assert len(train.carriages) == 4
+
+
+def test_add_existing_carriage():
+    seats = {Seat(1, True, 2),
+                Seat(2, True, 1),
+                Seat(3, True, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes2()
+    carriage1 = Cariage(1, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage2 = Cariage(2, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage3 = Cariage(3, {}, seats, [['.', 'S1', 'S2', 'S3']])
+
+    train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
+
+    with pytest.raises(ValueError):
+        train.add_carriage(carriage2)
+
+
+def test_remove_nonexistent_carriage():
+    seats = {Seat(1, True, 2),
+                Seat(2, True, 1),
+                Seat(3, True, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes2()
+    carriage1 = Cariage(1, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage2 = Cariage(2, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage3 = Cariage(3, {}, seats, [['.', 'S1', 'S2', 'S3']])
+
+    train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
+
+    with pytest.raises(ValueError):
+        train.remove_carriage(4)
+
+
+def test_list_of_ids():
+    seats = {Seat(1, True, 2),
+                Seat(2, True, 1),
+                Seat(3, True, 0)}
+
+    carriage_routes = create_simple_CarriageRoutes2()
+    carriage1 = Cariage(1, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage2 = Cariage(2, {}, seats, [['.', 'S1', 'S2', 'S3']])
+    carriage3 = Cariage(3, {}, seats, [['.', 'S1', 'S2', 'S3']])
+
+    train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
+
+    assert train.list_of_ids() == [1]

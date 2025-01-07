@@ -4,11 +4,8 @@ from get_data.get_data import get_station_data
 from System.system import System
 
 
-def draw_graph(routes):
+def draw_graph(routes, station_positions):
     G = routes
-    stations = routes.nodes
-    station_positions = get_stations_gps(stations)
-
     plt.figure(figsize=(10, 8))
     nx.draw(G, pos=station_positions, with_labels=True, node_color="skyblue", font_weight="bold", node_size=200, font_size=6)
     plt.show()

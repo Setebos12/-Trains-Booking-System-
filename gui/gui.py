@@ -22,8 +22,8 @@ def plot_route(route, departure_station, arrival_station):
         for node in G.nodes
     ]
 
-    plt.figure(figsize=(4.5, 4.5))
-    draw_circular(G, with_labels=True, node_color=node_colors, font_weight="bold", node_size=450, font_size=5)
+    plt.figure(figsize=(7, 5))
+    draw_circular(G, with_labels=True, node_color=node_colors, font_weight="bold", node_size=450, font_size=8.5)
     plt.title("Routes Visualization")
 
     buffer = BytesIO()
@@ -71,6 +71,7 @@ class TrainWindow(QMainWindow):
         if user_id:
             self.user_system.change_current_user(user_id)
             self.ui.IDshow.setText(f"Your ID: {user_id}")
+        self._go_home()
 
     def _Go_ticket(self):
         self.ui.ListTicket.clear()
@@ -174,7 +175,7 @@ class TrainWindow(QMainWindow):
     def _select_train(self, item):
         if not item.flags() & Qt.ItemFlag.ItemIsEnabled:
             return
-
+        self.ui.summary.setText("Choose Seat")
         self.user_system.monitor_user.route_id = item.route
         self.user_system.monitor_user.train_id = item.train.id
         self.user_system.monitor_user.arrival = item.dep_arr[1]

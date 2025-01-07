@@ -63,7 +63,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -115,6 +115,11 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Choose your Seat my Friend</string>
                 </property>
@@ -125,6 +130,11 @@
               </item>
               <item>
                <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Legend R Requriments not met, B Booked, F Free</string>
                 </property>
@@ -141,7 +151,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>549</width>
-                   <height>138</height>
+                   <height>133</height>
                   </rect>
                  </property>
                 </widget>
@@ -151,6 +161,11 @@
             </item>
             <item>
              <widget class="QPushButton" name="Booker">
+              <property name="font">
+               <font>
+                <pointsize>17</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Book</string>
               </property>
@@ -165,7 +180,13 @@
       <widget class="QWidget" name="page_2">
        <layout class="QVBoxLayout" name="verticalLayout_9">
         <item>
-         <widget class="QListWidget" name="ListTicket"/>
+         <widget class="QListWidget" name="ListTicket">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -192,6 +213,11 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
               <property name="inputMask">
                <string/>
               </property>
@@ -213,6 +239,11 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
               </property>
               <property name="inputMask">
                <string/>
@@ -256,6 +287,11 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
               <property name="calendarPopup">
                <bool>true</bool>
               </property>
@@ -268,6 +304,11 @@
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
               </property>
               <property name="calendarPopup">
                <bool>false</bool>
@@ -295,6 +336,11 @@
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
            <widget class="QCheckBox" name="checkBox">
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Direct</string>
             </property>
@@ -311,6 +357,11 @@
           </item>
           <item>
            <widget class="QPushButton" name="Search">
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Search</string>
             </property>
@@ -323,12 +374,26 @@
       <widget class="QWidget" name="page_6">
        <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
-         <widget class="QListWidget" name="listWidget"/>
+         <widget class="QListWidget" name="listWidget">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="spacing">
+           <number>7</number>
+          </property>
+         </widget>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
            <widget class="QCheckBox" name="Compartemnts">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Compartemnts</string>
             </property>
@@ -336,6 +401,11 @@
           </item>
           <item>
            <widget class="QCheckBox" name="Compartemnts1">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Compartments</string>
             </property>
@@ -347,6 +417,11 @@
          <layout class="QHBoxLayout" name="horizontalLayout_9">
           <item>
            <widget class="QCheckBox" name="Table">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Table</string>
             </property>
@@ -354,6 +429,11 @@
           </item>
           <item>
            <widget class="QCheckBox" name="Table1">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Table</string>
             </property>
@@ -365,6 +445,11 @@
          <layout class="QHBoxLayout" name="horizontalLayout_10">
           <item>
            <widget class="QCheckBox" name="corridor_middle_window">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>window_middle_corridor</string>
             </property>

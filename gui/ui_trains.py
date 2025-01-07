@@ -112,12 +112,18 @@ class Ui_Trains(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.summary.sizePolicy().hasHeightForWidth())
         self.summary.setSizePolicy(sizePolicy1)
+        font = QFont()
+        font.setPointSize(13)
+        self.summary.setFont(font)
         self.summary.setScaledContents(True)
 
         self.verticalLayout_5.addWidget(self.summary)
 
         self.label_3 = QLabel(self.page)
         self.label_3.setObjectName(u"label_3")
+        font1 = QFont()
+        font1.setPointSize(11)
+        self.label_3.setFont(font1)
 
         self.verticalLayout_5.addWidget(self.label_3)
 
@@ -126,7 +132,7 @@ class Ui_Trains(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 549, 138))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 549, 133))
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.verticalLayout_5.addWidget(self.scrollArea)
@@ -136,6 +142,9 @@ class Ui_Trains(object):
 
         self.Booker = QPushButton(self.page)
         self.Booker.setObjectName(u"Booker")
+        font2 = QFont()
+        font2.setPointSize(17)
+        self.Booker.setFont(font2)
 
         self.verticalLayout_6.addWidget(self.Booker)
 
@@ -152,6 +161,9 @@ class Ui_Trains(object):
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.ListTicket = QListWidget(self.page_2)
         self.ListTicket.setObjectName(u"ListTicket")
+        font3 = QFont()
+        font3.setPointSize(16)
+        self.ListTicket.setFont(font3)
 
         self.verticalLayout_9.addWidget(self.ListTicket)
 
@@ -174,6 +186,9 @@ class Ui_Trains(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.Departure.sizePolicy().hasHeightForWidth())
         self.Departure.setSizePolicy(sizePolicy2)
+        font4 = QFont()
+        font4.setPointSize(20)
+        self.Departure.setFont(font4)
         self.Departure.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout.addWidget(self.Departure)
@@ -182,6 +197,7 @@ class Ui_Trains(object):
         self.Arrival.setObjectName(u"Arrival")
         sizePolicy2.setHeightForWidth(self.Arrival.sizePolicy().hasHeightForWidth())
         self.Arrival.setSizePolicy(sizePolicy2)
+        self.Arrival.setFont(font4)
         self.Arrival.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout.addWidget(self.Arrival)
@@ -206,6 +222,9 @@ class Ui_Trains(object):
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.dateEdit.sizePolicy().hasHeightForWidth())
         self.dateEdit.setSizePolicy(sizePolicy3)
+        font5 = QFont()
+        font5.setPointSize(15)
+        self.dateEdit.setFont(font5)
         self.dateEdit.setCalendarPopup(True)
 
         self.horizontalLayout_2.addWidget(self.dateEdit)
@@ -214,6 +233,7 @@ class Ui_Trains(object):
         self.timeEdit.setObjectName(u"timeEdit")
         sizePolicy3.setHeightForWidth(self.timeEdit.sizePolicy().hasHeightForWidth())
         self.timeEdit.setSizePolicy(sizePolicy3)
+        self.timeEdit.setFont(font5)
         self.timeEdit.setCalendarPopup(False)
 
         self.horizontalLayout_2.addWidget(self.timeEdit)
@@ -232,6 +252,7 @@ class Ui_Trains(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.checkBox = QCheckBox(self.page_5)
         self.checkBox.setObjectName(u"checkBox")
+        self.checkBox.setFont(font)
         self.checkBox.setIconSize(QSize(32, 32))
         self.checkBox.setChecked(True)
 
@@ -239,6 +260,7 @@ class Ui_Trains(object):
 
         self.Search = QPushButton(self.page_5)
         self.Search.setObjectName(u"Search")
+        self.Search.setFont(font)
 
         self.verticalLayout_4.addWidget(self.Search)
 
@@ -252,6 +274,10 @@ class Ui_Trains(object):
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.listWidget = QListWidget(self.page_6)
         self.listWidget.setObjectName(u"listWidget")
+        font6 = QFont()
+        font6.setPointSize(18)
+        self.listWidget.setFont(font6)
+        self.listWidget.setSpacing(7)
 
         self.verticalLayout_10.addWidget(self.listWidget)
 
@@ -259,11 +285,15 @@ class Ui_Trains(object):
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.Compartemnts = QCheckBox(self.page_6)
         self.Compartemnts.setObjectName(u"Compartemnts")
+        font7 = QFont()
+        font7.setPointSize(14)
+        self.Compartemnts.setFont(font7)
 
         self.horizontalLayout_8.addWidget(self.Compartemnts)
 
         self.Compartemnts1 = QCheckBox(self.page_6)
         self.Compartemnts1.setObjectName(u"Compartemnts1")
+        self.Compartemnts1.setFont(font7)
 
         self.horizontalLayout_8.addWidget(self.Compartemnts1)
 
@@ -274,11 +304,13 @@ class Ui_Trains(object):
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.Table = QCheckBox(self.page_6)
         self.Table.setObjectName(u"Table")
+        self.Table.setFont(font7)
 
         self.horizontalLayout_9.addWidget(self.Table)
 
         self.Table1 = QCheckBox(self.page_6)
         self.Table1.setObjectName(u"Table1")
+        self.Table1.setFont(font7)
 
         self.horizontalLayout_9.addWidget(self.Table1)
 
@@ -289,6 +321,7 @@ class Ui_Trains(object):
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.corridor_middle_window = QCheckBox(self.page_6)
         self.corridor_middle_window.setObjectName(u"corridor_middle_window")
+        self.corridor_middle_window.setFont(font7)
 
         self.horizontalLayout_10.addWidget(self.corridor_middle_window)
 
@@ -322,7 +355,7 @@ class Ui_Trains(object):
 
         self.retranslateUi(Trains)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Trains)

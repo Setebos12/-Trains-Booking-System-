@@ -63,7 +63,7 @@ The **Train Booking System** is an application designed for booking and managing
 ## Usage
 
 ### **Login**
-1. Enter your unique user ID.
+1. Enter your unique user ID (default user id: 0).
 2. Click `Enter` to access your account.
 
 ### **Search for Trains**

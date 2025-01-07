@@ -17,6 +17,14 @@ class RouteError(Exception):
     pass
 
 
+class InvalidTrainId(Exception):
+    pass
+
+
+class InvalidUserId(Exception):
+    pass
+
+
 class System:
     def __init__(self) -> None:
         self.trains = self._load_trains()
@@ -32,7 +40,7 @@ class System:
 
     def add_user(self, user_id: str) -> None:
         if user_id in self.users:
-            raise ValueError(f"User with ID {user_id} already exists.")
+            raise InvalidUserId(f"User with ID {user_id} already exists.")
         user = User(user_id)
         self.users[user.id] = user
         self.write_user_file(user)
@@ -45,7 +53,7 @@ class System:
 
     def get_user(self, user_id: str) -> User:
         if user_id not in self.users:
-            raise ValueError(f"User with ID {user_id} does not exist.")
+            raise InvalidUserId(f"User with ID {user_id} does not exist.")
         return self.users[user_id]
 
     def _create_graph_from_trains(self) -> DiGraph:
@@ -85,6 +93,10 @@ class System:
         self, starting_station: str, destination_station: str,
         time: datetime = None, time_wait: tuple = (0, 500)
     ) -> List:
+
+        self._validate_station(starting_station)
+        self._validate_station(destination_station)
+
         if not has_path(self.network, starting_station, destination_station):
             raise RouteError("No path exists between the stations.")
 
@@ -139,10 +151,10 @@ class System:
     def book_seat(self, starting_station: str, destination_station: str, train_id: int, route_id: int,
                   carriage_id: int, seat_id: int, user_id: str) -> None:
         if train_id not in self.trains:
-            raise ValueError(f"Invalid train ID: {train_id}")
+            raise InvalidTrainId(f"Invalid train ID: {train_id}")
 
         if user_id not in self.users:
-            raise ValueError(f"Invalid user ID: {user_id}")
+            raise InvalidUserId(f"Invalid user ID: {user_id}")
 
         train = self.trains[train_id]
         train.book_seat_for_route(starting_station, destination_station, carriage_id, seat_id, route_id, user_id)

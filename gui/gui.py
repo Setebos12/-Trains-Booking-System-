@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter, QListWidget
 from PySide6.QtCore import QDate, QTime, Qt
 from PySide6.QtGui import QPixmap
 from gui.ui_trains import Ui_Trains
-from System.system import System, UserSystem, RouteError, InvalidStationError
+from System.system import System, UserSystem, RouteError, InvalidStationError, InvalidUserId, InvalidTrainId
 from datetime import datetime
 from io import BytesIO
 from networkx import draw_circular
@@ -131,7 +131,7 @@ class TrainWindow(QMainWindow):
                 self._populate_no_direct_train_list(info, departure, arrival)
 
             self.ui.stackedWidget.setCurrentIndex(3)
-        except (RouteError, InvalidStationError, ValueError) as e:
+        except (RouteError, InvalidStationError, ValueError, InvalidUserId, InvalidTrainId) as e:
             self.ui.info.setText(str(e))
 
     def _populate_train_list(self, trains, departure, arrival):

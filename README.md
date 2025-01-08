@@ -49,7 +49,7 @@ The **Train Booking System** is an application designed for booking and managing
    ```
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirments.txt
    ```
 3. Refresh train data (optional):
    ```bash

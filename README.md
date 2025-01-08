@@ -23,6 +23,8 @@ The **Train Booking System** is an application designed for booking and managing
 - **Routes**:
   - Directed graphs representing station-to-station connections.
   - Includes precise arrival and departure data for better planning.
+- **CarriageRoutes**:
+  - Reservation involves reserving places on the edges of a graph.
 
 ### **Users**
 - **Account Management**:
@@ -84,7 +86,8 @@ The **Train Booking System** is an application designed for booking and managing
 
 
 ## Data Sources
-- Train data retrieved from [Portal Pasażera](https://portalpasazera.pl/).
+- Train data retrieved from [Portal Pasażera](https://portalpasazera.pl/)
+- see data/Routes_internet_data.txt.
 
 ---
 

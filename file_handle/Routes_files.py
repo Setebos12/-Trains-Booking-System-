@@ -7,7 +7,7 @@ def write_Route(route: Routes):
     write_data(json_repr_routes(route), base_path="data/Routes_files")
 
 
-def read_Route(uniq_id):
+def read_Route(uniq_id: str):
     data = read_data(uniq_id, base_path="data/Routes_files")
     routes = Routes(
         data['id'], node_link_graph(data['graph'], edges="edges"), False

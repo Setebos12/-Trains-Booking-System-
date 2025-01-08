@@ -10,7 +10,7 @@ def write_train_file(train: Train):
     write_data(json_repr_train(train), base_path="data/Trains")
 
 
-def read_train_file(uniq_id):
+def read_train_file(uniq_id: str):
     data = read_data(uniq_id, base_path="data/Trains")
     train_id = data['id']
     carriages = data['carriages']

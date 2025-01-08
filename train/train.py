@@ -3,6 +3,10 @@ from train.carriage import Cariage, json_repr_carriage
 from Routes.Routes import Routes, json_repr_routes
 
 
+class InvalidCarriageError(Exception):
+    pass
+
+
 class Train:
     def __init__(
         self, id: int, carriages: List[Cariage], routes: List[Routes]
@@ -18,7 +22,7 @@ class Train:
     ) -> None:
 
         if carriage_id not in self.carriages:
-            raise ValueError(f"Invalid carriage ID: {carriage_id}")
+            raise InvalidCarriageError(f"Invalid carriage ID: {carriage_id}")
         self.carriages[carriage_id].book_seat_for_route(
             starting_station, destination_station, str(seat_id), route_id, data)
 
@@ -47,12 +51,12 @@ class Train:
 
     def add_carriage(self, carriage: Cariage) -> None:
         if carriage.id in self.carriages:
-            raise ValueError(f"Carriage with ID {carriage.id} already exists.")
+            raise InvalidCarriageError(f"Carriage with ID {carriage.id} already exists.")
         self.carriages[carriage.id] = carriage
 
     def remove_carriage(self, carriage_id: int) -> None:
         if carriage_id not in self.carriages:
-            raise ValueError(f"Carriage with ID {carriage_id} does not exist.")
+            raise InvalidCarriageError(f"Carriage with ID {carriage_id} does not exist.")
         del self.carriages[carriage_id]
 
     def __str__(self) -> str:

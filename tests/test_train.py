@@ -3,7 +3,7 @@ from train.carriage import Cariage, assign_seats, create_carriage_routes
 from Routes.Routes import Routes, SeatsinRouteBookedError, create_graph_from_routes
 from Routes.Route import Route
 import pytest
-from train.train import Train
+from train.train import Train, InvalidCarriageError
 from file_handle.train_files import read_train_file
 from datetime import datetime
 
@@ -188,7 +188,7 @@ def test_book_seat_train_wrong_id_carriage_seat_route():
     train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
     train.assign_routes_to_carriages()
 
-    with pytest.raises(ValueError):
+    with pytest.raises(InvalidCarriageError):
         train.book_seat_for_route('Warszawa Centralna', 'Wrocław', carriage_id=5, seat_id='1', route_id=1, data=123)
     with pytest.raises(KeyError):
         train.book_seat_for_route('Warszawa Centralna', 'Wrocław', carriage_id=2, seat_id='4', route_id=1, data=123)
@@ -268,7 +268,7 @@ def test_add_existing_carriage():
 
     train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
 
-    with pytest.raises(ValueError):
+    with pytest.raises(InvalidCarriageError):
         train.add_carriage(carriage2)
 
 
@@ -284,7 +284,7 @@ def test_remove_nonexistent_carriage():
 
     train = Train(1, [carriage1, carriage2, carriage3], carriage_routes)
 
-    with pytest.raises(ValueError):
+    with pytest.raises(InvalidCarriageError):
         train.remove_carriage(4)
 
 

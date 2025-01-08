@@ -45,7 +45,7 @@ The **Train Booking System** is an application designed for booking and managing
 1. Clone the repository:
    ```bash
    git clone https://gitlab-stud.elka.pw.edu.pl/pipr24z_gr204/trains-booking-system.git
-   cd train-booking-system
+   cd trains-booking-system
    ```
 2. Install dependencies:
    ```bash

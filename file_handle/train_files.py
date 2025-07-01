@@ -13,7 +13,7 @@ def write_train_file(train: Train):
 def read_train_file(uniq_id: str):
     data = read_data(uniq_id, base_path="data/Trains")
     train_id = data['id']
-    carriages = data['carriages']
+    carriages = data['carrages']
     car = [create_carriage_from_data(carriage)
            for carriage in carriages.values()]
     routes = [Routes(route['id'],

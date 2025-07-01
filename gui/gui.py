@@ -61,7 +61,7 @@ class TrainWindow(QMainWindow):
         self._set_date_and_time_limits()
 
     def _set_date_and_time_limits(self):
-        self.ui.dateEdit.setMinimumDate(QDate.currentDate())
+        self.ui.dateEdit.setMinimumDate(QDate(2020, 1, 1))
         self.ui.dateEdit.setMaximumDate(QDate.currentDate().addMonths(6))
         self.ui.timeEdit.setMinimumTime(QTime.currentTime())
         self.ui.timeEdit.setMaximumTime(QTime(23, 59, 59))

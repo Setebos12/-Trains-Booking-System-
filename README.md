@@ -51,11 +51,7 @@ The **Train Booking System** is an application designed for booking and managing
    ```bash
    pip install -r requirments.txt
    ```
-3. Refresh train data (optional):
-   ```bash
-   python refresh_data.py
-   ```
-4. Run the application:
+3. Run the application:
    ```bash
    python app.py
    ```
